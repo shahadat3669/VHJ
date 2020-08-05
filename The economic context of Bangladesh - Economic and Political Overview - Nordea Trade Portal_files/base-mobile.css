@@ -1,0 +1,736 @@
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+	/* veilles */
+    .page_veille_appels_d_offres #zone_des_resultats select {
+        max-width: 200px;
+    }
+	/* service AO */
+	.page_service_appels_d_offres_v2 .bloc-decoupe-secteur-ao, .page_service_appels_d_offres_v2 .bloc-decoupe-top20-ao {
+    	width: 33%;
+  	}
+  	/* classification HS */
+  	.page_service_nomenclature_v2 .nomenclature_type_3 .input_clave {
+  		max-width: 100%;
+  	}
+  	/* local classification */
+  	.page_service_nomenclature_gtm_v2 .nomenclature_type_3 .input_clave,
+  	.page_service_nomenclature_gtm_v2 .nomenclature_type_1 .input_clave {
+  		max-width: 100%;
+  	}
+}
+@media (max-width: 991px) {
+	.partenariat-dnb-credit {
+	    max-width: auto;
+	    float: none;
+	    margin: 20px 0 25px 0;
+	}
+	.page_service_db_credit .contenu .col-md-3 a.bulle_info-haut,
+	.page_service_dnb_accueil_v2 .contenu .col-md-3 a.bulle_info-haut,
+	.page_service_dnb_accueil_v2 #contenu .col-md-3 a.bulle_info-haut {
+		display: none;
+	}
+	.page_service_dnb_accueil_v2 .bloc-rapport form {
+		float: none;
+		width: 100%;
+		margin-top: 1em;	
+	}
+	.page_service_dnb_accueil_v2 .bloc-rapport form .bouton-off {
+		width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	/*-- listes --*/
+	dl, dt, dd {
+		float: none;
+	}
+	dl dt, dl dd {
+      display: block;
+      width: 100%;
+	  margin-left: 0;
+	  margin-right: 0;
+	  padding-left: 0;
+    }
+	dl dd {
+    	margin-bottom: 15px;
+	}
+	/*-- onglets --*/
+	#encart-contenu, #encart-produit, #encart-associations, #encart-resultat-produit, #encart-theme-atlas {
+		padding: 10px 8px;
+	}
+	a.onglet-hs, a.onglet-keyword, a.onglet-preferences,
+	a.onglet-hs:hover, a.onglet-keyword:hover, a.onglet-preferences:hover,
+	a.onglet-hs-active, a.onglet-keyword-active, a.onglet-preferences-active,
+	a.onglet-hs-active:hover, a.onglet-keyword-active:hover, a.onglet-preferences-active:hover,
+	a.onglet-contenu, a.onglet-contenu:hover, a.onglet-contenu-actif, a.onglet-contenu-actif:hover,
+	a.onglet-country, a.onglet-country:hover, a.onglet-country-active, a.onglet-country-active:hover,
+	a.onglet-industry, a.onglet-industry:hover, a.onglet-industry-active, a.onglet-industry-active:hover,
+	a.onglet-tous-salons-v2, a.onglet-salons-venir-v2, a.onglet-salons-passes-v2, 
+	a.onglet-tous-salons-v2:hover, a.onglet-salons-venir-v2:hover, a.onglet-salons-passes-v2:hover, 
+	a.onglet-tous-salons-v2-active, a.onglet-salons-venir-v2-active, a.onglet-salons-passes-v2-active, 
+	a.onglet-tous-salons-v2-active:hover, a.onglet-salons-venir-v2-active:hover,
+	a.onglet-salons-passes-v2-active:hover, a.onglet-theme-1, a.onglet-theme-1:hover,
+	a.onglet-theme-1-actif, a.onglet-theme-1-actif:hover {
+		font-size: 0.79em;
+    	padding: 5px 3px 0 3px;
+		margin-right: 2px;
+	}
+	/*-- tables --*/
+	div.atlas table, table.colonnes-3 {
+		width: 100%;
+	}
+	div.atlas table td, table.colonnes-3 table td, table td, table th {
+		font-size: 11px;
+		padding: 4px;
+	}
+	form table tr td:first-of-type {
+  		width: auto !important;
+	}
+	
+	 /* Force table to not be like tables anymore */
+    .table-responsive,
+    .table-responsive thead,
+    .table-responsive tbody,
+    .table-responsive th,
+    .table-responsive td,
+    .table-responsive tr {
+      display: block;
+    }
+    table.table-responsive {
+      border: 0;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table.table-responsive thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    table.table-responsive tr {
+      border: 1px solid #cdcdcd;
+      border-bottom: 0;
+    }
+    table.table-responsive tr:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+    table.table-responsive tr:nth-child(odd) td,
+    body.page_service_annuaires_v3 div#page_actu__1 table.table-responsive tbody:nth-child(odd) tr td 
+	body.page_service_importateurs_inde_entreprise_v2 div#page_actu__1 table.table-responsive tbody:nth-child(odd) tr td {
+      background: #ffffff !important;
+    }
+    table.table-responsive tr:nth-child(even) td,
+    body.page_service_annuaires_v3 div#page_actu__1 table.table-responsive tbody:nth-child(even) tr td 
+	body.page_service_importateurs_inde_entreprise_v2 div#page_actu__1 table.table-responsive tbody:nth-child(even) tr td {
+      background: #f4f4f4 !important;;
+    }
+    table.table-responsive td {
+      /* Behave  like a "row" */
+      border: none !important;
+      border: 0 !important;
+      position: relative;
+      width: 100%;
+      padding-left: 47% !important;
+      white-space: normal;
+      text-align: left;
+    }
+	table.table-responsive td::before {
+		content: attr(data-title);
+	}
+	table.table-responsive td::before {
+		font-weight: bold;
+		left: 10px;
+		overflow: hidden;
+		padding-right: 10px;
+		position: absolute;
+		text-align: left;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 42%;
+	}	
+	/*-- boutons --*/
+	.bouton-off, .bouton-on,
+	a.bouton-off, a.bouton-on,
+	.bouton-off-inactif {
+		width: 100%;
+	}
+	/*-- atlas --*/
+	h1#pays_tax-guide .txt-h1, p#titre-sup .txt-sup {
+   		width: 84%;
+    	line-height: 1.4em;
+	}
+	#donnees1, #donnees2, #meteo {
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+	.atlas__3 h1#pays_v1 {
+  		margin-bottom: 40px;
+	}
+	#encart-theme-atlas {
+    	margin-top: 70px;
+	}
+	.page_atlas_1_2_presentation #contenu table {
+		margin-top: -5px;
+	}
+	.page_atlas_1_2_presentation #contenu table thead tr td, .page_atlas_1_2_presentation #contenu table tr td {
+		padding: 2px;
+		font-size: 9px;
+	}
+	.onglet-suivant, .onglet-precedent {
+		display: none;	
+	}
+	p.droits {
+		clear: both;
+		font-size: 11px;
+		font-style: italic;
+		padding: 30px 0 0;
+		width: 100%;
+	}
+	div#contient-contact-atlas {
+      float: none;
+    }
+	a.lien-contact-atlas, a.lien-contact-atlas:hover, a.lien-contact-atlas-actif, a.lien-contact-atlas-actif:hover {
+		margin-left: 0;
+	}
+    #formulaire_remarque, .formulaire_remarque {
+      width: 100%;
+      padding-top: 8px;
+    }
+    .atlas #form_remarque {
+      width: 100%;
+      float: none;
+      margin-top: 57px;
+    }
+	#btn-fermer-contact {
+		left: auto;
+		right: 10px;
+		top: 70px;
+	}
+	#form_remarque dl.dl-contact-atlas dt, #form_remarque dl.dl-contact-atlas2 dt,
+	.page_service_salons_v3 .informations-3 dt,
+	.page_service_annuaires_v3 .informations-3 dt {
+		width: auto;
+		float: none;
+		margin: 10px 0 0 0;
+	}
+	#form_remarque dl.dl-contact-atlas dd, #form_remarque dl.dl-contact-atlas2 dd,
+	.page_service_salons_v3 .informations-3 dd,
+	.page_service_annuaires_v3 .informations-3 dd {
+		float: none;
+		width: auto;
+	}
+    #form_remarque .textarea_contact, #form_remarque .input_contact {
+      width: 96%;
+	  padding-left: 2px;
+    }
+	#form_remarque dl.dl-contact-atlas2 dt.dt_antispam {
+		display: none;	
+	}
+	/*-- services divers --*/
+	div#choix_produit a#lien-onglet-keyword {
+		display: none;
+	}
+	.page_service_gtm_document_determination_v2 div#choix_produit a#lien-onglet-keyword {
+		display: block;
+	}
+	.lien-dr-select, .lien-dr-select:hover {
+		display: block;
+  		top: -12px;
+	}
+	#encart-produit input,
+	#encart-produit select {
+		width: 100%;
+		max-width: 100%;	
+	}
+	div#contenu div.service__gtm-v2 .input_date, 
+	div#contenu div.service__gtm-v2 .input_nomenclature {
+		width: 240px;	
+	}
+	#contenu input.input_checkbox {
+		width: auto;
+		max-width: auto;
+	}
+	.titre-resultat-l {
+		width: 100%;	
+	}
+	.ancre-resultat-r, .ancre-resultat-r2 {
+		display: none;
+	}
+	#back-list-salon-v2, #page_next_prev_fiche_salon_v2 {
+		width: 100%;
+		margin: 0;
+	}
+	/*-- top 10 --*/
+	div.bloc-trading-gauche, div.bloc-trading-droite {
+		float: left;
+		width: 100%;
+	}
+	.page_service_flux_tous_pays_top_10_v4 .bloc_bulle_info {
+    	width: 300px;
+	}
+	.page_service_flux_tous_pays_top_10_v4 .titre-trading-countries {
+		float: none;
+		width: 100%;
+	}
+	.page_service_flux_tous_pays_top_10_v4 a#lien-affiner-recherche.lien-affiner-recherche,
+	.page_service_flux_tous_pays_top_10_v4 a.lien-pdf-impression {
+		display: none;
+	}
+	.page_service_flux_tous_pays_top_10_v4 #choix_industry select {
+	  max-width: 100%;
+	  width: 100%;
+	}
+	.page_service_flux_tous_pays_top_10_v4 .txt-industry-droite {
+	    float: none;
+	    margin: 0 0 10px;
+	    width: 100%;
+	}
+	#introduction_service a {
+    	word-wrap: break-word;
+	}
+	/*-- flux import export --*/
+	span#titre_1.titre-secondaire {
+		display: block;
+	}
+	.page_service_flux_tous_pays_v3 #contenu .lien-all-world, .page_service_flux_tous_pays_v3 #contenu .lien-all-world:hover {
+		margin-right: 8px;
+		margin-left: 5px;
+	}
+	.page_service_flux_tous_pays_v3 .bloc-decoupe-pays {
+		width: 50%;
+	}
+	.page_service_flux_tous_pays_v3 .txt-industry-droite {
+	    float: none;
+	    margin: 0 0 10px;
+	    width: 100%;
+	}
+	.page_service_flux_tous_pays_v3 #resultats_comtrade, #resultats_eurostat {
+  		font-size: .8em;
+	}
+	.page_service_flux_tous_pays_v3 #resultats_comtrade table td,
+	.page_service_flux_tous_pays_v3 #resultats_eurostat table td {
+    	padding: 1px;
+	}
+	.page_service_flux_tous_pays_v3 .choix-pref {
+        width: 29%;
+        margin-top: 2px;
+    }
+    .page_service_flux_tous_pays_v3 .pays-pref {
+        width: 100%;
+    }
+    .page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu, .page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu:hover, 
+    .page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu-actif, .page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu-actif:hover {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .page_service_flux_tous_pays_v3 .resultats h2 {
+        width: 100%;
+    }
+    .page_service_flux_tous_pays_v3 .resultats .lien-page {
+        display: none;
+    }
+	#ul_votre_selection {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background-color: white;
+		padding: 1em;
+		width: 100%;
+		z-index: 9999;
+		border-top: 1px solid black;
+		margin-bottom: 0;
+	}
+	/*-- études memos v2 --*/
+	#recherche-intro {
+		width: 100%;
+	}
+	.informations-3 a#bouton {
+		margin: 0 0 10px;
+	}
+	.page_recherche_etudes_memos_v2 form #recherche-intro, .page_spe_recherche_etudes_memos_v5 form #recherche-intro {
+    	width: 100%;
+	}
+	.page_spe_recherche_etudes_memos_v2 .choix-filtre, .page_spe_recherche_etudes_memos_v2 .choix-filtre-2,
+	.page_spe_recherche_etudes_memos_v5 .choix-filtre, .page_spe_recherche_etudes_memos_v5 .choix-filtre-2 {
+	 	width: 100%;
+	}
+	.page_spe_recherche_etudes_memos_v5 .bloc-creation-alerte table.invisible td {
+	    padding: 5px;
+	    display: block;
+		width: 100%;
+	}
+	/*--- alerts --*/
+	.page_veille_accueil_v4 #zone_des_resultats select,
+	.page_veille_accueil_v4 #zone_des_resultats input,
+	.page_veille_appels_d_offres #zone_des_resultats select {
+		width: 100%;
+		max-width: none;
+	}
+	table.sepa-veille {
+		border-bottom: 1px solid #ccc;
+	}
+	table.sepa-veille tr td:first-of-type, table.sepa-veille tr td.double, table.sepa-veille tr td.simple, table.sepa-veille tr td {
+		padding: 0 0 0 28% !important;
+		width: auto !important;
+	}
+	table.sepa-veille tr.modif-veille td {
+		padding: 5px !important;
+		text-align: left !important;
+	}
+	.form-veille-a, .form-veille-b, .form-veille-c {
+		float: none;
+		margin: 5px 0;
+		width: 100%;
+	}
+	/*-- find importers --*/
+	.page_service_find_importers .list-country a {
+	  width: 49%;
+	}
+	.page_service_find_importers .list-country-column {
+	    -webkit-column-count: 2;
+	    -moz-column-count: 2;
+	    column-count: 2;
+	  }
+	/*-- trova fornitori nel mondo et importatori --*/	
+	.page_service_importateurs_chine_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_v2 #code_hs_pere_2.choix, .page_service_importateurs_inde_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_v2 #code_hs_pere_2.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_latinos #code_hs_pere_1.choix, .page_service_importateurs_latinos #code_hs_pere_2.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_1.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_2.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_importateurs_europeens #code_hs_pere_1.choix, .page_service_importateurs_europeens #code_hs_pere_2.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_1.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_2.choix, .page_service_importateurs_kompass #code_hs_pere_1.choix, .page_service_importateurs_kompass #code_hs_pere_2.choix, .page_service_importateurs_chine_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_v2 #code_hs_pere_2.choix, .page_service_importateurs_inde_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_v2 #code_hs_pere_2.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_latinos #code_hs_pere_1.choix, .page_service_importateurs_latinos #code_hs_pere_2.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_1.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_2.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_importateurs_europeens #code_hs_pere_1.choix, .page_service_importateurs_europeens #code_hs_pere_2.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_1.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_2.choix, .page_service_importateurs_kompass #code_hs_pere_1.choix, .page_service_importateurs_kompass #code_hs_pere_2.choix,
+	.page_service_importateurs_canada #code_hs_pere_1.choix, .page_service_importateurs_canada #code_hs_pere_2.choix,
+	.page_service_importateurs_canada_entreprise #code_hs_pere_1.choix, .page_service_importateurs_canada_entreprise #code_hs_pere_2.choix {
+		width: 100%;
+		padding: 0;
+	}
+	.liste_des_produits_importateurs .choix, .page__service_piers_fournisseurs_v3 #choix_secteur .choix, .page__service_piers_fournisseurs_entreprise_v3 #choix_secteur .choix, 
+	#choix_secteur #code_hs_section .choix {
+        width: 100%;
+    }
+	.page_service_importateurs_latinos .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_kompass .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_kompass_entreprise .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_europeens .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_europeens_entreprise .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_chine_v2 .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_inde_v2 .liste_des_produits_importateurs dd .lien-page, .page_service_importateurs_canada .liste_des_produits_importateurs dd .lien-page {
+		float: none;	
+	}
+	.page_service_importateurs_chine_v2 #choix_hs #titre_industrie a, .page_service_importateurs_chine_v2 #choix_hs #titre_produit a, 
+	.page_service_importateurs_inde_v2 #choix_hs #titre_industrie a, .page_service_importateurs_inde_v2 #choix_hs #titre_produit a,
+	.page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_industrie a,
+	.page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit a,
+	.page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_industrie a,
+	.page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit a,
+	.page_service_importateurs_latinos #choix_hs #titre_industrie a, .page_service_importateurs_latinos #choix_hs #titre_produit a, 
+	.page_service_importateurs_latinos_entreprise #choix_hs #titre_industrie a,
+	.page_service_importateurs_latinos_entreprise #choix_hs #titre_produit a, .page_service_importateurs_kompass #choix_hs #titre_industrie a,
+	.page_service_importateurs_kompass #choix_hs #titre_produit a, .page_service_importateurs_kompass_entreprise #choix_hs #titre_industrie a,
+	.page_service_importateurs_kompass_entreprise #choix_hs #titre_produit a, .page_service_importateurs_europeens #choix_hs #titre_industrie a, 
+	.page_service_importateurs_europeens #choix_hs #titre_produit a, .page_service_importateurs_europeens_entreprise #choix_hs #titre_industrie a,
+	.page_service_importateurs_europeens_entreprise #choix_hs #titre_produit a, .page_service_importateurs_canada #choix_hs #titre_industrie a, 
+	.page_service_importateurs_canada #choix_hs #titre_produit a, .page_service_importateurs_canada_entreprise #choix_hs #titre_industrie a, 
+	.page_service_importateurs_canada_entreprise #choix_hs #titre_produit a {
+		float: none;
+		margin-left: 5px;
+	}
+	.page_service_importateurs_latinos #titre_industrie,
+	.page_service_importateurs_latinos_entreprise #titre_industrie {
+		padding-bottom: 0px;
+	}
+	.page_service_importateurs_latinos .liste_des_produits_importateurs dt, 
+	.page_service_importateurs_kompass .liste_des_produits_importateurs dt,
+	.page_service_importateurs_kompass_entreprise .liste_des_produits_importateurs dt,
+	.page_service_importateurs_europeens .liste_des_produits_importateurs dt,
+	.page_service_importateurs_europeens_entreprise .liste_des_produits_importateurs dt,
+	.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs dt,
+	.page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs dt,
+	.page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs dt,
+	.page_service_importateurs_inde_entreprise_v2 #produit#produit.liste_des_produits_importateurs dt,
+	.page_service_importateurs_canada .liste_des_produits_importateurs dt  {
+		width: 100%;
+	}
+	.page_service_importateurs_latinos .liste_des_produits_importateurs dd, 
+	.page_service_importateurs_kompass .liste_des_produits_importateurs dd,
+	.page_service_importateurs_kompass_entreprise .liste_des_produits_importateurs dd,
+	.page_service_importateurs_europeens .liste_des_produits_importateurs dd,
+	.page_service_importateurs_europeens_entreprise .liste_des_produits_importateurs dd,
+	.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs dd,
+	.page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs dd,
+	.page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs dd,
+	.page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs dd,
+	.page_service_importateurs_canada .liste_des_produits_importateurs dd {
+		padding: 0 3px 5px 5px;
+		width: 100%;
+	}	
+	.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-off, 
+	.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-on, 
+	.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, 
+	.page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-off, 
+	.page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-on, 
+	.page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, 
+	.page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off, 
+	.page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-on, 
+	.page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, 
+	.page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off, 
+	.page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-on, 
+	.page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, 
+	.page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-off, 
+	.page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-on, 
+	.page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-off,
+	.page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-on,
+	.page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-on,
+	.page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-off,
+	.page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-on,
+	.page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-off,
+	.page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-off,
+	.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-on,
+	.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-off-inactif,
+	.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-off,
+	.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-on {
+		margin: 10px 0 5px 0;
+	}
+	.page_service_importateurs_kompass #produit.liste_des_produits_importateurs dt, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs dt {
+    	width: 100%;
+  	}
+	.fiche-salon_v2-gauche, .fiche-salon_v2-droite {
+		float: none;
+		width: auto;
+	}
+	.page_service_gtm_quick_quote_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_latinos .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_latinos_entreprise .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_kompass .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_kompass_entreprise .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_canada .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_canada_entreprise .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_canada .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_canada_entreprise .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_chine_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_chine_entreprise_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_chine_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_inde_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_inde_entreprise_v2 .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_europeens .contenu div#choix_produit a#lien-onglet-keyword,
+    .page_service_importateurs_europeens_entreprise .contenu div#choix_produit a#lien-onglet-keyword {
+        display: block;
+    }
+	/*-- salons --*/
+	body .service_salons_v5 .salon-dispo_v2 {
+		width: 100%;
+	}
+	body #contenu .service_salon_fiche_v5 .line_1 p.titre-salon,
+	body #contenu .service_salon_fiche_v5 .line_1 .lien-salon-fiche,
+	body #contenu .service_salon_fiche_v5 .line_2 .left,
+	body #contenu .service_salon_fiche_v5 .line_2 .right,
+	body #contenu .service_salon_fiche_v5 .salon-details-gauche, 
+	body #contenu .service_salon_fiche_v5 .salon-details-droite {
+  		float: left;
+		width: 100%;
+	}
+	.service_salons_v5 .desc-resultats a:hover {
+    	font-size: 0.89em;
+	}
+	/*-- appels d'offres --*/
+	.page_service_appels_d_offres_v2 .bloc-secteur-ao, .page_service_appels_d_offres_v2 .bloc-pays-ao {
+	    min-width: auto;
+	    width: 100%;
+	}
+	.page_service_appels_d_offres_v2 .bloc-decoupe-top20-ao, .page_service_appels_d_offres_v2 .bloc-decoupe-continents-ao, .page_service_appels_d_offres_v2 .bloc-decoupe-1-continent-ao {
+  		float: none;
+  		width: 100%;
+	}
+	.page_service_appels_d_offres_v2 .bloc-decoupe-secteur-ao {
+	    width: 100%;
+	}
+	.page_service_appels_d_offres_v2 .bloc-creation-alerte table.invisible td.alerte-td-simple {
+  		width: 38%;
+	}
+	.page_service_appels_d_offres_v2 .cache-input-ao {
+		max-width: 100%;
+	}
+	/*-- dnb --*/
+	.partenariat-dnb {
+		float: left;
+	  	width: 100%;
+	  	text-align: left;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	table.invisible td.td-fin-dnb {
+		background: none;
+	}
+	div.bloc-rapport table tr td.triple table.invisible td {
+  		display: block;
+  		width: 100% !important;
+	}
+	div.bloc-rapport table tr td.triple {
+  		width: 50% !important;
+		padding-left: 3%;
+	}
+	div.bloc-rapport table tr td:first-of-type {
+		width: 50% !important;
+		margin: 0;
+	}
+	.page_service_dnb_fiche .resultats a.lien-pdf {
+		display: block;
+	 	margin: 5px 0;
+	}
+	.prix-dnb {
+  		text-align: center;
+	}
+	.select_langue {
+  		width: 100%;
+  		text-align: center;
+	}
+	.page_service_dnb_fiche .resultats a.lien-page {
+		margin-left: 0px;
+		display: block;
+	}
+	.page_service_db_credit .bloc-rapport form {
+		display: block !important;
+		float: none !important;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		clear: both;
+	}
+	.page_service_db_credit .bloc-rapport .titre-dnb {
+		display: block;
+		margin-bottom: 10px;
+	}
+	/*-- prix de vente import --*/
+	.page_service_gtm_landed_cost_v2 select#currency, .page_service_gtm_landed_cost_v2 input#valeur {
+  		margin-top: 10px;
+	}
+	/*-- prix de vente export --*/
+	.page_service_prix_de_vente_export table {
+  		font-size: 11px;
+	}
+	/*-- convertisseur de devise --*/
+	#doubletableau .tableau1, #doubletableau .tableau2 {
+  		width: 100%;
+  		float: none;
+	}
+	.page_service_convertir_des_devises table tr select {
+  		width: 90%;
+	}
+	div#doubletableau table input[type=text], 
+	.page_service_convertir_des_devises form table input[readonly=readonly], 
+	.page_service_convertir_des_devises form table input[type=text] {
+  		width: 60px !important;
+	}
+	/*-- convertisseur de mesures --*/
+	.page_service_convertir_des_mesures table.invisible input[type=button] {
+    	width: 35px !important;
+    }
+	.page_service_convertir_des_mesures table.invisible td {
+  		display: inline-block;
+  		width: auto !important;
+	}
+	.page_service_convertir_des_mesures .select_mesure {
+    	width: 170px;
+	}
+	/*-- nomenclature --*/
+	.nomenclature_type_1, .nomenclature_type_2, .nomenclature_type_3 {
+  		width: auto;
+  		margin: 1em 0;
+  		float: none;
+	}
+	.nomenclature_type_1 input.bouton-on, .nomenclature_type_1 input.bouton-off, 
+	.nomenclature_type_2 input.bouton-on, .nomenclature_type_2 input.bouton-off, 
+	.nomenclature_type_3 input.bouton-on, .nomenclature_type_3 input.bouton-off {
+  		width: 30%;
+	}
+	.nomenclature-droite,
+    .nomenclature-droite_popup {
+    	width: 65%;
+    }
+    .nomenclature-gauche,
+    .nomenclature-gauche_popup {
+    	width: 33%;
+    }
+    .nomenclature-droite-div-upload_popup {
+        width: 100%;
+        clear: both;
+        padding-left: 10px;
+    }
+    .gtm-recherche .nomenclature-gauche, .gtm-recherche .nomenclature-gauche_popup,
+    .scroll-droite .nomenclature-gauche_popup {
+    	width: 100%;
+	}
+    .gtm-recherche .nomenclature-droite, .gtm-recherche .nomenclature-droite_popup {
+        width: 100%;
+    }
+	/*-- account --*/
+	.page_profil_modifier dl dd {
+  		line-height: normal;
+	}
+	.page_spe_preferences select#pays_choisi {
+  		margin-bottom: 10px !important;
+	}
+	.page_spe_vos_abonnements table.sepa-veille td.simple,
+	.page_spe_vos_abonnements .abonnement-douanes table.sepa-veille td.double {
+  		width: 100% !important;
+	}
+	.page_messagerie .message-home a, .page_messagerie .message-home a:hover {
+    	float: none;
+    	width: 100%;
+	}
+	.page_messagerie .date-pas-lue, .page_messagerie .date-lue {
+		width: 95%;
+	}
+	/*-- recherche --*/
+	.page_recherche_globale_v2 .recherche-nav, .page_recherche_globale_v2 #encart-produit,
+	.page_recherche_globale_v3 .recherche-nav, .page_recherche_globale_v3 #encart-produit {
+  		float: none;
+  		width: 100%;
+	}
+	input.input_recherche-global {
+		margin-bottom: 10px;
+		width: 100%;	
+	}
+	.liste_des_produits_importateurs{
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.contient-choix-liste-prod {
+	    width: 100%;
+	}
+	.liste_des_produits_importateurs .contient-choix-liste-prod label{
+		font-size: 14px;
+	}
+	.contient-choix-liste-prod .choix-liste input[type="checkbox"]{
+		margin: 4px 0 0;
+	}
+	.contient-choix-liste-prod .choix-liste .bulle_info{
+	    font-size: 13px;
+	}
+	.liste_des_produits_importateurs p.txt-commentaire-piers{
+		font-size: 12px;
+	}
+	/*--- Veille Appels d'offres --*/
+	.bloc-form-veille .form-veille-1{
+		margin-bottom: 16px;
+		margin-right: 0;
+	}
+	.bloc-form-veille .form-veille-1, .bloc-form-veille .form-veille-2, .bloc-form-veille .form-veille-1 select, .bloc-form-veille .form-veille-2 select{
+		width: 100%;
+	}
+	/*-- atlas --*/
+	#donnees1, #donnees2, #meteo, #carte1 {
+        clear: both;
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    #carte1 {
+        margin: 25px 0;
+    }
+    /*-- cyber payement --*/
+    form table.table-pay input[type=text] {
+		width: 100%;
+  		max-width: 100%;
+	}
+	.table-pay .td-pay {
+		font-size: 0.85em;
+	}
+	.avis-demo, .messages-criteres {
+	    padding: 6px 10px 6px 10px;
+	    background-image: none !important;
+	}
+
+}
+/*--- fin styles mobiles --*/

@@ -1,0 +1,306 @@
+.sprite {
+	display: inline-block;
+	background: url(/ressources/images/flags-sprites/sprites-countries.png) no-repeat; 
+	width: 33px;
+	height: 33px;
+	border-radius: 33px;
+	box-shadow: 0 0 0 1px rgba(6, 6, 6, 0.25);
+}
+.sprite.af, .sprite.ax, .sprite.al, .sprite.dz, .sprite.as, 
+.sprite.ad, .sprite.ao, .sprite.ai, .sprite.ag, .sprite.ar, 
+.sprite.am, .sprite.au, .sprite.at, .sprite.az, .sprite.bs, 
+.sprite.bh, .sprite.bd, .sprite.bb, .sprite.by, .sprite.be, 
+.sprite.bz, .sprite.bj, .sprite.bm, .sprite.bo, .sprite.ba, 
+.sprite.bw, .sprite.br, .sprite.vg, .sprite.bn, .sprite.bg, 
+.sprite.bf, .sprite.bi, .sprite.kh, .sprite.cm, .sprite.ca, 
+.sprite.cv, .sprite.ky, .sprite.cf, .sprite.td, .sprite.cl, 
+.sprite.cn, .sprite.co, .sprite.km, .sprite.cg, .sprite.cd, 
+.sprite.cr, .sprite.ci, .sprite.hr, .sprite.cu, .sprite.cw, 
+.sprite.cy, .sprite.cz, .sprite.dk, .sprite.dj, .sprite.do, 
+.sprite.ec, .sprite.eg, .sprite.sv, .sprite.gb, .sprite.gq, 
+.sprite.er, .sprite.ee, .sprite.et, .sprite.fk, .sprite.fo, 
+.sprite.fj, .sprite.fi, .sprite.fr, .sprite.french-southern-icon, .sprite.pf, 
+.sprite.ga, .sprite.gm, .sprite.ge, .sprite.de, .sprite.gh, 
+.sprite.gi, .sprite.gl, .sprite.gd, .sprite.gp, .sprite.gu, 
+.sprite.gt, .sprite.gw, .sprite.gn, .sprite.gy, .sprite.ht, 
+.sprite.hn, .sprite.hk, .sprite.hu, .sprite.is, .sprite.in, 
+.sprite.id, .sprite.ir, .sprite.iq, .sprite.ie, .sprite.il, 
+.sprite.it, .sprite.ci, .sprite.jm, .sprite.jp, .sprite.je, 
+.sprite.jo, .sprite.kz, .sprite.ke, .sprite.kiribati-icon, .sprite.kosovo-icon, 
+.sprite.kw, .sprite.kg, .sprite.la, .sprite.lv, .sprite.lb, 
+.sprite.ls, .sprite.lr, .sprite.ly, .sprite.li, .sprite.lt, 
+.sprite.lu, .sprite.mo, .sprite.mk, .sprite.mg, .sprite.mw, 
+.sprite.my, .sprite.mv, .sprite.ml, .sprite.mt, .sprite.mh, 
+.sprite.mq, .sprite.mr, .sprite.mu, .sprite.yt, .sprite.mx, 
+.sprite.fm, .sprite.md, .sprite.mc, .sprite.mn, .sprite.me, 
+.sprite.ms, .sprite.ma, .sprite.mz, .sprite.mm, .sprite.na, 
+.sprite.nr, .sprite.np, .sprite.netherlands-antilles-icon, .sprite.nl, .sprite.nz, 
+.sprite.nc, .sprite.ni, .sprite.ne, .sprite.ng, .sprite.nu, 
+.sprite.nf, .sprite.kp, .sprite.mp, .sprite.northern-ireland-icon, .sprite.no, 
+.sprite.om, .sprite.pk, .sprite.pw, .sprite.ps, .sprite.pa, 
+.sprite.pg, .sprite.py, .sprite.pe, .sprite.ph, .sprite.pn, 
+.sprite.pl, .sprite.pt, .sprite.pr, .sprite.qa, .sprite.re, 
+.sprite.ro, .sprite.ru, .sprite.rw, .sprite.sh, .sprite.pm, 
+.sprite.vc, .sprite.bl, .sprite.kn, .sprite.lc, .sprite.ws, 
+.sprite.sm, .sprite.st, .sprite.sa, .sprite.scotland-icon, .sprite.sn, 
+.sprite.rs, .sprite.sc, .sprite.sl, .sprite.sg, .sprite.bq, 
+.sprite.sx, .sprite.sk, .sprite.si, .sprite.sb, .sprite.gs, 
+.sprite.kr, .sprite.ss, .sprite.za, .sprite.es, .sprite.lk, 
+.sprite.sd, .sprite.sr, .sprite.sj, .sprite.sz, .sprite.se, 
+.sprite.ch, .sprite.sy, .sprite.tw, .sprite.tj, .sprite.tz, 
+.sprite.th, .sprite.tl, .sprite.tg, .sprite.tk, .sprite.to, 
+.sprite.tt, .sprite.tn, .sprite.tr, .sprite.tm, .sprite.tc, 
+.sprite.tv, .sprite.us, .sprite.ug, .sprite.ua, .sprite.vi, 
+.sprite.ae, .sprite.gb, .sprite.uy, .sprite.uz, .sprite.vu, 
+.sprite.ve, .sprite.vn, .sprite.wales-icon, .sprite.wf, .sprite.ye, 
+.sprite.zm, .sprite.zw, .sprite.gr, .sprite.so
+{ max-width: 100%; background-size: 100%; }
+ 
+.sprite.af { background-position: 0 0%; background-size: 100%; }
+.sprite.ax { background-position: 0 0.420168%; background-size: 100%; }
+.sprite.al { background-position: 0 0.840336%; background-size: 100%; }
+.sprite.dz { background-position: 0 1.260504%; background-size: 100%; }
+.sprite.as { background-position: 0 1.680672%; background-size: 100%; }
+.sprite.ad { background-position: 0 2.10084%; background-size: 100%; }
+.sprite.ao { background-position: 0 2.521008%; background-size: 100%; }
+.sprite.ai { background-position: 0 2.941176%; background-size: 100%; }
+.sprite.ag { background-position: 0 3.361345%; background-size: 100%; }
+.sprite.ar { background-position: 0 3.781513%; background-size: 100%; }
+.sprite.am { background-position: 0 4.201681%; background-size: 100%; }
+.sprite.au { background-position: 0 4.621849%; background-size: 100%; }
+.sprite.at { background-position: 0 5.042017%; background-size: 100%; }
+.sprite.az { background-position: 0 5.462185%; background-size: 100%; }
+.sprite.bs { background-position: 0 5.882353%; background-size: 100%; }
+.sprite.bh { background-position: 0 6.302521%; background-size: 100%; }
+.sprite.bd { background-position: 0 6.722689%; background-size: 100%; }
+.sprite.bb { background-position: 0 7.142857%; background-size: 100%; }
+.sprite.by { background-position: 0 7.563025%; background-size: 100%; }
+.sprite.be { background-position: 0 7.983193%; background-size: 100%; }
+.sprite.bz { background-position: 0 8.403361%; background-size: 100%; }
+.sprite.bj { background-position: 0 8.823529%; background-size: 100%; }
+.sprite.bm { background-position: 0 9.243697%; background-size: 100%; }
+.sprite.bo { background-position: 0 9.663866%; background-size: 100%; }
+.sprite.ba { background-position: 0 10.084034%; background-size: 100%; }
+.sprite.bw { background-position: 0 10.504202%; background-size: 100%; }
+.sprite.br { background-position: 0 10.92437%; background-size: 100%; }
+.sprite.vg { background-position: 0 11.344538%; background-size: 100%; }
+.sprite.bn { background-position: 0 11.764706%; background-size: 100%; }
+.sprite.bg { background-position: 0 12.184874%; background-size: 100%; }
+.sprite.bf { background-position: 0 12.605042%; background-size: 100%; }
+.sprite.bi { background-position: 0 13.02521%; background-size: 100%; }
+.sprite.kh { background-position: 0 13.445378%; background-size: 100%; }
+.sprite.cm { background-position: 0 13.865546%; background-size: 100%; }
+.sprite.ca { background-position: 0 14.285714%; background-size: 100%; }
+.sprite.cv { background-position: 0 14.705882%; background-size: 100%; }
+.sprite.ky { background-position: 0 15.12605%; background-size: 100%; }
+.sprite.cf { background-position: 0 15.546218%; background-size: 100%; }
+.sprite.td { background-position: 0 15.966387%; background-size: 100%; }
+.sprite.cl { background-position: 0 16.386555%; background-size: 100%; }
+.sprite.cn { background-position: 0 16.806723%; background-size: 100%; }
+.sprite.co { background-position: 0 17.226891%; background-size: 100%; }
+.sprite.km { background-position: 0 17.647059%; background-size: 100%; }
+.sprite.cg { background-position: 0 18.067227%; background-size: 100%; }
+.sprite.cd { background-position: 0 18.487395%; background-size: 100%; }
+.sprite.cr { background-position: 0 18.907563%; background-size: 100%; }
+.sprite.ci { background-position: 0 19.327731%; background-size: 100%; }
+.sprite.hr { background-position: 0 19.747899%; background-size: 100%; }
+.sprite.cu { background-position: 0 20.168067%; background-size: 100%; }
+.sprite.cw{ background-position: 0 20.588235%; background-size: 100%; }
+.sprite.cy { background-position: 0 21.008403%; background-size: 100%; }
+.sprite.cz { background-position: 0 21.428571%; background-size: 100%; }
+.sprite.dk { background-position: 0 21.848739%; background-size: 100%; }
+.sprite.dj { background-position: 0 22.268908%; background-size: 100%; }
+.sprite.do { background-position: 0 22.689076%; background-size: 100%; }
+.sprite.ec { background-position: 0 23.109244%; background-size: 100%; }
+.sprite.eg { background-position: 0 23.529412%; background-size: 100%; }
+.sprite.sv { background-position: 0 23.94958%; background-size: 100%; }
+.sprite.gb { background-position: 0 24.369748%; background-size: 100%; }
+.sprite.gq { background-position: 0 24.789916%; background-size: 100%; }
+.sprite.er { background-position: 0 25.210084%; background-size: 100%; }
+.sprite.ee { background-position: 0 25.630252%; background-size: 100%; }
+.sprite.et { background-position: 0 26.05042%; background-size: 100%; }
+.sprite.fk { background-position: 0 26.470588%; background-size: 100%; }
+.sprite.fo { background-position: 0 26.890756%; background-size: 100%; }
+.sprite.fj { background-position: 0 27.310924%; background-size: 100%; }
+.sprite.fi { background-position: 0 27.731092%; background-size: 100%; }
+.sprite.fr { background-position: 0 28.151261%; background-size: 100%; }
+.sprite.french-southern-icon { background-position: 0 28.571429%; background-size: 100%; }
+.sprite.pf { background-position: 0 28.991597%; background-size: 100%; }
+.sprite.ga { background-position: 0 29.411765%; background-size: 100%; }
+.sprite.gm { background-position: 0 29.831933%; background-size: 100%; }
+.sprite.ge { background-position: 0 30.252101%; background-size: 100%; }
+.sprite.de { background-position: 0 30.672269%; background-size: 100%; }
+.sprite.gh { background-position: 0 31.092437%; background-size: 100%; }
+.sprite.gi { background-position: 0 31.512605%; background-size: 100%; }
+.sprite.gl { background-position: 0 31.932773%; background-size: 100%; }
+.sprite.gd { background-position: 0 32.352941%; background-size: 100%; }
+.sprite.gp { background-position: 0 32.773109%; background-size: 100%; }
+.sprite.gu { background-position: 0 33.193277%; background-size: 100%; }
+.sprite.gt { background-position: 0 33.613445%; background-size: 100%; }
+.sprite.gw { background-position: 0 34.033613%; background-size: 100%; }
+.sprite.gn { background-position: 0 34.453782%; background-size: 100%; }
+.sprite.gy { background-position: 0 34.87395%; background-size: 100%; }
+.sprite.ht { background-position: 0 35.294118%; background-size: 100%; }
+.sprite.hn { background-position: 0 35.714286%; background-size: 100%; }
+.sprite.hk { background-position: 0 36.134454%; background-size: 100%; }
+.sprite.hu { background-position: 0 36.554622%; background-size: 100%; }
+.sprite.is { background-position: 0 36.97479%; background-size: 100%; }
+.sprite.in { background-position: 0 37.394958%; background-size: 100%; }
+.sprite.id { background-position: 0 37.815126%; background-size: 100%; }
+.sprite.ir { background-position: 0 38.235294%; background-size: 100%; }
+.sprite.iq { background-position: 0 38.655462%; background-size: 100%; }
+.sprite.ie { background-position: 0 39.07563%; background-size: 100%; }
+.sprite.il { background-position: 0 39.495798%; background-size: 100%; }
+.sprite.it { background-position: 0 39.915966%; background-size: 100%; }
+.sprite.ci { background-position: 0 40.336134%; background-size: 100%; }
+.sprite.jm { background-position: 0 40.756303%; background-size: 100%; }
+.sprite.jp { background-position: 0 41.176471%; background-size: 100%; }
+.sprite.je { background-position: 0 41.596639%; background-size: 100%; }
+.sprite.jo { background-position: 0 42.016807%; background-size: 100%; }
+.sprite.kz { background-position: 0 42.436975%; background-size: 100%; }
+.sprite.ke { background-position: 0 42.857143%; background-size: 100%; }
+.sprite.kiribati-icon { background-position: 0 43.277311%; background-size: 100%; }
+.sprite.kosovo-icon { background-position: 0 43.697479%; background-size: 100%; }
+.sprite.kw { background-position: 0 44.117647%; background-size: 100%; }
+.sprite.kg { background-position: 0 44.537815%; background-size: 100%; }
+.sprite.la { background-position: 0 44.957983%; background-size: 100%; }
+.sprite.lv { background-position: 0 45.378151%; background-size: 100%; }
+.sprite.lb { background-position: 0 45.798319%; background-size: 100%; }
+.sprite.ls { background-position: 0 46.218487%; background-size: 100%; }
+.sprite.lr { background-position: 0 46.638655%; background-size: 100%; }
+.sprite.ly { background-position: 0 47.058824%; background-size: 100%; }
+.sprite.li { background-position: 0 47.478992%; background-size: 100%; }
+.sprite.lt { background-position: 0 47.89916%; background-size: 100%; }
+.sprite.lu { background-position: 0 48.319328%; background-size: 100%; }
+.sprite.mo { background-position: 0 48.739496%; background-size: 100%; }
+.sprite.mk { background-position: 0 49.159664%; background-size: 100%; }
+.sprite.mg { background-position: 0 49.579832%; background-size: 100%; }
+.sprite.mw { background-position: 0 50%; background-size: 100%; }
+.sprite.my { background-position: 0 50.420168%; background-size: 100%; }
+.sprite.mv { background-position: 0 50.840336%; background-size: 100%; }
+.sprite.ml { background-position: 0 51.260504%; background-size: 100%; }
+.sprite.mt { background-position: 0 51.680672%; background-size: 100%; }
+.sprite.mh { background-position: 0 52.10084%; background-size: 100%; }
+.sprite.mq { background-position: 0 52.521008%; background-size: 100%; }
+.sprite.mr { background-position: 0 52.941176%; background-size: 100%; }
+.sprite.mu { background-position: 0 53.361345%; background-size: 100%; }
+.sprite.yt { background-position: 0 53.781513%; background-size: 100%; }
+.sprite.mx { background-position: 0 54.201681%; background-size: 100%; }
+.sprite.fm { background-position: 0 54.621849%; background-size: 100%; }
+.sprite.md { background-position: 0 55.042017%; background-size: 100%; }
+.sprite.mc { background-position: 0 55.462185%; background-size: 100%; }
+.sprite.mn { background-position: 0 55.882353%; background-size: 100%; }
+.sprite.me { background-position: 0 56.302521%; background-size: 100%; }
+.sprite.ms { background-position: 0 56.722689%; background-size: 100%; }
+.sprite.ma { background-position: 0 57.142857%; background-size: 100%; }
+.sprite.mz { background-position: 0 57.563025%; background-size: 100%; }
+.sprite.mm { background-position: 0 57.983193%; background-size: 100%; }
+.sprite.na { background-position: 0 58.403361%; background-size: 100%; }
+.sprite.nr { background-position: 0 58.823529%; background-size: 100%; }
+.sprite.np { background-position: 0 59.243697%; background-size: 100%; }
+.sprite.netherlands-antilles-icon { background-position: 0 59.663866%; background-size: 100%; }
+.sprite.nl { background-position: 0 60.084034%; background-size: 100%; }
+.sprite.nz { background-position: 0 60.504202%; background-size: 100%; }
+.sprite.nc { background-position: 0 60.92437%; background-size: 100%; }
+.sprite.ni { background-position: 0 61.344538%; background-size: 100%; }
+.sprite.ne { background-position: 0 61.764706%; background-size: 100%; }
+.sprite.ng { background-position: 0 62.184874%; background-size: 100%; }
+.sprite.nu { background-position: 0 62.605042%; background-size: 100%; }
+.sprite.nf { background-position: 0 63.02521%; background-size: 100%; }
+.sprite.kp { background-position: 0 63.445378%; background-size: 100%; }
+.sprite.mp { background-position: 0 63.865546%; background-size: 100%; }
+.sprite.northern-ireland-icon { background-position: 0 64.285714%; background-size: 100%; }
+.sprite.no { background-position: 0 64.705882%; background-size: 100%; }
+.sprite.om { background-position: 0 65.12605%; background-size: 100%; }
+.sprite.pk { background-position: 0 65.546218%; background-size: 100%; }
+.sprite.pw { background-position: 0 65.966387%; background-size: 100%; }
+.sprite.ps { background-position: 0 66.386555%; background-size: 100%; }
+.sprite.pa { background-position: 0 66.806723%; background-size: 100%; }
+.sprite.pg { background-position: 0 67.226891%; background-size: 100%; }
+.sprite.py { background-position: 0 67.647059%; background-size: 100%; }
+.sprite.pe { background-position: 0 68.067227%; background-size: 100%; }
+.sprite.ph { background-position: 0 68.487395%; background-size: 100%; }
+.sprite.pn { background-position: 0 68.907563%; background-size: 100%; }
+.sprite.pl { background-position: 0 69.327731%; background-size: 100%; }
+.sprite.pt { background-position: 0 69.747899%; background-size: 100%; }
+.sprite.pr { background-position: 0 70.168067%; background-size: 100%; }
+.sprite.qa { background-position: 0 70.588235%; background-size: 100%; }
+.sprite.re { background-position: 0 71.008403%; background-size: 100%; }
+.sprite.ro { background-position: 0 71.428571%; background-size: 100%; }
+.sprite.ru { background-position: 0 71.848739%; background-size: 100%; }
+.sprite.rw { background-position: 0 72.268908%; background-size: 100%; }
+.sprite.sh { background-position: 0 72.689076%; background-size: 100%; }
+.sprite.pm { background-position: 0 73.109244%; background-size: 100%; }
+.sprite.vc { background-position: 0 73.529412%; background-size: 100%; }
+.sprite.bl { background-position: 0 73.94958%; background-size: 100%; }
+.sprite.kn { background-position: 0 74.369748%; background-size: 100%; }
+.sprite.lc { background-position: 0 74.789916%; background-size: 100%; }
+.sprite.ws { background-position: 0 75.210084%; background-size: 100%; }
+.sprite.sm { background-position: 0 75.630252%; background-size: 100%; }
+.sprite.st { background-position: 0 76.05042%; background-size: 100%; }
+.sprite.sa { background-position: 0 76.470588%; background-size: 100%; }
+.sprite.scotland-icon { background-position: 0 76.890756%; background-size: 100%; }
+.sprite.sn { background-position: 0 77.310924%; background-size: 100%; }
+.sprite.rs { background-position: 0 77.731092%; background-size: 100%; }
+.sprite.sc { background-position: 0 78.151261%; background-size: 100%; }
+.sprite.sl { background-position: 0 78.571429%; background-size: 100%; }
+.sprite.sg { background-position: 0 78.991597%; background-size: 100%; }
+.sprite.bq { background-position: 0 79.411765%; background-size: 100%; }
+.sprite.sx { background-position: 0 79.831933%; background-size: 100%; }
+.sprite.sk { background-position: 0 80.252101%; background-size: 100%; }
+.sprite.si { background-position: 0 80.672269%; background-size: 100%; }
+.sprite.sb { background-position: 0 81.092437%; background-size: 100%; }
+.sprite.gs { background-position: 0 81.512605%; background-size: 100%; }
+.sprite.kr { background-position: 0 81.932773%; background-size: 100%; }
+.sprite.ss { background-position: 0 82.352941%; background-size: 100%; }
+.sprite.za { background-position: 0 82.773109%; background-size: 100%; }
+.sprite.es { background-position: 0 83.193277%; background-size: 100%; }
+.sprite.lk { background-position: 0 83.613445%; background-size: 100%; }
+.sprite.sd { background-position: 0 84.033613%; background-size: 100%; }
+.sprite.sr { background-position: 0 84.453782%; background-size: 100%; }
+.sprite.sj { background-position: 0 84.87395%; background-size: 100%; }
+.sprite.sz { background-position: 0 85.294118%; background-size: 100%; }
+.sprite.se { background-position: 0 85.714286%; background-size: 100%; }
+.sprite.ch { background-position: 0 86.134454%; background-size: 100%; }
+.sprite.sy { background-position: 0 86.554622%; background-size: 100%; }
+.sprite.tw { background-position: 0 86.97479%; background-size: 100%; }
+.sprite.tj { background-position: 0 87.394958%; background-size: 100%; }
+.sprite.tz { background-position: 0 87.815126%; background-size: 100%; }
+.sprite.th { background-position: 0 88.235294%; background-size: 100%; }
+.sprite.tl { background-position: 0 88.655462%; background-size: 100%; }
+.sprite.tg { background-position: 0 89.07563%; background-size: 100%; }
+.sprite.tk { background-position: 0 89.495798%; background-size: 100%; }
+.sprite.to { background-position: 0 89.915966%; background-size: 100%; }
+.sprite.tt { background-position: 0 90.336134%; background-size: 100%; }
+.sprite.tn { background-position: 0 90.756303%; background-size: 100%; }
+.sprite.tr { background-position: 0 91.176471%; background-size: 100%; }
+.sprite.tm { background-position: 0 91.596639%; background-size: 100%; }
+.sprite.tc { background-position: 0 92.016807%; background-size: 100%; }
+.sprite.tv { background-position: 0 92.436975%; background-size: 100%; }
+.sprite.us { background-position: 0 92.857143%; background-size: 100%; }
+.sprite.ug { background-position: 0 93.277311%; background-size: 100%; }
+.sprite.ua { background-position: 0 93.697479%; background-size: 100%; }
+.sprite.vi { background-position: 0 94.117647%; background-size: 100%; }
+.sprite.ae { background-position: 0 94.537815%; background-size: 100%; }
+.sprite.gb { background-position: 0 94.957983%; background-size: 100%; }
+.sprite.uy { background-position: 0 95.378151%; background-size: 100%; }
+.sprite.uz { background-position: 0 95.798319%; background-size: 100%; }
+.sprite.vu { background-position: 0 96.218487%; background-size: 100%; }
+.sprite.ve { background-position: 0 96.638655%; background-size: 100%; }
+.sprite.vn { background-position: 0 97.058824%; background-size: 100%; }
+.sprite.wales-icon { background-position: 0 97.478992%; background-size: 100%; }
+.sprite.wf{ background-position: 0 97.89916%; background-size: 100%; }
+.sprite.ye { background-position: 0 98.319328%; background-size: 100%; }
+.sprite.zm { background-position: 0 98.739496%; background-size: 100%; }
+.sprite.zw { background-position: 0 99.159664%; background-size: 100%; }
+.sprite.gr { background-position: 0 99.579832%; background-size: 100%; }
+.sprite.so { background-position: 0 100%; background-size: 100%; }
+
+.sprite.bt {
+	background: url(/ressources/images/flags-sprites/bt.png) no-repeat; 
+	background-size: 33px 33px;
+} /*-- bhoutan --*/
+.sprite.kv {
+	background: url(/ressources/images/flags-sprites/kv.png) no-repeat; 
+	background-size: 33px 33px;
+} /*-- kosovo --*/

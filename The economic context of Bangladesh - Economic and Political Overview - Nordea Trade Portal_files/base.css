@@ -1,0 +1,6799 @@
+/*
+    |---------------------------|
+   	|  Styles de Base Généraux  |
+	|---------------------------|			
+*/
+html { 
+  	font-size: 100%;
+} 
+body { 
+  	margin: 0; 
+ 	padding: 0;
+  	font-size: .8em;
+  	color: #42453a;
+  	background: white;
+	font: normal 80% Tahoma, Arial, Helvetica, sans-serif;
+}
+body.body-vide {
+	background-color:#ffffff;
+	background-image:none;
+}
+.h1-accueil {
+	display: none;
+}
+h1, h2, h3, h4, h5, h6 { 
+  	margin: 1em 0 .5em 0;
+	padding: 0;
+  	line-height: 1.2; 
+  	font-weight: bold;
+  	font-style: normal; 
+} 
+h1 { 
+  	font-size: 1.75em; 
+}
+h1#pays_tax-guide, p#titre-sup {
+	position:relative;
+	width:100%;
+	z-index: 1;
+}
+p#titre-sup {
+	margin:5px 0 20px 0;
+}
+h1#pays_tax-guide img, p#titre-sup img {
+	height:30px;
+	width:45px;
+	margin:0 0 0 1px;
+	padding:0;
+}
+h1#pays_tax-guide .txt-h1, p#titre-sup .txt-sup {
+	position: absolute;
+	display:block;
+	top: 3px;
+	left: 52px;
+	width:92%;
+	height:25px;
+	z-index: 10;
+}
+p#titre-sup .txt-sup {
+	font-size: 1.4em;
+	color:#000;
+}
+h1#pays_v1 {
+	position:relative;
+	width:100%;
+	z-index: 1;
+	line-height: 21px !important;
+}
+h1#pays_v1 img {
+	height:30px;
+	width:45px;
+	margin:0 0 0 1px;
+	padding:0;
+}
+h1 .txt-h1_v1 {
+	position: absolute;
+	display:block;
+	top: 3px;
+	left: 52px;
+	width:92%;
+	height:25px;
+	z-index: 10;
+}
+h2 { 
+  	font-size: 1.5em; 
+} 
+h3, .titre2-salon-fiche, .titre-h3 { 
+  	font-size: 1.2em; 
+} 
+h4 { 
+  	font-size: 1em; 
+} 
+ul, ol { 
+  	margin: .25em 0 .75em 7px; 
+  	padding: 0; 
+} 
+* html ul, * html ol,
+*+html ul, *+html ol { 
+  	margin-left: 2px;  
+}
+li {
+	padding: 0 0 0 9px;
+	margin: 0px;
+	list-style: none;
+	background: url(/ressources/images/puce-li.gif) no-repeat;
+}
+ol li {
+	padding: 1px 0 2px 0;
+	list-style-type: decimal;
+	list-style-image: none;
+	list-style-position: inside;
+	background-image: none;		
+}
+.texte-gras {
+	font-weight: bold;
+}
+.page_dnb_cgu_popup ol li, .page_service_dnb_cgu_popup_es ol li, .page_service_dnb_cgu_popup ol li {
+	list-style:none;
+}
+.page_dnb_cgu_popup .sous-titre, .page_service_dnb_cgu_popup_es .sous-titre, .page_service_dnb_cgu_popup .sous-titre {
+	margin-top:0;
+	margin-bottom:1em;
+	color:#666;
+}
+p { 
+  	margin: .75em 0;
+} 
+address { 
+  	margin: .75em 0; 
+  	font-style: normal; 
+} 
+img, a img, a:hover img { 
+  	border: none; 
+  	vertical-align: text-bottom;
+} 
+em { 
+  	font-style: italic; 
+} 
+strong { 
+  	font-weight: bold; 
+	font-size:0.95em;
+}
+hr {
+	display: none;
+	clear: both;
+	width: 100%;
+	height: 1px;
+}
+.break-word {
+	word-wrap:break-word;
+}
+.clean {
+	clear:both;
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+.txt-no-results {
+	font-style: italic;
+	color: #666666;
+}
+.mw-100 {
+	max-width: 100%;
+}
+.alerte-cov {
+	padding: 1em 1.5em 1em 6em;
+	border: 1px solid #dddddd;
+	background: #eeeeee url(/commun/images/picto-alert-blanc.png) 20px 10px no-repeat;
+	background-size: 50px auto;
+}
+/*------------ Liens ------------*/ 
+a { 
+  	text-decoration: none; 
+	color: #00f; 
+} 
+a:hover { 
+  	text-decoration: underline;
+  	color: gray; 
+} 
+/* Pas de bordure pointillée ou halo lors du clic sur un lien */ 
+a:active, a:focus { 
+  	outline: none; 
+	text-decoration: none; 
+}
+/*--- Liens Fédérations---*/ 
+a.lien-titre {
+	background:url(/ressources/images/lien-plus-off.gif) no-repeat left;
+	padding-left:12px;
+	vertical-align:middle;
+}
+a.lien-titre:hover {
+	background:url(/ressources/images/lien-plus-on.gif) no-repeat left;
+	padding-left:12px;
+	vertical-align:middle;
+}
+a.lien-titre-actif {
+	background:url(/ressources/images/lien-moins-off.gif) no-repeat left;
+	padding-left:12px;
+	vertical-align:middle;
+}
+a.lien-titre-actif:hover {
+	background:url(/ressources/images/lien-moins-on.gif) no-repeat left;
+	padding-left:12px;
+	vertical-align:middle;
+}
+.page_service_annuaires a.lien-titre,
+.page_service_annuaires a.lien-titre:hover,
+.page_service_federations a.lien-titre,
+.page_service_federations a.lien-titre:hover {
+	background: none;
+	padding-left: 0;
+	vertical-align: baseline;
+}
+span.plus {
+	font-size:8px;
+	font-weight:bold;
+	background-color:#a30000;
+	padding:0 2px 1px 2px;
+	color:#FFF;
+}
+span.moins {
+	font-size:9px;
+	font-weight:bold;
+	background-color:#a30000;
+	padding:0 3px 0px 3px;
+	color:#FFF;
+}
+ /*------------ formulaires ------------*/
+form#desc_question{
+    position: relative;
+}
+form#desc_question #bulle_notes{
+    color: #777;
+    font-size: 11px;
+    font-weight: bold;
+    left: 140px;
+    position: absolute;
+    top: 5px;
+}
+form, fieldset { 
+  	margin: 0; 
+  	padding: 0; 
+  	border: none; 
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+} 
+input, button, select { 
+  	vertical-align: middle;
+}
+input, select, textarea {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	border: 1px solid gray;
+	background-color: #fff;
+	font-size: 1em;
+	margin: 0px;
+	width: 198px;
+	padding: 2px 1px 2px 2px;
+}
+/*input[type="password"], input#mot_de_passe, input.input_mdp {
+    font-family:Arial, Helvetica, sans-serif;
+}*/
+select {
+	width: 203px;
+	padding: 1px 0;
+}
+option {
+	padding: 2px 1px;
+}
+textarea {
+	height: 80px;
+}
+.input_radio, .input_checkbox {
+	width: auto;
+	border: 0;
+	padding: 0;
+	background: none;
+	background-color: none;
+}
+.input_montant, .bouton-2 {
+	width: 57px;
+}
+.page_service_prix_de_vente_export .input_montant, .page_service_prix_de_vente_export .bouton-2 {
+	text-align:right;
+	padding-right:2px;
+	padding-left:1px;
+}
+.page_service_prix_de_vente_export .bouton-2 {
+	font-weight:bold;
+	padding-right:1px;
+	padding-left:2px;
+}
+.champ-off {
+	color:#999;
+	font-style:italic;
+}
+.champ-on {
+	color:#000;
+	font-style:normal;
+}
+.bouton-2 { /* Service prix de vente */
+	width: 62px;
+	border: 1px solid #0066ff;
+	color: #0066ff;
+}
+.input_donnees {
+	width: 27px;
+}
+.select_flux {
+	width:140px;
+	height:80px;
+}
+.select_mesure {
+	width:180px;
+}
+.input_antispam {
+	width: 165px;
+}
+#filtres input[type=checkbox] {
+	width: auto;
+}
+.input_dandb-court {
+	width: 181px;
+}
+.page_service_dnb_accueil h1, .contenu .page_service_dnb_fiche h1, .page_service_dnb_commande .contenu h1,
+.page_service_dnb_accueil_v2 .contenu h1, .page_service_dnb_fiche_v2 .contenu h1, .page_service_dnb_commande_v2 .contenu h1 {
+	clear:none;
+	max-width: calc(100% - 170px);
+}
+.page_service_dnb_accueil table.invisible {
+    width: 100%;
+}
+.page_service_dnb_accueil .pagination-haut { 
+	margin: 20px 0 10px 0;
+	clear:both;
+	display:block;
+}
+.page_service_dnb_accueil .pagination-haut table.invisible td, /* à coller en local */
+.page_service_dnb_accueil .pagination-bas table.invisible td,
+.page_service_dnb_accueil .pagination-haut table.invisible,
+.page_service_dnb_accueil .pagination-bas table.invisible {
+    padding: 0;
+}
+.partenariat-dnb {
+	float:right;
+	margin-left:10px;
+	padding-left:10px;
+	margin-bottom:6px;
+	width:210px;
+	text-align:center;
+	border-left:1px dotted #e5e5e5;
+}
+*+html .partenariat-dnb {
+	padding-top:25px;
+}
+* html .partenariat-dnb {
+	display:block;
+	margin-top:25px;
+}
+.partenariat-dnb p {
+	font-size:0.9em;
+	font-style:italic;
+	margin-bottom:5px;
+	padding-bottom:0;
+}
+.partenariat-dnb img {
+	width:203px;
+	height:30px;
+}
+.valign-centre {
+	display:table-cell; 
+	vertical-align:middle;	
+}
+.entreprise-dnb {
+	/*border-left:3px solid #fff;
+	padding-left:15px;*/
+	padding:10px;
+	margin-bottom:10px;
+	background-color:#FFF;
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.bloc-rapport {
+	padding:12px 10px 8px 10px;
+	margin-bottom:10px;
+	background-color:#FFF;
+	border:1px solid #b6b6b6;
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	margin-bottom:10px;
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+* html .page_service_dnb_fiche .bloc-rapport {
+	behavior: none; /* car bug ie 6 !*/
+}
+.bloc-rapport table.invisible {
+	background-color:#fff;
+	width:100%;
+	margin:0;
+}
+.bloc-rapport table.invisible td {
+	padding:0;
+}
+.bloc-rapport table.invisible table.invisible,
+.bloc-rapport table.invisible table.invisible td{
+	width:100%;
+	margin:0;
+	padding-top:0;
+	padding-bottom:0;
+	border:0;
+}
+.bloc-rapport table.invisible select {
+	background-color:#f1f1f1;
+}
+.titre-dnb {
+	font-size:1.2em;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#003859;
+}
+.mot-cle-dnb, h3 span.mot-cle-dnb {
+	text-transform:uppercase;
+}
+.prix-dnb {
+	font-size:1.2em;
+	display:block;
+	text-align:center;
+	padding-bottom:5px;
+}
+table.invisible td.td-fin-dnb {
+	background:url(/commun/images/ligne-dnb.gif) right top no-repeat;
+}
+.montant-dnb {
+	display:block;
+	width:72px;
+	text-align:right;
+}
+.asterisque-dnb {
+	font-size:1.1em;
+	font-weight:normal;
+}
+dl.dl-large dt {
+	width: 30%;
+}
+dl.dl-large dd {
+	width: 65%;
+}
+a.lien-pdf {
+	padding:1px 0 0 17px;
+	/*color:#e92727;*/
+	text-decoration:none;
+	background:url(/commun/images/picto-pdf-petit.gif) left top no-repeat;
+}
+a.lien-pdf:hover {
+	text-decoration:underline;
+}
+a.lien-xls {
+	padding:1px 0 0 19px;
+	text-decoration:none;
+	background:url(/commun/images/pictos-bo/excel.gif) left top no-repeat;
+}
+a.lien-xls:hover {
+	text-decoration:underline;
+}
+a.lien-word{
+	padding:1px 0 0 19px;
+	text-decoration:none;
+	display: inline-block;
+    height: 16px;
+	margin-bottom: 5px;
+	background:url(/commun/images/admin/word.gif) left top no-repeat;	
+}
+a.lien-word:hover{
+	text-decoration:underline;
+}
+a.lien-zip{
+	padding:1px 0 0 25px;
+	text-decoration:none;
+	display: inline-block;
+    height: 24px;
+	line-height: 24px;
+	margin-bottom: 5px;
+	background:url(/commun/images/admin/zip.gif) left top no-repeat;	
+}
+a.lien-zip:hover{
+	text-decoration:underline;
+}
+a.lien-modifier {
+	padding:2px 0 0 17px;
+	text-decoration:none;
+	background:url(/commun/images/admin/modifier.gif) left top no-repeat;
+}
+a.lien-modifier:hover {
+	text-decoration:underline;
+}
+a.lien-rechercher {
+	padding:2px 0 0 18px;
+	text-decoration:none;
+	background:url(/commun/images/admin/chercher.gif) left top no-repeat;
+}
+a.lien-rechercher:hover {
+	text-decoration:underline;
+}
+a.lien-supprimer {
+	padding:2px 0 0 17px;
+	text-decoration:none;
+	background:url(/commun/images/admin/supprimer.gif) left top no-repeat;
+}
+a.lien-supprimer:hover {
+	text-decoration:underline;
+}
+a.lien-back {
+	padding:0 0 0 18px;
+	text-decoration:none;
+	background:url(/commun/images/admin/premier_normal.gif) left top no-repeat;
+}
+a.lien-back:hover {
+	text-decoration:underline;
+}
+.page_service_dnb_fiche .resultats a.lien-page {
+	margin-left:10px;
+}
+.page_service_dnb_fiche .resultats a.lien-pdf {
+	margin-left:50px;
+}
+.select_langue {
+	width:90px;
+}
+*+html input.bouton-off, *+html input.bouton-on {/*--- ie7 ---*/
+	border:0;
+}
+.bouton-off {
+	width: auto;
+	background-color: #0066ff;
+	border: 1px solid #0066ff;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0px;
+	padding: 2px 5px;
+	/*font-size: 1.1em;
+	font-weight: bold;*/
+}
+.bouton-on, input.button {/*-- .button (gtm) --*/
+	width: auto;
+	background-color: #FFFFFF;
+	border: 1px solid #0066ff;
+	color: #0066ff;
+	text-align: center;
+	margin: 0px;
+	padding: 2px 5px;
+	text-decoration: none;
+	cursor:pointer;
+}
+.bloc-veille-libre a.bouton-off, .bloc-veille-libre a.bouton-off:hover, .bloc-veille-libre a.bouton-on, .bloc-veille-libre a.bouton-on:hover,
+.modif-veille input.bouton-off, .modif-veille input.bouton-off:hover, .modif-veille input.bouton-on, .modif-veille input.bouton-on:hover {
+    display: inline-block;
+	padding: 2px 5px;
+}
+
+.page_service_flux_tous_pays_v3 #bouton5, .page_service_flux_tous_pays_v3 #bouton6 {
+	margin:0 20px 0 200px;
+}
+
+
+/*------------ Débug liste déroulante ie6 ------------*/
+.innerFixer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	border:0;
+}
+/*------------ info bulle atlas & gtm ------------*/
+.bulle_info,
+.bulle_gtm {
+    position:relative;
+    z-index:24;
+    color:#000;
+    text-decoration:none;
+	font-weight:normal;
+}
+.bulle_info:hover {
+	border:0; /*--- Attribut permettant d'afficher la bulle dans ie6---*/
+	z-index:25;
+}
+#contenu .atlas a.bulle_info,
+#contenu .atlas a.bulle_info:hover,
+.atlas a.bulle_info,
+.atlas a.bulle_info:hover {
+	cursor:default;
+	text-decoration: none;
+	color: #333;
+}
+.bulle_info span,
+.bulle_gtm .info_bulle_gtm {
+	display:none;
+}
+.bulle_info:hover span,
+.bulle_gtm:hover .info_bulle_gtm{ 
+	display:block; 	
+ 	position:absolute;    
+    top:19px; 
+    left:30px; 
+    width:250px;
+    border:1px solid #0066ff;
+    background-color:#0066ff; 
+	color:#fff;
+    text-align:left;
+    font-weight:normal;
+    padding:3px;
+	font-size:11px;
+}
+.resultats .bulle_info:hover span {   
+    top:-45px; 
+    left:30px;
+	width:300px;
+	font-size:0.9em;
+}
+.bulle2 .bulle_info:hover span {   
+    top:-17px; 
+    left:25px;
+	width:85px;
+}
+.bulle_gtm:hover .info_bulle_gtm {     
+    top:23px; 
+    left:7px;
+	z-index:25;
+}
+.page__veille_accueil .bulle_info:hover span {
+	top:-15px; 
+    left:30px; 
+}
+#bulle_fleche, #bulle_fleche1, #bulle_fleche2, #bulle_fleche3, #bulle_fleche4, #bulle_fleche5, #bulle_fleche6, #bulle_fleche7, #bulle_fleche8 { /* pour page veille__accueil-v2 */
+	display:block; 	
+ 	position:absolute;    
+    top:15px; 
+    left:-8px; 
+    width:8px;
+	height:15px;
+	z-index: 30;
+}
+.page_service_flux_tous_pays_top_10_v4 #encart-produit #choix_produit .bulle_info-on,
+.page_service_flux_tous_pays_top_10_v3 #encart-produit #choix_produit .bulle_info-on,
+.page_service_flux_tous_pays_top_10_v2 #encart-produit #choix_produit .bulle_info-on,
+.page_service_flux_tous_pays_v2 #encart-produit #choix_produit .bulle_info-on,
+.page_service_piers_importateurs_am_latine #encart-produit #choix_produit .bulle_info-on,
+.page_service_piers_importateurs_am_latine_liste_entreprise #encart-produit #choix_produit .bulle_info-on,
+.page_service_piers_importateurs #encart-produit #choix_produit .bulle_info-on,
+.page_service_piers_fournisseurs #encart-produit #choix_produit .bulle_info-on,
+.page_service_piers_fournisseurs_liste_entreprise #encart-produit #choix_produit .bulle_info-on {
+	width:300px;
+	top:-100px;
+}
+.page_service_flux_tous_pays_top_10_v4 #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_flux_tous_pays_top_10_v3 #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_flux_tous_pays_top_10_v2 #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_flux_tous_pays_v2 #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_piers_importateurs_am_latine #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_piers_importateurs_am_latine_liste_entreprise #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_piers_importateurs #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_piers_fournisseurs #encart-produit #choix_produit span.bulle_info-on #bulle_fleche,
+.page_service_piers_fournisseurs_liste_entreprise #encart-produit #choix_produit span.bulle_info-on #bulle_fleche {
+	top:103px;
+}
+.page_service_gtm_document_determination_v2 dl dt .bulle_info:hover span,
+.page_service_gtm_import_controls_v2 dl dt .bulle_info:hover span,
+.page_service_gtm_export_controls_v2 dl dt .bulle_info:hover span,
+.page_service_gtm_quick_quote_v2 dl dt .bulle_info:hover span {
+	left: 24px;
+	top: -8px;	
+}
+.page_service_gtm_document_determination_v2 dl dt .bulle_info:hover #bulle_fleche,
+.page_service_gtm_import_controls_v2 dl dt .bulle_info:hover #bulle_fleche,
+.page_service_gtm_export_controls_v2 dl dt .bulle_info:hover #bulle_fleche,
+.page_service_gtm_quick_quote_v2 dl dt .bulle_info:hover #bulle_fleche {
+	top: 5px;	
+}
+
+.page_service_piers_importateurs h2 .bulle_info .bulle_info-on,
+.page_service_piers_importateurs_v3 h2 .bulle_info .bulle_info-on,
+.page_service_piers_importateurs_am_latine_liste_entreprise h2 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs h2 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_liste_entreprise h2 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_v3 h2 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_liste_entreprise_v3 h2 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_entreprise_v3 h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_chine h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_inde h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_chine_v2 h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_inde_v2 h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_latinos h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_europeens h2 .bulle_info .bulle_info-on,
+.page_service_importateurs_canada h2 .bulle_info .bulle_info-on{
+	left:29px;
+	top:-17px;
+	width:165px;
+	padding-right:5px;
+	font-size:11px;
+	font-weight:normal;
+	/*background:#fff;
+	color: #333;*/
+	font-family:Arial, Helvetica, sans-serif;
+	text-indent:0;
+	text-transform:none;
+}
+.page_service_piers_importateurs h2 .bulle_info .picto-information,
+.page_service_piers_importateurs_v3 h2 .bulle_info .picto-information,
+.page_service_piers_importateurs_am_latine_liste_entreprise h2 .bulle_info .picto-information,
+.page_service_piers_fournisseurs h2 .bulle_info .picto-information,
+.page_service_piers_fournisseurs_liste_entreprise h2 .bulle_info .picto-information,
+.page_service_piers_fournisseurs_v3 h2 .bulle_info .picto-information,
+.page_service_piers_fournisseurs_liste_entreprise_v3 h2 .bulle_info .picto-information  {
+	margin-left:4px;
+}
+.page_service_piers_importateurs_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_chine_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_inde_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_chine_entreprise_v2 h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_inde_entreprise_v2 h3 .bulle_info .bulle_info-on,
+.page_service_piers_importateurs_am_latine_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_v3 h3 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_liste_entreprise_v3 h3 .bulle_info .bulle_info-on,
+.page_service_piers_fournisseurs_entreprise_v3 h3 .bulle_info .bulle_info-on,
+.page_service_piers_importateurs_entreprise_v3 h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_latinos_entreprise h3 .bulle_info .bulle_info-on,
+.page_service_importateurs_europeens_entreprise h3 .bulle_info .bulle_info-on {
+	font-size:11px;
+	font-weight:normal;
+	/*color: #333;*/
+	font-family:Arial, Helvetica, sans-serif;
+	width:165px;
+	text-indent:0;
+}
+
+.page_service_gtm_document_determination_v2 .champ_obligatoire2,
+.page_service_gtm_import_controls_v2 .champ_obligatoire2,
+.page_service_gtm_export_controls_v2 .champ_obligatoire2,
+.page_service_gtm_quick_quote_v2 .champ_obligatoire2 {
+	display: inline-block;
+	float:right;
+}
+.champ_obligatoire, .champ_remarque {
+	color: #FF6600;
+}
+.champ_en_erreur { 
+	color: #FF0000; 
+	clear: both;
+	font-weight: bold;
+}
+.champ_en_erreur a { 
+	color: #FF0000; 
+	text-decoration:underline;
+}
+.champ_obligatoire2 {
+	font-style:italic;
+	/*color:#666;
+	font-weight:bold;
+	padding-left:20px;*/
+	display:block;
+	clear:both;
+	margin:8px 0 5px 0;
+}
+.page_service_modele .etoile-obligatoire {
+	/*display:none;*/
+}
+.page_service_modele .mention-obligatoire {
+	display:none;
+}
+.page_service_modele .service_perso_lcl_v2 .etoile-obligatoire,
+.page_service_modele .service_perso_mp .etoile-obligatoire,
+.page_service_modele .service_perso_emporiki-v2 .etoile-obligatoire,
+.page_service_modele .service_perso_attijari .etoile-obligatoire,
+.page_service_modele .service_perso_maurice .etoile-obligatoire, 
+.page_service_modele .service_perso_npdc .etoile-obligatoire {
+	display:inline;
+}
+.page_service_modele .service_perso_lcl_v2 .mention-obligatoire,
+.page_service_modele .service_perso_mp .mention-obligatoire,
+.page_service_modele .service_perso_emporiki-v2 .mention-obligatoire,
+.page_service_modele .service_perso_attijari .mention-obligatoire,
+.page_service_modele .service_perso_maurice .mention-obligatoire,
+.page_service_modele .service_perso_npdc .mention-obligatoire{
+	display:block;
+}
+.page_service_modele .service_perso_lcl_v2 .mention-obligatoire_old-site,
+.page_service_modele .service_perso_mp .mention-obligatoire_old-site,
+.page_service_modele .service_perso_emporiki-v2 .mention-obligatoire_old-site,
+.page_service_modele .service_perso_attijari .mention-obligatoire_old-site,
+.page_service_modele .service_perso_maurice .mention-obligatoire_old-site,
+.page_service_modele .service_perso_npdc .mention-obligatoire_old-site {
+	display:none;
+}
+
+.bulle_info-haut {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.bulle_info-haut span, .bulle_info-haut img.img-fleche-haut {
+    display: none;
+}
+.bulle_info-haut:hover span { 
+  display: block;
+  position: absolute;
+  border: 1px solid #cccccc;
+  background-color: #fff; 
+  color: #666666;  
+  width: 150px;
+  top: -11%; 
+  left: 45%; 
+  left: calc( 50% - 75px); 
+  padding: 8px;
+  font-style: normal;
+  font-size: 0.85em;
+  line-height: 1.25em;
+  text-decoration: none; 
+  text-align: center; 
+}
+a.bulle_info-haut:hover img.img-fleche-haut { 
+  display:block;  
+  position:absolute;    
+  bottom: -8px; 
+  left: 47%; 
+  left: calc(50%- 7px); 
+  width: 15px;
+  height: 8px;
+  z-index: 30;
+}
+
+/*------------ Picto Information ------------*/
+div.picto-information, .picto-information {
+	background:transparent url(/commun/images/pictos/picto-information.png) no-repeat;
+	display:inline-block;
+	width:12px;
+	height:12px;
+}
+*+html div.picto-information, *+html .picto-information {
+	display:inline;
+}
+* html div.picto-information, * html .picto-information {
+	display:inline;
+	background:none; 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/commun/images/pictos/picto-information.png', sizingMethod='crop'); 
+	zoom:1;
+}
+a.lien-warning {
+	background:transparent url(/commun/images/pictos/picto-information.png) no-repeat;
+	display:inline-block;
+	width:12px;
+	height:12px;
+	text-decoration:none;
+}
+*+html a.lien-warning {
+	display:inline;
+}
+* html a.lien-warning {
+	display:inline;
+	background:none; 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/commun/images/pictos/picto-information.png', sizingMethod='crop'); 
+	zoom:1;
+}
+
+/*------------ GTM - 3 blocs nomenclature ------------*/
+/*.nomenclature_type_3 { fait passer le bloc actif du milieu à la ligne ?!
+	clear:both;
+}*/
+.nomenclature_type_1, .nomenclature_type_2, .nomenclature_type_3 {
+	float:left;
+	width:200px;
+	border:1px solid #ddd;
+	padding:5px;
+	margin:20px 20px 0 0;
+	height:112px;
+	background-color:#f4f4f4;
+}
+.nomenclature_type_2 {
+	margin-right:0;
+}
+.input_clave {
+	width:200px;
+	background-color:#fff;
+}
+.input_nombre {
+	width:20px;
+	background-color:#fff;
+}
+.nomenclature_type-actif {
+	border:2px solid #ff6600;
+	width:198px;
+	height:110px;
+}
+.nomenclature_type_1 h2, .nomenclature_type_2 h2, .nomenclature_type_3 h2 {
+	margin-top:0;
+	margin-bottom:10px;
+}
+
+/*.nomenclature_type_1 .bouton-off, .nomenclature_type_2 .bouton-off, .nomenclature_type_3 .bouton-off,
+.nomenclature_type_1 .bouton-on, .nomenclature_type_2 .bouton-on, .nomenclature_type_3 .bouton-on {
+	margin-top:5px;
+}
+#nomenclature_type_3 .bouton-on, #nomenclature_type_3 .bouton-off {
+	margin-top: 0px;
+}*/
+.nomenclature_type_1, .nomenclature_type_2, .nomenclature_type_3 {
+   position: relative;
+}
+.nomenclature_type_1 input.bouton-on, .nomenclature_type_1 input.bouton-off,
+.nomenclature_type_2 input.bouton-on, .nomenclature_type_2 input.bouton-off, 
+.nomenclature_type_3 input.bouton-on, .nomenclature_type_3 input.bouton-off {
+   position: absolute;
+   top: auto; /* pour annuler top existant */ 
+   left: auto; /* pour annuler left existant */
+   bottom: 8px;
+   right: 5px;
+}
+*+html .nomenclature_type_1 input.bouton-on, *+html .nomenclature_type_1 input.bouton-off,
+*+html .nomenclature_type_2 input.bouton-on, *+html .nomenclature_type_2 input.bouton-off, 
+*+html .nomenclature_type_3 input.bouton-on, *+html .nomenclature_type_3 input.bouton-off {
+	width: 75px;
+}
+.nomenclature_type_1 #nomenclature__nombre_1 {
+	width: 20px;
+	position: absolute;
+    bottom: 8px;
+    left: 5px;
+}
+.nomenclature_type_1 #nomenclature__nombre_2 {
+	width: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 35px;
+}
+.nomenclature_type_1 #nomenclature__nombre_3 {
+	width: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 65px;
+}
+/*------------ GTM API ------------*/
+a.doc-name-gtm {
+	display:block;
+	font-weight:bold;
+	margin-top:5px;
+}
+.doc-category-gtm {
+	margin-top:5px;
+}
+.doc-description-gtm {
+	margin-top:2px;
+}
+.input_nomenclature, .input_date {
+	width:90px;
+}
+div#contenu div.service__gtm-v2 .input_date,
+div#contenu div.service__gtm-v2 .input_nomenclature {
+	width:115px;
+}
+/*.select_pays-gtm { (désactivé car problème select id="pays_export" GTM)
+	width:180px;
+}*/
+.bloc-resultat-gtm, .bloc-resultat-gtm2 {
+	color:#777;
+}
+.bloc-resultat-gtm2 {
+	/*border-bottom:1px dashed #dddddd;*/
+	margin:8px 0 15px 0;
+	padding-bottom: 10px;	
+}
+.bloc-resultat-gtm dl{
+	/*border-bottom:1px dashed #dddddd;*/
+	margin:8px 0 15px 0;
+	padding-bottom: 10px;
+}
+.bloc-resultat-gtm td{
+	vertical-align: middle;	
+}
+.afficher-detail, .cacher-detail,
+.afficher-detail:hover, .cacher-detail:hover {
+	color: #FFF;
+	padding-left: 10px;
+	margin-left: 10px;
+	text-decoration: underline;	
+	background: url(/commun/images/picto-plus.gif) left center no-repeat;
+	font-weight:normal;
+	float: right;
+}
+.afficher-detail:hover, .cacher-detail:hover {
+	text-decoration: none;	
+}
+*+html .afficher-detail, *+html .cacher-detail,
+*+html .afficher-detail:hover, *+html .cacher-detail:hover {
+	float: none;
+	margin-left: 25px;
+}
+* html .afficher-detail, * html .cacher-detail,
+* html .afficher-detail:hover, * html .cacher-detail:hover {
+	float: none;
+	margin-left: 25px;
+}
+.cacher-detail, .cacher-detail:hover {
+	background: url(/commun/images/picto-moins.gif) left center no-repeat;	
+}
+div#contenu div.service__c table.aucentre, div#contenu div.service__gtm table td.aucentre, table td .aucentre {
+	text-align: center;	
+}
+/* à retirer !
+.page_service_gtm_document_determination .input_nomenclature, .page_service_gtm_document_determination .input_date,
+.page_service_gtm_import_controls .input_nomenclature, .page_service_gtm_import_controls .input_date,
+.page_service_gtm_export_controls .input_nomenclature, .page_service_gtm_export_controls .input_date,
+.page_service_gtm_document_determination_d2 .input_nomenclature, .page_service_gtm_document_determination_d2 .input_date,
+.page_service_gtm_import_controls_d2 .input_nomenclature, .page_service_gtm_import_controls_d2 .input_date,
+.page_service_gtm_export_controls_d2 .input_nomenclature, .page_service_gtm_export_controls_d2 .input_date { 
+	width: 115px;
+}*/
+.description-produit {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.description2 {
+	color:#999;
+}
+/*------------ GTM V2 ------------*/
+.lien-hs {
+	display:block;
+	clear:both;
+}
+.option-off {
+	color:#9d9387;
+	font-weight:bold;
+	font-style:italic;
+}
+.option-off-2 {
+	color:#beb6ab;
+}
+#div_preferences_hs, .liste_des_produits_importateurs, .service__gtm-v2 #resultat {
+	padding:10px 5px 0 5px;
+	margin:5px 0 15px 0;
+	background-color:#f1f1f1;
+	border: dotted 1px #e5e5e5;	
+	position:relative;
+	z-index:1;
+}
+.liste_des_produits_importateurs {
+	margin:5px 7px 0 0;
+	padding:10px 5px;
+}
+.txt-commentaire-piers {
+	color:#999;
+	font-style:italic;
+}
+.bouton-centre {
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+.description-preference {
+	padding:0 12px 0.75em 0;
+}
+a.lien-fermer-preferences {
+	display:block;
+	width:15px;
+	height:15px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:2;
+	text-decoration:none;
+	background:url(/commun/images/pictos/btn-close-on.gif) no-repeat top; 
+}
+a.lien-fermer-preferences:hover {
+	background:url(/commun/images/pictos/btn-close-off.gif) no-repeat top; 
+	text-decoration:none;
+	cursor:pointer;
+}
+/*--- gtm #choix_hs  ---*/
+a.lien-doux {
+	color: #aba195; 
+	text-decoration:none;
+}
+a.lien-doux:hover {
+	color: #000; 
+	text-decoration:undeline;
+}
+/*------------ listes de définition ------------*/
+dl { 
+  	margin: .75em 0;
+	float:left;/*--- pour clear après dl ---*/
+	width:100%;
+}
+dt { 
+  	margin: .3em 0 0 0; 
+  	width: 20%;
+  	clear: left;
+	float: left;
+} 
+dl.informations-2 dt
+/* titres (ex : divers__actualites.html ou dossier-personnel_accueil.html) */
+	{
+	width: 83%;
+	text-align:left;
+	margin:0;
+	padding:0;
+	}
+dd { 
+  	margin: .25em 0 .25em .5em; 
+  	width: 75%;
+	float: left;	
+	padding-left: 0.7em;
+}
+dl.informations-2 dd
+/* titres (ex : divers__actualites.html ou dossier-personnel_accueil.html) */
+	{
+	width: 14%;
+	margin:0;
+	padding:0;
+	}
+dt.label { /*--- pour homogénéiser dl sur gtm ---*/
+  	font-weight:normal;
+}
+/*------------ tableaux ------------*/
+table { 
+  	margin: 0 0 10px 0; 
+  	border: 1px solid gray;
+  	border-collapse: collapse;
+  	border-spacing: 0; 
+  	width: 100%;
+} 
+table td, table th { 
+  	padding: 4px;
+  	border: 1px solid gray;
+  	border-collapse: collapse;
+  	vertical-align: top;
+  	text-align: center;	
+} 
+.page_atlas_country_risk_1_voyage_affaires table td { 
+  	text-align:left;
+} 
+thead td, thead th  {
+	width: auto;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: gray;
+	vertical-align: middle;
+}
+/*-- Largeur d'une colonne dans un tableau --*/
+td.double, .invisible td.double {
+	width: 14em;
+}
+td.simple, .invisible td.simple,
+td.triple_type_de_demande, td.triple_nom_profil {
+	width: 7em;
+}
+td.simple2 {
+	width: 9em;
+}
+td.triple {
+	width: 25.5em;
+}
+.invisible td.triple {
+	width: 18em;
+}
+td.triple_message, td.triple_reponse  {
+	min-width:30%;
+}
+td.agauche {
+	width: auto;
+}	
+/*-- Largeur des colonnes dans un tableau --*/
+table.colonnes-2 td {
+	width: 50%;
+}
+table.colonnes-3 td {
+	width: 33.3%;
+}
+table.colonnes-4 td {
+	width: 25%;
+}
+table.colonnes-5 td {
+	width: 20%;
+}
+table.colonnes-8 td {
+	width: 12.5%;
+}
+table.colonnes-9 td {
+	width: 11.1%;
+}
+#doubletableau {
+	overflow: visible;
+	width: 100%;
+	text-align: center;
+}
+#doubletableau .tableau1 {
+	clear: both;
+	width: 49.5%;
+	float: left;
+}
+#doubletableau .tableau2 {
+	width: 49.5%;
+	float: right;
+}
+.agauche {
+	text-align: left;
+}	
+.aucentre {
+	text-align: center;
+}	
+.adroite {
+	text-align: right;
+}
+.gras {
+	font-weight: bold;
+}
+.italique {
+	font-style:italic;
+}
+.unite {
+	font-weight: normal;
+	font-size: 11px;
+	font-style: italic;
+}
+.both, .clear {
+	clear: both;
+}
+.marge-table, marge-table-2 {
+	height: 15px;
+	width: 90%;
+	clear: both;
+}
+table.liens td {
+	text-align: left;
+	width: 50%;
+}
+div#contenu div.service__gtm table,
+div#contenu div.service__gtm table td {
+	border: 0;
+	padding-top: 4px;
+	width: auto;
+}
+div#contenu div.service__c table,
+div#contenu div.service__gtm table td {
+	border: 0;
+	text-align: left;
+}
+div#contenu div.service__gtm-v2 table,
+div#contenu div.service__gtm-v2 table td {
+	/*-- styles table normaux (border 1, etc) --*/
+}
+.invisible td, .invisible,
+.page_gtm_sans_menu_Y table, .page_gtm_sans_menu_Y table td, 
+.page_service_gtm_quick_quote table, 
+.page_service_gtm_quick_quote table td, 
+.page_service_gtm_landed_cost table, 
+.page_service_gtm_landed_cost table td,
+.page_service_gtm_common_tariff_search table,
+.page_service_gtm_common_tariff_search table td,
+.page_service_gtm_document_determination table,
+.page_service_gtm_document_determination table td,
+.page_spe_service_salons_fiche table,
+.page_spe_service_salons_fiche table td,
+.page_service_gtm_trade_party_screening table,
+.page_service_gtm_trade_party_screening table td,
+.page_service_gtm_import_controls table,
+.page_service_gtm_import_controls table td,
+.page_service_gtm_export_controls table,
+.page_service_gtm_export_controls table td,
+.page_service_nomenclature_gtm table,
+.page_service_nomenclature_gtm table td {
+	border: 0;
+	width: auto;
+	font-size: 1em;
+	text-align: left;
+	padding:0;
+}
+.page_service_convertir_des_mesures .invisible td {
+	padding:4px;
+	vertical-align:middle;
+}
+.page_gtm_sans_menu_Y table {
+	margin: 0;
+	width: 550px;
+}
+.page_gtm_sans_menu_Y .retour,
+.page_gtm_sans_menu_Y .bloc_navigation_non_imprimable {
+	display: none;
+}
+.page_service_gtm_quick_quote table, 
+.page_service_gtm_landed_cost table, 
+.page_service_gtm_document_determination table,
+.page_service_gtm_trade_party_screening table,
+.page_service_gtm_import_controls table,
+.page_service_gtm_export_controls table {
+	margin:0;
+	width: 700px;
+}
+.page_service_gtm_import_controls table,
+.page_service_gtm_export_controls table {
+	margin:0;
+	width: 700px;
+}
+.page_service_gtm_document_determination table {
+	padding:0;
+	margin:0;
+	width: 680px;
+}	
+.page_service_gtm_landed_cost .invisible, 
+.page_service_gtm_landed_cost .invisible td,
+.page_service_gtm_import_controls .invisible,
+.page_service_gtm_import_controls .invisible td,
+.page_service_gtm_export_controls .invisible,
+.page_service_gtm_export_controls .invisible td {
+	width: auto;
+}
+.page_service_gtm_import_controls .invisible,
+.page_service_gtm_export_controls .invisible {
+	width: 415px;
+	background-color:#f6f6f6;
+}
+.page_service_gtm_import_controls dd .invisible,
+.page_service_gtm_export_controls dd .invisible,
+.page_service_gtm_landed_cost dd .invisible {
+	margin:0;
+	padding:0;
+	width:400px;
+}
+.page_service_gtm_trade_party_screening dd .note {
+	font-size:1em;
+	color:#000;
+}
+.page_gtm_sans_menu_Y #contenu-all, .page_gtm_sans_menu_Y #contenu {
+	margin-left: 15px;
+	width:720px;
+}
+.page_spe_recherche_etudes_memos table,
+.page_spe_recherche_etudes_memos table td {
+	border: 0;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-right: 8px;	
+}
+.mots_cle, .pertinence {
+	font-size:0.9em;
+	color:#777;
+}
+table.headerblock {
+	background-color:#FFF;
+}
+table.headerblock tbody td.label {
+	padding:2px 5px 0 5px;
+}
+table.headerblock tbody td.data {
+	padding:2px 50px 0 5px;
+}
+/*------------ Autre ------------*/
+p.retour {
+	clear: both;
+	text-align: right;
+}
+.retour a { /*--- Alignement Opéra ---*/
+	display:block;
+	float:right;
+}
+.attente {
+	text-align:center;
+	font-weight:bold;
+}
+.message-attente, .message-attente2/*, .message-attente-pagination*/ {
+	position:absolute; 
+	top:150px; 
+	left:300px; 
+	width:350px; 
+	/*height:130px;*/
+	height:auto;
+	background-color:#FFFFFF; 
+	border:1px solid #000000; 
+	text-align:center;
+	z-index:1000;
+}
+/*.message-attente-pagination {
+	top:70px; 
+	left:140px; 
+}*/
+.message-attente-pagination {
+	float:left;
+	clear:both;
+	margin:20px 0 20px 140px;
+	left:300px; 
+	width:350px; 
+	height:auto;
+	background-color:#FFFFFF; 
+	border:1px solid #000000; 
+	text-align:center;
+}
+.page_gtm_sans_menu_Y .message-attente {
+	top:150px; 
+	left:230px;
+}
+.page_service_gtm_landed_cost_resultats .message-attente {
+	top:300px; 
+	left:258px;
+}
+.message-attente2 {
+	top:475px; /* lien specimen / page shipping documents */
+}
+.page_service_federations_v2 .message-attente {
+	top:200px; 
+}
+.message-attente img, .message-attente img {
+	padding:10px;
+}
+.chemin {
+	font-size:9px;
+	color:#b6b6b6;
+	text-align:left;
+	font-weight:bold;
+}
+.page_gtm_sans_menu_Y .chemin {
+	display:none;
+}
+.chemin a, .chemin a:hover {
+	font-size:9px;
+	font-weight:normal;
+}
+.droits {
+	font-style:italic;
+	font-size:0.9em;
+}
+.message-cadre {
+	display: inline-block;
+	padding: 4px 5px;
+	background-color: #eeeeee;
+	font-style:italic;
+	font-size:0.9em;
+}
+/*-----------Bloc-TAM --------*/
+#contenu .bloc-tam {
+	width:200px;
+	float:right;
+	padding: 0;
+	margin: 0 0 0 15px;
+}
+.bloc-tam div#encart-img {
+	float:left;
+	margin:0;
+	border:1px solid #999;
+	background-color:#fff;
+	padding: 5px;
+}
+#contenu .lien-tam {
+	width:200px;
+	float:right;
+	padding:5px;
+	text-align:center;
+}
+.bloc-tam {
+	font-size: 11px;
+	margin-top:0;
+}
+.bloc-tam h2 {
+	margin-top:0;
+	padding-top:0;
+}
+.bloc-tam div#encart-img p {
+	margin: 4px 0 3px 0;
+	padding: 0;
+	text-align:left;
+}
+.bloc-tam div#encart-img .img-expert {
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.page_service_tam_voir_expert_2 #contenu h1,
+.page_service_tam_questionnaire_2 #contenu h1,
+.page_service_tam_questionnaire_presentation_2 #contenu h1,
+.page_service_tam_questionnaire_questions_2 #contenu h1,
+.page_service_tam_voir_expert_2 #contenu h2,
+.page_service_tam_questionnaire_2 #contenu h2,
+.page_service_tam_questionnaire_presentation_2 #contenu h2,
+.page_service_tam_questionnaire_questions_2 #contenu h2,
+.page_service_tam_voir_expert_2 #contenu h3,
+.page_service_tam_questionnaire_2 #contenu h3,
+.page_service_tam_questionnaire_presentation_2 #contenu h3,
+.page_service_tam_questionnaire_questions_2 #contenu h3 {
+	clear: none;
+}
+/*-----------Fin Bloc-Tam -------*/
+/*------Service Etudes de marchés-----*/
+a.pagination-select {
+	font-weight: bold;
+	color: #6e6e6e;
+	text-decoration: none;
+}
+/*-------- contact atlas --------*/
+#contient-contact-atlas {
+	margin: 0 0 15px 0;
+	padding: 0;
+	position: relative;
+	clear:both;
+}
+.contact-atlas {
+	background: url(/commun/images/pictos/contact.gif) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	height: 20px;
+	text-indent:27px;
+	text-align: left;
+	margin: 0;
+	padding:4px 0 3px 0;
+}
+.remarque-atlas {
+	float:left;	
+}
+a.lien-contact-atlas, a.lien-contact-atlas:hover,
+a.lien-contact-atlas-actif, a.lien-contact-atlas-actif:hover {
+	float: left;
+	display: block;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 4px;
+	padding-left: 5px;
+	height: 19px;
+	text-indent: 0;
+	margin: 1px 0 0 2px;
+}
+a.lien-contact-atlas:hover, a.lien-contact-atlas-actif,
+a.lien-contact-atlas-actif:hover {
+	margin-top: 0;
+	padding-left: 4px;
+	border-top: #ccc solid 1px;
+	border-right: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	background-color: #FFF;
+	text-decoration: none;
+	outline: none;
+}
+* html a.lien-contact-atlas:hover, * html a.lien-contact-atlas-actif,
+* html a.lien-contact-atlas-actif:hover {
+	border:0;
+	padding-left: 5px;
+	margin: 1px 0 0 2px;
+	text-decoration:underline;
+}
+#formulaire_remarque, .formulaire_remarque {
+	position: relative;
+	width: 430px;
+	margin: 0;
+	padding: 0;
+}
+.atlas #form_remarque {
+	float: left;
+	width: 420px;
+	margin-top: 23px;
+	border: #ccc solid 1px;
+	padding: 10px 0 10px 10px;
+}
+#form_remarque .textarea_contact, #form_remarque .input_contact {
+	width: 288px;	
+	padding-left: 0;
+	padding-right: 0;
+}
+#form_remarque .input_antispam {
+	padding-left: 0;
+	padding-right: 0;
+	width: 168px;	
+}
+#form_remarque dl.dl-contact-atlas dt, #form_remarque dl.dl-contact-atlas2 dt {
+	width: 100px;
+	margin: 0.8em 0 0 0;
+	text-align:left;
+	float: left;
+	clear: both;
+}
+#form_remarque dl.dl-contact-atlas2 dt {
+	width: 220px;
+}
+*+html #form_remarque dl.dl-contact-atlas dd, #form_remarque dl.dl-contact-atlas2 dd {
+	float: none;
+} /*---hack ie7----*/
+* html #form_remarque dl.dl-contact-atlas dd, #form_remarque dl.dl-contact-atlas2 dd {
+	float: none;
+} /*---hack ie6----*/
+#form_remarque dl.dl-contact-atlas dd, #form_remarque dl.dl-contact-atlas2 dd {
+	width: 300px;
+	float: right;
+	margin: 0.8em 0 0 0;
+	padding: 0;
+}
+#form_remarque dl.dl-contact-atlas2 dd {
+	width: 180px;	
+}
+#form_remarque dl.dl-contact-atlas2 dt.dt_antispam {
+	height: 41px;	
+}
+#form_remarque champ_en_erreur {
+	padding-top: 0;	
+}
+.etoile-obligatoire {
+	color: #f4ad01;
+	font-size: 15px;
+}
+#btn-fermer-contact {
+	position:absolute; 
+	z-index: 10; 
+	width:15px;
+	height:15px;
+	left: 410px;
+	top: 30px;
+	margin: 0;
+	padding: 0;
+}
+* html #btn-fermer-contact {
+	position:relative;
+	z-index:1;
+	top: 48px;
+}
+/*------------ ATLAS ------------*/
+.services, .contact-atlas {
+	background:url(/commun/images/pictos/services.gif) no-repeat;
+	text-indent:27px;
+	padding-top:4px;
+	padding-bottom:3px;
+}
+.contact-atlas {
+	background:url(/commun/images/pictos/contact.gif) no-repeat;
+}
+.page_atlasv1_carte #contenu p {
+	width:460px;
+	text-align:center;
+}
+/*------------ Boite d'aide service ------------*/
+.div-note2 {
+	width:70%; 
+	float:left;
+	margin-bottom:10px;
+	position:relative;
+	z-index:1;
+}
+.div-note2 a.lien-page {
+	position:absolute;
+	z-index:2;
+	top:22px;
+	left:440px;
+	width:100px;
+}
+.note2 {
+	width:25%;
+	float:right; 
+	border:1px solid gray;
+	padding:2px 1px 2px 0;
+	text-align:left;
+	color:#000000;
+	font-size:10px;
+	font-weight:normal;
+	text-decoration:none;
+	margin-top:20px;
+}
+/*------------ ... ------------*/
+/* styles locaux */
+.continent_afrique,
+.continent_amerique-du-nord,
+.continent_amerique-du-sud,
+.continent_asie,
+.continent_europe-centrale,
+.continent_europe-du-nord,
+.continent_europe-du-sud,
+.continent_oceanie,
+.continent_europe-de-l-est
+{
+	display: none;
+}
+.choix_afrique .continent_afrique,
+.choix_amerique-du-nord .continent_amerique-du-nord,
+.choix_amerique-du-sud .continent_amerique-du-sud,
+.choix_asie .continent_asie,
+.choix_europe-centrale .continent_europe-centrale,
+.choix_europe-du-nord .continent_europe-du-nord,
+.choix_europe-du-sud .continent_europe-du-sud,
+.choix_oceanie .continent_oceanie,
+.choix_europe-de-l-est .continent_europe-de-l-est {
+	display: block;
+}
+.recherche_attente .ligne_explication {
+	display: none;
+	}
+.item_cache .texte_cache,
+.item_affiche .texte_affiche {
+	display: none;
+}
+.item_gauche,
+.item_droit {
+	height: 28px;
+	width: 69px;
+	overflow: hidden;
+	position: absolute;
+	padding: 2px 3px 0px 3px;
+	font-weight: bold;
+}
+.item_gauche {
+	text-align: left;
+}
+.item_droit {
+	text-align: right;
+}
+.type_de_flux_import .flux_export,
+.type_de_flux_export .flux_import {
+	display: none;
+}
+.titre-dt {
+	font-weight:bold;
+}
+.notes {
+	font-style:italic;
+}
+.terme {
+	color:#C84EF0;
+	font-size:0.9em;
+}
+.pays {
+	color:#FF9C00;
+	font-size:0.9em;
+}
+#choix_continent {
+	height: 660px;
+	font-size: 0.85em;
+}
+.choix {
+	overflow:hidden;
+	float:left;
+	width:135px;
+	margin:0 0 0 5px;
+}
+#encart-produit ul.choix {
+    width: auto;
+}
+.page_service_importateurs_kompass #code_hs_pere_1.choix, .page_service_importateurs_kompass #code_hs_pere_2.choix {
+    padding: 5px 0 20px 0;
+    width: 46%;
+}
+.body-lightbox .libelle-right {
+    width: 20% !important;
+}
+/*--- Styles pour le service "recherche de nomenclature douanière" ---*/
+.code0, .code1, .code2, .code4, .code5 {
+	width:100%;
+	float:left;
+	display:block;
+	border-top:1px solid #fff;
+	color:#42453a;/*--- new ---*/
+}
+.code0 {
+	background-color:#ecede9;
+	font-size:1.05em;
+}
+.code0 .nomenclature-gauche { /* ie */
+	border:1px solid #ecede9;
+}
+.code0 a, .code1 a, .code2 a, .code3 a, .code4 a, .code5 a {color:#42453a; text-decoration:none;}
+.code0 a:hover, .code1 a:hover, .code2 a:hover, .code3 a:hover, .code4 a:hover, .code5 a:hover {text-decoration:underline;}
+.code1 {
+	background-color:#e4e6e0;
+	font-size:0.95em;
+}
+.code1 .nomenclature-gauche_popup { /* ie */
+	border:1px solid #e4e6e0;
+}
+.code2 {
+	background-color:#dcded5;
+	font-size:0.9em;
+}
+.code2 .nomenclature-gauche_popup { /* ie */
+	border:1px solid #dcded5;
+}
+.code3 {
+	width:100%;
+	float:left;
+	display:block;
+	border-top:1px solid #fff;
+	background-color:#cdd0c6;
+	font-size:0.85em;
+	color:#42453a;
+}
+.code3 .nomenclature-gauche_popup { /* ie */
+	border:1px solid #cdd0c6;
+}
+.code4 {
+	background-color:#cacdc3;
+	font-size:0.85em;
+	color:#42453a;
+}
+.code4 .nomenclature-gauche_popup { /* ie */
+	border:1px solid #cacdc3;
+}
+.code5 {
+	background-color:#cacdc3;
+	font-size:0.85em;
+	color:#42453a;
+}
+.code5 .nomenclature-gauche_popup { /* ie */
+	border:1px solid #cacdc3;
+}
+.nomenclature-gauche {
+	float:left;
+	width:13%;
+	padding:3px 7px 3px 2px;
+	font-weight:bold;
+	text-align:left;
+}
+.nomenclature-droite {
+	float:left;
+	width:82%;
+	padding:3px 2px 3px 7px;
+	/*border-left:1px solid #007dc6;*/
+	/*border-left:1px solid #fff;*/
+	text-align:left;
+}
+.nomenclature-gauche_popup {
+	float:left;
+	width:13%;
+	padding:3px 7px 3px 2px;
+	font-weight:bold;
+	text-align:left;
+	/*height:auto !important;
+	height:20px;
+	min-height:20px;*/
+}
+.nomenclature-droite_popup {
+	float:left;
+	width:70%;
+	padding:3px 10px 3px 7px;
+	/*border-left:1px solid #007dc6;*/
+	/*border-left:1px solid #fff;*/
+	text-align:left;
+	/*height:auto !important;
+	height:20px;
+	min-height:20px;*/
+	clear:none;
+}
+.nomenclature-droite-div-upload_popup {
+	float:left;
+	width:10%;
+	padding:3px 2px 3px 7px;
+	text-align:left;
+	/*height:auto !important;
+	height:20px;
+	min-height:20px;*/
+}
+.nomenclature-droite-div-upload_popup {/* ajout 05/02/13 */
+    width: 12%;
+	padding-left:0;
+	float: right;
+}
+.nomenclature-droite-upload_popup .bouton-off, .nomenclature-droite-upload_popup .bouton-on {
+	font-size:10px;
+	cursor:pointer;
+}
+.s_nomenclature .bouton-off, .s_nomenclature .bouton-on {/* ajout 05/02/13 */
+    float: right;
+    margin: 4px 2px 0 5px;
+	font-size: 10px;
+	padding:5px;
+	height: auto;
+}
+/*.code0 .nomenclature-droite {
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+}
+.code0, .code1, .code2, .code3, .code4, .code5 {
+	width:100%;
+	float:left;
+	display:block;
+}
+.code0 {
+	background-color:#007dc6;
+	font-size:12px;
+	color:#FFFFFF;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code0 a, .code0 a:hover {color:#FFFFFF;}
+.code1 {
+	background-color:#fff;
+	font-size:11px;
+	color:#006dad;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code1 a {color:#006dad;}
+.code2 {
+	background-color:#fff;
+	font-size:10px;
+	color:#018bdc;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code2 a {color:#018bdc;}
+.code3 {
+	background-color:#fff;
+	font-size:10px;
+	color:#22adfe;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code3 a {color:#22adfe;}
+.code4 {
+	background-color:#fff;
+	font-size:10px;
+	color:#22adfe;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code4 a {color:#22adfe;}
+.code5 {
+	background-color:#fff;
+	font-size:10px;
+	color:#22adfe;
+	border-left:1px solid #007dc6;
+	border-right:1px solid #007dc6;
+}
+.code5 a {color:#22adfe;}
+.nomenclature-gauche {
+	float:left;
+	width:10%;
+	padding:3px 7px 3px 2px;
+	font-weight:bold;
+	text-align:left;
+}
+.nomenclature-droite {
+	float:left;
+	width:85%;
+	padding:3px 2px 3px 7px;
+	border-left:1px solid #007dc6;
+	text-align:left;
+}
+.code0 .nomenclature-droite {
+	border-left:1px solid #fff;
+}*/
+.nomenclature table {
+	border:0px;
+	width:100%;
+}
+.nomenclature td
+{
+    font-size: 11px;
+    margin: 0px;
+    line-height: 1.3em;
+}
+.nomenclature th
+{
+    font-size: 11px;
+    margin: 0px;
+    line-height: 1.3em;
+	padding:3px;
+	text-indent:-3px;
+}
+input.affcode {
+	font-size: 11px;
+	background-color:#e6eff1;
+}
+span.pas_donnees_piers {
+	display: block;
+	color: #666;
+	font-style:italic;
+	background: url(/commun/images/pictos/fleche-piers.gif) no-repeat left center;
+	padding-left: 10px;
+	margin-top: 6px;
+}
+.s_nomenclature .bouton-off, .s_nomenclature .bouton-on {
+	float: right;
+	margin: 4px 5px 2px 5px;
+}
+/*--- Lien Nouveau Service Actif --*/
+a.lien-ss-menu-actif.lien-nouveau-service, a.lien-ss-menu-actif.lien-nouveau-service:hover{
+	/*background: url(/commun/images/icon-new.gif) no-repeat 114px 0;*/
+	height: 12px;
+	background-position: right center;	
+}
+a.lien-nouveau-service:after, a.lien-nouveau-service:hover:after{
+	content: url(/commun/images/icon-new.gif);
+	height: 12px;
+	padding-left: 4px;	
+}
+
+/*---Lien Nouveau Service Actif --*/
+
+/*--- Résultat de recherche ---*/
+th.codeR1 {
+	width:110px;
+	background-color:#999999;
+}
+th.libelleR1 {
+	background-color:#999999;
+}
+td.codeR2 {
+	width:110px;
+	background-color:#EEEEEE;
+}
+td.libelleR2 {
+	background-color:#EEEEEE;
+}
+.highlight {
+	color: #009900;
+	background-color: #FFCC66;
+	display: inline;
+}
+/*--- Liste par ontologie ---*/
+input.recherche
+{
+	font-size: 11px;
+	background-color:#e6eff1;
+}
+th.code
+{
+	width:110px;
+    background-color:#dedede;
+    text-align: left;
+	font-weight:normal;
+}
+th.libelle
+{
+    background-color:#dedede;
+    text-align: left;
+	font-weight:normal;
+}
+th.langues
+{
+    background-color:#EEEEEE;
+    text-align: right;
+}
+th.head
+{
+    background-color:#EEEEEE;
+    text-align: right;
+}
+td.code {
+	width:110px;
+	background-color:#6781b1;
+}
+td.libelle {
+	background-color:#6781b1;
+}
+td.code2 {
+	width:110px;
+	background-color:#D0E2A1;
+}
+td.libelle2 {
+	background-color:#D0E2A1;
+}
+td.code3 {
+	width:110px;
+	background-color:#DEEBBB;
+}
+td.libelle3 {
+	background-color:#DEEBBB;
+}
+
+td.code4 {
+	width:110px;
+	background-color:#ECF4D7;
+}
+td.libelle4 {
+	background-color:#ECF4D7;
+}
+td.code5 {
+	width:110px;
+	background-color:#F7FBED;
+}
+td.libelle5 {
+	background-color:#F7FBED;
+}
+td.code6 {
+	width:110px;
+	background-color:#bbc7dc;
+}
+td.libelle6 {
+	background-color:#bbc7dc;
+}
+td.code7 {
+	width:110px;
+	background-color:#ced7e5;
+}
+td.libelle7 {
+	background-color:#ced7e5;
+}
+
+td.code8 {
+	width:110px;
+	background-color:#dfe6ef;
+}
+td.libelle8 {
+	background-color:#dfe6ef;
+}
+.incoterm-vendeur {
+	background-color:#eee;
+}
+.incoterm-acheteur {
+	background-color:#ddd;
+}
+/* Liens */
+a.code {
+    color: #3680CA;
+    text-decoration: none;
+}
+a.code:hover {
+    color:#73B3F2;
+	text-decoration: underline;
+}
+.mot_en_surbrillance {
+	background-color: #84DA84;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+/*---------------------------------/
+           IMPRESSION
+/---------------------------------*/
+.convertir_en_pdf_ok .item_cache .texte_cache {
+	display: block;
+}
+.convertir_en_pdf_ok .item_cache .texte_affiche {
+	display: none;
+}
+.convertir_en_pdf_ok .chemin,
+.convertir_en_pdf_ok #carte1,
+.convertir_en_pdf_ok #zone_celsius,
+.convertir_en_pdf_ok .atlas-inclusion-news {
+	display:none;
+}
+.convertir_en_pdf_ok .retour a img {
+	display:none;
+}
+.convertir_en_pdf_ok .retour {
+	display:block;
+	height:30px;
+}
+.convertir_en_pdf_ok #donnees1 {
+	width:920px;
+	 min-height: 0;
+}
+.convertir_en_pdf_ok #donnees2 {
+	width:920px;
+	float:left;
+}
+.convertir_en_pdf_ok #capitale, .convertir_en_pdf_ok #heures, .convertir_en_pdf_ok #monnaie, .convertir_en_pdf_ok #pib, .convertir_en_pdf_ok #ide, .convertir_en_pdf_ok #climat, .convertir_en_pdf_ok #risque, .convertir_en_pdf_ok #profil, .convertir_en_pdf_ok #population, .convertir_en_pdf_ok #telecommunication {
+	border-bottom: 0;
+	background-color:#FFF;
+}
+.convertir_en_pdf_ok #choix_theme-atlas, .convertir_en_pdf_ok #contient-contact-atlas,
+.convertir_en_pdf_ok .onglet-suivant, .convertir_en_pdf_ok .onglet-precedent,
+.convertir_en_pdf_ok #meteo, .convertir_en_pdf_ok .retour_vers_haut {
+	display:none;
+}
+.convertir_en_pdf_ok #encart-theme-atlas {
+    border: none;
+}
+body.convertir_en_pdf_ok {
+	font-family: Arial,Helvetica,sans-serif !important;
+	font-size: 1em;
+	color: #333333;
+	background-color: #ffffff;
+}
+.convertir_en_pdf_ok .contenu, .convertir_en_pdf_ok #contenu {
+	font-family: Arial,Helvetica,sans-serif !important;
+	margin: 30px auto;
+}
+body.convertir_en_pdf_ok h1, body.convertir_en_pdf_ok h2, body.convertir_en_pdf_ok h3, body.convertir_en_pdf_ok h4 {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.convertir_en_pdf_ok .contenu .picto-information {
+	display: none;
+}
+.convertir_en_pdf_ok #encart-resultat-salon-v2 p.sources.traduction_forcee {
+    display: block;
+}
+.convertir_en_pdf_ok .service_salons_v5 .type {
+    position: static;
+}
+.convertir_en_pdf_ok .service_salons_v5 span.conf {
+    display: inline-block;
+    min-width: 400px;
+}
+.convertir_en_pdf_ok thead, .convertir_en_pdf_ok tr, .convertir_en_pdf_ok p {
+   page-break-inside: avoid !important;
+}
+
+/*------ page de garde impression pdf Atlas -----*/
+h1.h1-garde-pdf {
+	font-weight: bold;
+	font-size: 45px;
+	text-align:center;
+	margin: 3em 0 1.8em 0;
+}
+.bloc-pays-pdf table.invisible {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.bloc-pays-pdf table.invisible td {
+	text-align:center;
+}
+.img-pays-pdf {
+	margin-bottom: 80px;	
+}
+.nom-pays-pdf {
+	font-size: 25px;	
+}
+.sommaire-pdf {
+	margin-top: 50px;
+	font-size: 1.2em;
+}
+.sommaire-pdf ul {
+	margin: 15px 0 20px 0;
+}
+.sommaire-pdf ul li {
+	background: none;
+	background-image: none;
+	padding-left: 0;
+	margin-bottom: 15px;
+	list-style:inside;
+	list-style-type: disc;
+}
+
+/*--- Video ---*/
+/*--- STYLES POUR LES SLIDERS ---*/
+#track1-left, #track2-left {
+	position: absolute;
+	width: 5px;
+	height: 9px;
+	background: transparent url(/commun/autres/flv-player.net/images/slider-images-track-left.png) no-repeat top left;
+}
+/* put the track and the right rounded edge on the track */
+#track1, #track2 {
+	float:left;
+	background: transparent url(/commun/autres/flv-player.net/images/slider-images-track-right.png) no-repeat top right;
+	width:115px; 
+	height:13px;
+	margin-left:5px;
+}
+#track2 {
+	width:555px;
+	margin-left:10px;
+}
+.handle1, .handle2 {
+	height:20px;
+}
+.handle1 img, .handle2 img {
+	float:left;
+}
+/*--- STYLES POUR LES BOUTONS DU PLAYER ---*/
+.player {
+	background-color: #000;
+	color: #FFF;
+	height: 20px;
+	width: 178px;
+	border: solid 1px #000;
+}
+.player .button {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	margin-top:2px;
+	float: left;
+}
+.player .button a {
+	display: block;
+	height: 20px;
+	text-indent: -100em;
+	overflow: hidden;
+}
+.player .timeline {
+	position: relative;
+}
+.player .timeline a {
+	position: absolute;
+	left: 60px;
+	display: block;
+	height: 20px;
+	width: 40px;
+	text-indent: -100em;
+	overflow: hidden;
+	background-image: url(/commun/autres/flv-player.net/images/control_slider.png);
+}
+.player .timeline a:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_slider_blue.png);
+}
+.player .play {
+	background-image: url(/commun/autres/flv-player.net/images/control_play.png);
+}
+.player .play:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_play_blue.png);
+}
+.player .pause {
+	background-image: url(/commun/autres/flv-player.net/images/control_pause.png);
+	display: none;
+}
+.player .pause:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_pause_blue.png);
+}
+.player .stop {
+	background-image: url(/commun/autres/flv-player.net/images/control_stop.png);
+}
+.player .stop:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_stop_blue.png);
+}
+.player .full {
+	background-image: url(/commun/autres/flv-player.net/images/control_eject.png);
+}
+.player .full:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_eject_blue.png);
+}
+.page-event .player .full {
+	background-image: url(/commun/autres/flv-player.net/images/control_eject-2.png);
+}
+.page-event .player .full:hover {
+	background-image: url(/commun/autres/flv-player.net/images/control_eject_blue-2.png);
+}
+/*----------------------- Service salons v2 (carige, ing)-----------------------*/
+.description-salon_v2  {
+	width: 60%;
+	float: left;
+}
+.note-description-salon_v2 {
+	width: 35%;
+	float: right;
+}
+.salon-dispo_v2 {
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color:#f1f1f1;
+	border: dotted 1px #e5e5e5;	
+}
+.methode-salon_v2 {
+	padding-top: 10px;
+	font-style: italic;
+	text-indent: 25px;
+	background: url(/commun/images/pictos/picto-fiches.gif) no-repeat;
+}
+.bulle_exemple_v2, .bulle_exemple_v2:hover,
+.bulle_exemple-ascendant_v2, .bulle_exemple-ascendant_v2:hover {
+	position:relative;
+	z-index:1;
+	text-decoration:none;
+	/*font-weight:normal;*/
+	color: #FFF;
+	background: url(/commun/images/pictos/picto-bulle-exemple_v2.gif) no-repeat right center;
+	padding-right:10px;
+}
+.bulle_exemple-ascendant_v2, .bulle_exemple-ascendant_v2:hover {
+	background: url(/commun/images/pictos/picto-bulle-exemple-ascendant_v2.gif) no-repeat right center;
+}
+.bulle_info_v2, .bulle_exemple_v2-d {
+	position:relative;
+	z-index: 21;
+	text-decoration:none;
+}
+.bulle_exemple_v2:hover,
+.bulle_exemple-ascendant_v2:hover {
+	border:0; /*--- Attribut permettant d'afficher la bulle dans ie6---*/
+	z-index:2;
+	text-decoration: underline;
+	background: url(/commun/images/pictos/picto-bulle-exemple_v2-on.gif) no-repeat right center;
+}
+.bulle_exemple-ascendant_v2:hover {
+	background: url(/commun/images/pictos/picto-bulle-exemple-ascendant_v2-on.gif) no-repeat right center;
+}
+.bulle_exemple_v2 span, .bulle_exemple_v2 span img,
+.bulle_exemple-ascendant_v2 span, .bulle_exemple-ascendant_v2 span img,
+.bulle_exemple_v2-d span, .bulle_exemple_v2-d span img {
+	display: none;	
+}
+.bulle_exemple_v2:hover span,
+.bulle_exemple-ascendant_v2:hover span,
+.bulle_exemple_v2-d:hover span{ 
+	display:block; 	
+	position:absolute;   
+	top:-10px; 
+	left:-134px; 
+	width:100px;
+	border:1px solid #959595;
+	background-color:#fff; 
+	color: #333;
+	text-align:left;;
+	font-weight:normal;
+	padding:6px 10px 8px 10px;
+	font-size:1em;
+	text-decoration:none;
+}
+.bulle_exemple_v2-d:hover span{ 
+	top:-10px;
+	left:20px; 
+	width: 185px;
+}
+.bulle_exemple_v2 span img,
+.bulle_exemple-ascendant_v2 span img,
+.bulle_exemple_v2-d span img{ 
+	display:block; 	
+	position:absolute;  
+	top: 8px;
+	right: -8px;
+	width:8px;
+	height:15px;
+}
+.bulle_exemple_v2-d span img{ 
+	top: 8px;
+	right: 205px;
+}
+.bulle_info_v2 span { 
+	display:block; 	
+	position:absolute;   
+	top:-10px; 
+	left:-116px; 
+	width:200px;
+	border:1px solid #959595;
+	background-color:#fff; 
+	color: #333;
+	text-align:left;;
+	font-weight:normal;
+	padding:6px 10px 8px 10px;
+	font-size:1em;
+	text-decoration:none;
+}
+.bulle_info_v2 span img { 
+	display:block; 	
+	position:absolute;  
+	top: 10px;
+	left:220px;
+	width:8px;
+	height:15px;
+}
+/*#encart-resultat-salon-v2 {
+	margin-top: 35px;
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 5px;
+}*/
+.encart-resultat-salon_1 { /*- quand il y a les onglets --*/
+	margin-top: 35px;
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 5px;
+} 
+.encart-resultat-salon_2 { /*- quand il n'y a pas les onglets --*/
+	margin-top: 5px;
+	border: none;
+	position: relative;
+	padding: 5px;
+}
+#encart-resultat-salon-v2 table {
+	margin-top: 5px;	
+}
+#choix_salon_temps {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+a.onglet-tous-salons-v2, a.onglet-salons-venir-v2, a.onglet-salons-passes-v2,
+a.onglet-tous-salons-v2:hover, a.onglet-salons-venir-v2:hover, a.onglet-salons-passes-v2:hover,
+a.onglet-tous-salons-v2-active, a.onglet-salons-venir-v2-active,  a.onglet-salons-passes-v2-active,
+a.onglet-tous-salons-v2-active:hover, a.onglet-salons-venir-v2-active:hover, a.onglet-salons-passes-v2-active:hover {
+	display: block;
+	float: left;
+	text-align:center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-right: 4px;
+	height: 18px;
+	width: 164px;
+	background: #fff url(/commun/images/onglet-off.gif) no-repeat; 	
+	text-decoration: none;
+}
+a.onglet-tous-salons-v2:hover, a.onglet-salons-venir-v2:hover, a.onglet-salons-passes-v2:hover,
+a.onglet-tous-salons-v2-active, a.onglet-salons-venir-v2-active,  a.onglet-salons-passes-v2-active,
+a.onglet-tous-salons-v2-active:hover, a.onglet-salons-venir-v2-active:hover, a.onglet-salons-passes-v2-active:hover {
+	color: #000;
+	background: #fff url(/commun/images/onglet-on.gif) no-repeat; 
+}
+.info_past_v2, .info_past_v2_blanc {
+	background-color: #f1f1f1;
+	padding: 5px 8px 5px 2px;
+	margin: 5px 0;
+	position: relative;
+}
+.info_past_v2_blanc {
+	background-color: #ffffff;
+	margin: 0;
+}
+.fermer-encart_info_past_v2, .fermer-encart_info_past_v2:hover {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 8px;
+	height: 7px;
+	background: url(/commun/images/pictos/picto-close-off.gif) no-repeat;	
+}
+.fermer-encart_info_past_v2:hover {
+	background: url(/commun/images/pictos/picto-close-on.gif) no-repeat;	
+}
+#nav-salon-v2-haut {
+	padding-top: 5px;
+	border-top: #959595 dotted 1px;
+	/*margin-bottom: 40px;*/
+}
+#back-list-salon-v2, #page_next_prev_fiche_salon_v2 {
+	float: left;
+	width: 230px;
+	height: 22px;
+	margin-right: 60px;
+	padding-top: 7px;
+}
+#page_next_prev_fiche_salon_v2 {
+	margin-right: 0;
+}
+#page_next_prev_fiche_salon_v2 a img, #page_next_prev_fiche_salon_v2 a:hover img {
+	vertical-align:baseline;
+}
+#back-list-salon-v2 a, #back-list-salon-v2 a:hover,
+a.back-list-link, a.back-list-link:hover {
+	text-decoration:none;
+	background:url(/ressources/images/picto-back-salon.gif) no-repeat;
+	padding-left:10px;
+	margin-bottom: 10px;
+}
+#back-list-salon-v2 a:hover, a.back-list-link:hover {
+	text-decoration: underline;
+}
+.picto-print_v2 {
+	display: block;
+	float: right;
+	width: 130px;
+	height: 29px;
+	font-size: 0.8em;
+}
+.picto-print_v2 img {
+	vertical-align: middle;
+}
+.fiche-salon_v2-gauche {
+	width: 60%;
+	float: left;
+	clear:both;
+	margin-bottom: 5px;
+}
+.fiche-salon_v2-droite {
+	width: 35%;
+	float: right;
+	/*padding-top: 5px;*/
+	margin-bottom: 5px;
+}
+.date-salon-fiche {
+	color: #666;	
+}
+.infos-fiche-salon-v2 {
+	padding: 5px;
+	background-color: #f1f1f1;
+}
+#afficher_image_salon {
+	margin-bottom: 5px;	
+}
+/*--- Encart "plus d'information" ---*/
+#recherche-intro {
+	float:left;
+	width:65%;
+	/*margin-top:20px;*/
+}
+page_recherche_etudes_memos #salon-intro {
+	float:left;
+	width:70%;
+}
+#recherche-autre-pays {
+	float:right;
+	width:170px;
+	margin:15px 10px 10px 0;
+}
+#salon-autre-pays {
+	float:right;
+	width:170px;
+	margin:0 0 10px 0;
+}
+h2.recherche-titre-encart-2 {
+	color:#ffffff;
+	padding:2px 1px 2px 2px;
+	margin:0px;
+	background-color:gray;
+	background-image:none;
+	border:0;
+}
+.recherche-encart {
+	padding:4px 2px;
+	border:1px solid gray;
+}
+.recherche-encart-2 {
+	overflow-y: scroll;
+	height: 87px;
+}
+.recherche-encart-3 {
+	overflow: hidden; 
+	width: 140px;
+	padding-bottom: 10px;
+}
+/*------------ Veille 1 ------------*/
+.veille-gauche, .veille-gauche2 {
+	float:left;
+	width:175px;
+	height:140px;
+	border:1px solid #a4a9af;
+	padding:1px 5px;
+	margin:0 10px 20px 0;
+	background-color:#efefef;
+}
+.veille-gauche h2, .veille-droite h2, .veille-gauche2 h2, .veille-droite2 h2 {
+	padding-left:0;
+	margin:5px 0 3px 0;
+	border:0;
+}
+.veille-gauche h2, .veille-droite h2, .veille-gauche2 h2, .veille-droite2 h2 {
+	background-image:none;
+	padding-left:0;
+	text-indent:0;
+	font-size:11px;
+	font-weight:bold;
+	margin:8px 0 3px 0;
+}
+.veille-gauche select, .veille-gauche2 select {
+	width:175px;
+}
+.veille-gauche input, .veille-gauche2 input {
+	width:170px;
+	margin-bottom:0;
+}
+.veille-milieu, .veille-milieu2 {
+	float:left;
+	padding:0;
+	margin:50px 0 0 0;
+	width:48px;
+}
+.veille-droite, .veille-droite2 {
+	float:right;
+	width:287px;
+	height:140px;
+	border:1px solid #a4a9af;
+	padding:1px 5px;
+	margin:0 0 20px 10px;
+	background-color:#efefef;
+	overflow:auto;
+}
+.veille-bas, .veille-bas2 {
+	clear: both;
+	padding: 2px 0 0 150px;
+}
+.veille-add, .veille-add2 {
+	background-color:#fff;
+	padding:2px;
+	margin-bottom:1px;
+	line-height:19px;
+}
+.page_veille_accueil .veille-gauche input, .page_veille_accueil .veille-gauche select,
+.page_veille_accueil_v4 .veille-gauche input, .page_veille_accueil_v4 .veille-gauche select{
+	background-color:#FFFFFF;
+}
+/*------------ Veille sectorielle ------------*/
+.bloc-veille-libre {
+	clear:both;
+	background-color:#f3f3f3;
+	margin:10px 0 20px 0;
+	padding:10px;
+	border:1px solid #b6b6b6;
+
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.intro-veille-libre {
+	width:360px;
+	padding-right:30px; 
+	margin-right:20px;
+ 	float:left;
+	background:url(/commun/images/fleche-veille-libre.gif) no-repeat center right;
+}
+/*.page_veille_accueil_v4 #contenu select,*/
+.form-veille-b select,
+.form-veille-c select {
+	width:100%;
+}
+/*.page_veille_accueil_v4 #contenu input.input_court,.page_veille_accueil_v4 #contenu input.input-veille, */
+.form-veille-b input.input_court, .form-veille-b input.input-veille,
+.form-veille-c input.input_court, .form-veille-c input.input-veille {
+	width:100%;
+} 
+.page_veille_accueil_v4 #contenu table.invisible td,
+.page_spe_vos_abonnements #contenu table.invisible td,
+.page_veille_appels_d_offres #contenu table.invisible td {
+    padding: 8px;
+}
+.page_spe_vos_abonnements #contenu table.invisible td {
+    padding: 8px;
+}
+
+.bloc-veille-libre form {
+ 	width:300px;
+ 	float:left;
+ 	margin-top:8px;
+}
+.bloc-veille-libre form select {
+ 	width:286px;
+ 	margin-bottom:8px;
+}
+.page_veille_accueil_v4 #contenu .bloc-veille-libre form select {
+ 	width:286px;
+	margin-bottom:8px;
+}
+.bloc-veille-libre form input {
+ 	margin-bottom:2px;
+}
+.apercu-veille {
+	position:relative;
+	z-index:1;
+	width:240px;
+	height:382px;
+	float:left;
+	margin-left:30px;
+}
+a.loupe-apercu {
+	position:absolute;
+	width:240px;
+	height:382px;
+	top:0;
+	left:0;
+	z-index:2;
+	background:transparent url(/commun/images/pictos/apercu-loupe.png) no-repeat center center;
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+}
+a.loupe-apercu:hover {
+	filter:alpha(opacity=20);
+	-moz-opacity:0.20;
+	opacity:0.20;
+}
+.page_veille_accueil .avis-demo, .page_veille_accueil_v4 .avis-demo, .page_veille_appels_d_offres .avis-demo {
+	width: 320px;
+	float:left;
+	margin-left:35px;
+	margin-top:15px;
+	clear:none;
+	padding:6px 10px 6px 10px;
+}
+.page_veille_accueil_v4 .avis-demo, .page_veille_appels_d_offres .avis-demo {
+	background-image:none;
+}
+.page_veille_accueil_v4 .avis-demo .titre-gras {
+	font-weight:bold;
+	margin-right:5px;
+}
+.page_veille_accueil .fleche-avis-demo, .page_veille_accueil_v4 .fleche-avis-demo, .page_veille_appels_d_offres .fleche-avis-demo {
+	background: url(/commun/images/fleche-gauche-demo.gif) no-repeat;
+	width: 9px;
+	height: 15px;
+	left: -8px;
+	top: 30px;
+}
+.modif-veille select, .modif-veille input {
+	max-width: 48%;
+}
+.modif-veille input[type=button]{
+	max-width: none;
+}
+/*------ styles alertes dans mon compte -----*/
+.page_spe_vos_abonnements #contenu #encart-contenu td img {
+    vertical-align: baseline ;
+}
+.page_spe_vos_abonnements .abonnement-douanes .bulle_info {
+    font-weight: bold;
+    cursor: default;
+}
+.page_spe_vos_abonnements .abonnement-douanes .bulle_info:hover span {
+	left: 0;
+	top: 20px;
+	padding: 0 5px;
+	width: 280px;
+}
+.page_spe_vos_abonnements .abonnement-douanes .bulle_info:hover span dt {
+	width: 26%;
+}
+.page_spe_vos_abonnements .abonnement-douanes .bulle_info:hover span dd {
+	width: 69%;
+}
+.page_spe_vos_abonnements .abonnement-douanes .message-cadre {
+	margin-bottom: 15px;
+}
+
+/*
+  |---------------------------------|
+  |   Styles Atlas Doing Business   |
+  |---------------------------------|			
+*/
+#pays h1 {
+	float: left;
+	background: none;
+	color: #aaa;
+	font-size: 1.5em;
+	padding: 5px 3px;
+	margin: 5px 0 8px 0;
+	text-indent: 0;
+	font-weight:bold;
+}
+#pays img {
+	float: left;
+	margin-top: 5px;
+}
+h1#rubrique {
+	clear:left;
+	font-size: 1.3em;
+}
+#donnees1 {
+	width:520px;
+	float:left;
+	clear:left;
+}
+#donnees2 {
+	width:250px;
+	float:right;
+}
+#carte1 {
+	width:250px;
+	float:right;
+	text-align:center;
+	margin-top:15px;
+}
+#meteo {
+	width:270px;
+	float:right;
+	min-height:120px;
+	padding:0px;
+	margin:0px;
+	clear:right;
+}
+#meteo p.sources {
+	clear:both;
+}
+#meteo #img-fond {
+	width:250px;
+	min-height:120px;
+	padding:0px;
+	margin:0px;
+	background:transparent url(/ressources/images/meteo/fond.png) no-repeat !important; 
+	background:none; 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/meteo/fond.png', sizingMethod='crop'); 
+	zoom:1;
+}
+#meteo #meteo-bloc1 {
+	width:248px;
+	float:left;
+	height:16px;
+	margin-top:10px;
+	font-weight:bold;
+	color:#ffffff;
+	
+}
+#meteo #meteo-bloc2 {
+	width:40px;
+	float:right;
+	height:14px;
+	margin:-1px 20px 0 0 !important;
+	margin:-3px 10px 0 0;
+	font-weight:bold;
+	color:#aba195;
+}
+#meteo #meteo-bloc2 a {
+	font-weight:normal;
+	text-decoration:none;
+}
+#meteo #meteo-bloc2 a:hover {
+	font-weight:normal;
+	text-decoration:underline;
+}
+#meteo #meteo-bloc2 span {
+	font-weight:normal;
+}
+#meteo #meteo-bloc3 {
+	width:190px;
+	height:66px;
+	float:right;
+	margin:0px 18px 0 0 !important;
+	margin:0px 9px 0 0;
+}
+#meteo #meteo-bloc4 {
+	width:250px;
+	float:left;
+	color:#000;
+	font-size:11px;
+	padding:10px 0 0 20px;
+}
+#meteo #meteo-bloc3 .temperature {
+	font-size:30px;
+	font-weight:bold;
+	padding:10px 5px 0 0 !important;
+	padding:5px 5px 0 0 !important!;
+	padding:9px 5px 0 0;
+	margin:5px 0 0 0;
+	color:#FFFFFF;
+	float:right;
+	width:180px;
+	height:30px;
+	text-align:right;
+}
+#meteo #meteo-bloc3 .temperature2 {
+	font-weight:normal;
+	font-size:9px;
+	padding:8px 5px 0 0 !important;
+	padding:14px 5px 0 0 !important!;
+	padding:6px 5px 0 0;
+	margin:0px;
+	color:#FFFFFF;
+	float:right;
+	width:180px;
+	clear:both;
+	text-align:right;
+}
+#meteo .sources {
+	padding:10px 0 0 20px;
+}
+.titre-encart {
+	background-color:#3e97d6;
+	font-weight:bold;
+	font-size:10px;
+	color:#ffffff;
+	padding: .3em 0 0.4em 2px;
+	margin:15px 0 2px 0;
+	border-bottom: 1px solid #ccc;
+}
+.titre-encart span {
+	font-weight:normal;
+}
+.sous-titre-encart {
+	font-weight:bold;
+}
+.titre-donnees {
+	padding-left:6px;
+	background-image:url(/ressources/images/picto-lien-page2.gif);
+	background-repeat:no-repeat;
+	margin-bottom:5px;
+}
+#capitale, #heures, #monnaie, #pib, #ide, #climat, #risque, #profil, #population, #telecommunication
+	{
+	text-indent: 22px;
+	padding: .3em 0 0.4em 0;
+	border-bottom: 1px solid #ccc;
+	background-color:#eeeeee;
+	font-weight:bold;
+	color:#000;
+	margin:15px 0 2px 0;
+	}
+#heures span {
+	font-weight:normal;
+}
+#capitale
+	{
+	margin-top: 16px;
+	background-image: url(/ressources/images/pictos/atlas/capitale.gif);
+	background-repeat:no-repeat;
+	}
+#heures
+	{
+	background-image: url(/ressources/images/pictos/atlas/heure.gif);
+	background-repeat:no-repeat;
+	}
+	
+#monnaie
+	{
+	background-image: url(/ressources/images/pictos/atlas/monnaie.gif);
+	background-repeat:no-repeat;
+	}
+	
+#profil
+	{
+	background-image: url(/ressources/images/pictos/atlas/pib.gif);
+	background-repeat:no-repeat;
+	}
+	
+#population
+	{
+	background-image: url(/ressources/images/pictos/atlas/population.gif);
+	background-repeat:no-repeat;
+	}
+	
+#telecommunication
+	{
+	background-image: url(/ressources/images/pictos/atlas/telecommunication.gif);
+	background-repeat:no-repeat;
+	}
+	
+#pib
+	{
+	background-image: url(/ressources/images/pictos/atlas/pib.gif);
+	background-repeat:no-repeat;
+	}
+	
+#ide
+	{
+	background-image: url(/ressources/images/pictos/atlas/ide.gif);
+	background-repeat:no-repeat;
+	}
+	
+#risque
+	{
+	background-image: url(/ressources/images/pictos/atlas/risque.gif);
+	background-repeat:no-repeat;
+	}
+	
+#liberte
+	{
+	background-image: url(/ressources/images/pictos/atlas/liberte.gif);
+	background-repeat:no-repeat;
+	}
+#climat
+	{
+	background-image: url(/ressources/images/pictos/atlas/climat.gif);
+	background-repeat:no-repeat;
+	}
+.sources {
+	clear: both;	
+	font-size: 0.9em;	
+	font-style: italic;	
+	margin: 0 0 0.5em 0;	
+}
+#encart-resultat-salon-v2 p.sources.traduction_forcee{
+	display: inline-block;
+	margin-top: 1em !important;	
+}
+.service_salon_fiche_v5 p.sources.traduction_forcee{
+	margin-top: 1em;	
+}
+/*------------ Préferences et pays top 10 ------------*/
+#encart-customisation {
+	border: #cccccc 1px solid;
+	position: relative;
+	padding: 15px 5px 10px 5px;
+}
+.page_spe_preferences h2 {
+	border: 0;
+}
+#choix_customisation {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: 135px;	
+}
+a.onglet-automatic, a.onglet-manual,
+a.onglet-automatic:hover, a.onglet-manual:hover,
+a.onglet-automatic-active,  a.onglet-manual-active,
+a.onglet-automatic-active:hover, a.onglet-manual-active:hover {
+	display: block;
+	float: left;
+	text-align:center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-right:4px;
+	height: 18px;
+	width: 86px;
+	background: #fff url(/ressources/images/onglet-custom-off.gif) no-repeat; 	
+	text-decoration: none;
+	color:#877f76;
+}
+a.onglet-automatic:hover, a.onglet-manual:hover,
+a.onglet-automatic-active,  a.onglet-manual-active,
+a.onglet-automatic-active:hover, a.onglet-manual-active:hover {
+	color: #000;
+	background: #fff url(/ressources/images/onglet-custom-on.gif) no-repeat; 
+}
+#encart-produit, #encart-resultat-produit {
+	margin-top: 35px;
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 15px 5px 10px 8px;
+}
+#encart-resultat-produit.onglet_pas_actif {
+	margin-top:20px;
+}
+
+/* concerne pages : .page_service_gtm_quick_quote_v2, .page_service_gtm_import_controls_v2, .page_service_gtm_export_controls_v2, .page_service_gtm_document_determination_v2 */ 
+.gtm-recherche {
+	border: #e0e0e0 1px solid;
+	padding: 10px 5px 5px 8px;
+	background-color:#f9f9f9;
+}
+.gtm-recherche .code0 {
+    font-size: 1em;
+}
+.gtm-recherche .nomenclature-gauche, .gtm-recherche .nomenclature-gauche_popup {
+    width: 15%;
+}
+.gtm-recherche .nomenclature-droite {
+    width: 80%;
+}
+.gtm-recherche .nomenclature-droite_popup {
+    width: 68%;
+}
+#encart-produit.sans_onglet, .sans_onglet {
+	margin-top:0;
+	border:0;
+	padding:0;
+}
+.page_service_flux_tous_pays_top_10_v3 #encart-produit,
+.page_service_flux_tous_pays_top_10_v2 #encart-produit {
+	margin-top: 25px;
+}
+#choix_produit {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+*html #choix_produit {
+	top: -22px;
+	left: -9px;	
+}
+a.onglet-hs, a.onglet-keyword, a.onglet-preferences,
+a.onglet-hs:hover, a.onglet-keyword:hover, a.onglet-preferences:hover,
+a.onglet-hs-active,  a.onglet-keyword-active, a.onglet-preferences-active,
+a.onglet-hs-active:hover, a.onglet-keyword-active:hover, a.onglet-preferences-active:hover {
+	display: block;
+	float: left;
+	text-align:center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-right: 4px;
+	height: 18px;
+	width: 164px;
+	background: #fff url(/ressources/images/onglet-off.gif) no-repeat; 	
+	text-decoration: none;
+}
+a.onglet-hs:hover, a.onglet-keyword:hover, a.onglet-preferences:hover,
+a.onglet-hs-active,  a.onglet-keyword-active, a.onglet-preferences-active,
+a.onglet-hs-active:hover, a.onglet-keyword-active:hover, a.onglet-preferences-active:hover {
+	color: #000;
+	background: #fff url(/ressources/images/onglet-on.gif) no-repeat; 
+}
+a.onglet-hs, a.onglet-keyword, a.onglet-preferences {
+	color:#aba195;
+}
+/*------------ Onglets adaptables ------------*/
+#encart-contenu {
+	margin-top: 50px;
+	border: #e0e0e0 1px solid;
+	position: relative;
+	z-index:1;
+	padding: 0 8px;
+}
+*html .page_veille_accueil_v4 #encart-contenu, 
+*html .page_veille_accueil #encart-contenu,
+*html .page_spe_vos_abonnements #encart-contenu,
+*html .page_spe_preferences #encart-contenu {
+	z-index:0;
+}
+#choix_contenu {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+* html #choix_contenu {
+	top: -22px;
+	left: -9px;
+}
+a.onglet-contenu, a.onglet-contenu:hover, a.onglet-contenu-actif, a.onglet-contenu-actif:hover {
+	position:relative;
+	z-index:1;
+	display:inline-block;
+	text-align:center;
+	font-size: 12px;
+	padding: 5px 10px 0 14px;
+	margin-right:4px;
+	height: 18px;
+	background: #fff url(/commun/images/onglets/onglet-1-off.gif) no-repeat; 	
+	text-decoration: none;
+}
+* html a.onglet-contenu, * html a.onglet-contenu:hover, * html a.onglet-contenu-actif, * html a.onglet-contenu-actif:hover {
+	margin-right:6px;
+}
+*+html a.onglet-contenu, *+html a.onglet-contenu:hover, *+html a.onglet-contenu-actif, *+html a.onglet-contenu-actif:hover {
+	margin-right:6px;
+}
+a.onglet-contenu:hover, a.onglet-contenu-actif, a.onglet-contenu-actif:hover {
+	color: #000;
+	background: #fff url(/commun/images/onglets/onglet-1-on.gif) no-repeat; 
+}
+a.onglet-contenu-actif, a.onglet-contenu-actif:hover {
+	cursor:default;
+}
+a.onglet-contenu img, a.onglet-contenu:hover img,
+a.onglet-contenu-actif img, a.onglet-contenu-actif:hover img {
+	position:absolute;
+	top:0;
+	right:-7px;
+	z-index:3;
+	width:7px;
+	height:23px;
+}
+/*------------ Encarts associations professionnelles ------------*/
+#encart-associations {
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 15px 5px 5px 5px;
+	margin-top:35px;
+}
+#choix_associations {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+#choix_industry ul, #choix_country ul {
+	width:46%;
+	float:left;
+	margin:0 0 0 8px;
+	position: relative;/* pour ie6 */
+}
+#choix_country ul {
+	width:31%;
+}
+a.lien-selection, a.lien-selection:hover, a.lien-selection:focus {
+	cursor:default;
+	font-weight:bold;
+	text-decoration:none;
+	background-color:#eee;
+}
+a.onglet-industry, a.onglet-country,
+a.onglet-industry:hover, a.onglet-country:hover,
+a.onglet-industry-active,  a.onglet-country-active,
+a.onglet-industry-active:hover, a.onglet-country-active:hover {
+	display: block;
+	float: left;
+	text-align:center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-right:4px;
+	height: 18px;
+	width: 164px;
+	background: #fff url(/ressources/images/onglet-off.gif) no-repeat; 	
+	text-decoration: none;
+	color:#877f76;
+}
+a.onglet-industry:hover, a.onglet-country:hover,
+a.onglet-industry-active,  a.onglet-country-active,
+a.onglet-industry-active:hover, a.onglet-country-active:hover {
+	color: #000;
+	background: #fff url(/ressources/images/onglet-on.gif) no-repeat; 
+}
+/*------------ Encarts annuaires professionnels ------------*/
+#encart-annuaires-v2 {
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 15px 5px 5px 5px;
+	margin-top: 50px;
+}
+#choix_annuaires-v2 {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+a.lien-onglet-annuaire, a.lien-onglet-annuaire:hover,
+a.lien-onglet-annuaire-active, a.lien-onglet-annuaire-active:hover {
+	display: block;
+	float: left;
+	text-align:center;
+	font-size: 12px;
+	padding-top: 5px;
+	padding-right: 4px;
+	height: 18px;
+	width: 138px;
+	background: #fff url(/ressources/images/onglet-off-court.gif) no-repeat; 	
+	text-decoration: none;
+	color:#877f76;
+}
+a.lien-onglet-annuaire:hover,
+a.lien-onglet-annuaire-active, a.lien-onglet-annuaire-active:hover {
+	color: #000;
+	background: #fff url(/ressources/images/onglet-on-court.gif) no-repeat; 
+}
+#annuaire_type_1 input#recherche_lien {
+	width: 250px; 	
+}
+/*------------ Pagination ------------*/
+#ordre-affichage, .ordre-affichage {
+	float:right;
+}
+/*.page_recherche_globale_dev_v2  #ordre-affichage,
+.page_recherche_globale_v2 #ordre-affichage {
+	float:right;
+	clear:none;
+	width:40%;
+}*/
+#pagination {
+	float:right;
+	width:260px;
+}
+.pagination {
+	margin:10px 0;
+}
+.pagination-page {
+	display:block;
+	float:left;
+	height:20px;
+	margin-bottom:1px;
+	margin-right:3px;
+}
+.page_recherche_globale_dev_v2 .pagination-page,
+.page_recherche_globale_v2 .pagination-page,
+.page_recherche_globale_v3 .pagination-page {
+	height:17px;
+	padding-top:2px
+}
+.pagination-on {
+	padding:1px 5px 1px 4px;
+	border:1px solid #999;
+	background-color:#999;
+	margin-left:1px;
+	color:#fff;
+}
+.page_recherche_globale_v2 .pagination-on,
+.page_recherche_globale_v3 .pagination-on,
+.page_recherche_globale_dev_v2 .pagination-on,
+.page_recherche_globale .pagination-on {
+	display:block;
+	height:15px;
+	margin-bottom:1px;
+}
+.page_recherche_globale .pagination-on {
+	height:20px;
+}
+a.pagination-lien, a.pagination-lien:hover {
+	padding:1px 5px;
+	border:1px solid #999;
+	color:#999;
+	margin-left:1px;
+	float: left;
+}
+.page_recherche_globale_v2 a.pagination-lien, .page_recherche_globale_v2 a.pagination-lien:hover,
+.page_recherche_globale_v3 a.pagination-lien, .page_recherche_globale_v3 a.pagination-lien:hover,
+.page_recherche_globale_dev_v2 a.pagination-lien, .page_recherche_globale_dev_v2 a.pagination-lien:hover,
+.page_recherche_globale a.pagination-lien, .page_recherche_globale a.pagination-lien:hover {
+	display:block;
+	float:left;
+	height:15px;
+	margin-bottom:1px;
+}
+.page_recherche_globale a.pagination-lien, .page_recherche_globale a.pagination-lien:hover {
+	height:20px;
+}
+a.pagination-lien:hover {
+	background-color:#999;
+	color:#fff;
+	text-decoration:none;
+}
+.numero-vide {
+	color:#000;
+	padding:0 2px;
+	height:20px;
+	margin:0 5px 2px 5px;
+	float:left;
+}
+.pagination-on, a.pagination-lien, a.pagination-lien:hover {
+    float: left;
+}
+
+/*------------------ Recherche Transversale v2 --------------------*/
+.page_recherche_globale_dev_v2 .chemin, .page_recherche_globale_v2 .chemin,
+.page_recherche_globale_v3 .chemin {
+	display:none;
+}
+.input_recherche-global {
+	padding-top:4px;
+	padding-bottom:6px;
+	padding-left:5px;
+	margin-right:5px;
+	width:250px;
+	font-size:1.2em;
+}
+/*.recherche-orthographe {
+	display:block;
+	margin:0 30px;
+}*/
+.recherche-presentation {
+	padding:10px 5px;
+	background-color:#f8f8f8;
+	margin:20px 0;
+}
+.recherche-explication {
+	margin:20px 0;
+}
+.recherche-mot {
+	text-transform:uppercase;
+	font-weight:normal;
+	/*color:#cc0000;*/
+}
+h1 .recherche-mot {
+    font-weight:bold;
+}
+.page_recherche_globale_v2 h1 a, .page_recherche_globale_v3 h1 a, .page_recherche_globale_dev_v2 h1 a {
+	font-weight:bold;
+}
+.recherche-mots-cles {
+	/*width:62%;
+	float:right;
+	text-align:right;
+	padding-right:5px;*/
+}
+.recherche-nav {
+	position:relative;
+	z-index:1;
+	clear:both;
+	float:left;
+	border:1px solid #e6e6e6;
+	background-color:#f8f8f8;
+	padding:10px 5px 12px 10px;
+	width:200px;
+	margin-bottom:30px;
+	
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-ms-border-radius: 4px; 
+	border-radius: 4px;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.recherche-nav h2 {
+	margin-top:0;
+	margin-bottom:20px;
+}
+.recherche-nav h3 {
+	font-size: 1.2em;
+	margin-top:5px;
+	border-bottom:1px dotted #ddd;
+}
+.recherche-nav p {
+	margin:0.25em 0;
+}
+.recherche-nav select {
+	background-color:#f1f1f1;
+	margin-top:10px;
+	margin-bottom:5px;
+}
+.recherche-nav .input_checkbox {
+	background-color:#f8f8f8;
+}
+.fleche-filtre {
+	position:absolute;
+	top:13px;
+	right:-12px;
+	width:12px;
+	height:23px;
+	z-index:2;	
+	background: url(/commun/images/fleche_recherche_globale.gif) no-repeat top left;
+}
+.page_recherche_globale_v2 #encart-produit,
+.page_recherche_globale_v3 #encart-produit,
+.page_recherche_globale_dev_v2 #encart-produit {
+	float:right;
+	width:690px; /* origine RHB */
+	/*margin-top: 22px;*/
+	height:auto !important;
+	height:205px;
+	min-height:205px;
+	margin-top:0;
+	margin-bottom: 30px;
+	border: #e6e6e6 1px solid;
+	padding: 15px 8px 12px 10px;
+	
+	-webkit-border-radius: 4px 0 0 0; /* si pas d'onglet */
+	-moz-border-radius: 4px 0 0 0; 
+	-ms-border-radius: 4px 0 0 0; 
+	border-radius: 4px 0 0 0;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.page_recherche_globale_v2 .class-sans-onglet #encart-produit,
+.page_recherche_globale_v3 .class-sans-onglet #encart-produit,
+.page_recherche_globale_dev_v2 .class-sans-onglet #encart-produit {
+	margin-top:0;
+}
+.page_recherche_globale_v2 .class-avec-onglet #encart-produit,
+.page_recherche_globale_v3 .class-avec-onglet #encart-produit,
+.page_recherche_globale_dev_v2 .class-avec-onglet #encart-produit {
+	margin-top:22px;
+}
+.encart-produit-vide {
+	float:right;
+	width:692px;
+	padding: 0 8px 12px 10px;
+}
+.no-result-recherche {
+	background: url(/commun/images/appel-offre-picto-ampoule.jpg) no-repeat 0 10px;
+	padding-left: 35px;
+	min-height: 60px;
+}
+.no-result-recherche p {
+	font-weight:bold;
+}
+.no-result-recherche p.no-result-p {
+	padding-top:15px;
+	font-weight:normal;
+}
+/*.page_recherche_globale_v2 #choix_produit {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}*/
+.recherche-ligne {
+	magin-bottom:10px;
+	padding-bottom:2px;
+	border-bottom:1px dotted #e6e6e6;
+}
+* html .recherche-ligne {
+	border-bottom:1px solid #e6e6e6;
+}
+.recherche-ligne p {
+	margin:0;
+	padding:8px 0 7px 0;
+}
+.recherche-ligne p.recherche-description {
+	padding:1px 0 2px 0;
+}
+.recherche-ligne em {
+	color:#666;
+}
+.nb-resultats, .nb-resultats-vide {
+	width:65%;
+	float:left;
+	height:35px;
+}
+.nb-resultats-vide {
+	width:100%;
+}
+.page_recherche_globale_v2 .champ_remarque,
+.page_recherche_globale_v3 .champ_remarque,
+.page_recherche_globale_dev_v2 .champ_remarque {
+	color:#000;
+	font-style:normal;
+	padding-top:3px;
+}
+.recherche-ligne-titre {
+	font-size:1.6em;
+}
+.picto-refine {
+	background: url(/commun/images/pictos/picto-refine.gif) left center no-repeat;
+	width:7px;
+	height:8px;
+	padding-right:10px;
+}
+
+
+/*--- Etude Mémos ---
+.bloc-creation-alerte,.bloc-creation-alerte2 {
+	clear:both;
+	background-color:#eee;
+	padding:10px 15px;
+	margin:10px 0 10px 0;
+}
+.bloc-creation-alerte2 {
+	padding:10px 10px 10px 10px;
+}
+.texte-alerte {
+	margin:0;
+	padding:0;
+	display:inline-block;
+}
+.bloc-creation-alerte #bouton2 { 
+	margin-left:10px;
+	display:inline-block;
+	padding-left:0;
+	padding-right:0;
+	padding-bottom:0;
+}  
+.btn-alerte-etude {
+	float:left;
+	width:110px;
+	margin-right:10px;
+}
+.message-alerte-etude {
+	float:left;
+	width:300px;
+	margin-top:3px;
+}
+.lien-alerte-etude {
+	float:right;
+	margin-top:3px;
+}
+.partenaires h2, .partenaires p {
+	width:auto;
+}
+.image-partenaire {
+	display:block;
+	float:right;
+	margin:0 0 0 10px;
+	width:200px;
+	text-align:right;
+}*/
+.bloc-creation-alerte, .bloc-creation-alerte2 {
+	clear:both;
+	background-color:#eee;
+	margin:20px 0 5px 0;
+}
+.bloc-creation-alerte table.invisible, .bloc-creation-alerte2 table.invisible {
+	margin:0;
+	padding:0;
+	width: 100%;
+}
+.bloc-creation-alerte table.invisible td, .bloc-creation-alerte2 table.invisible td {
+	padding:12px 15px;
+	vertical-align:middle;
+}
+.bloc-creation-alerte2 table.invisible td {
+	padding:5px 15px 12px 15px;
+}
+.bloc-creation-alerte2 table.invisible td.alerte-td-simple {
+	padding-top:12px;
+}
+.bloc-creation-alerte table.invisible td p, .bloc-creation-alerte2 table.invisible td p {
+	/*padding:0;
+	margin:0;*/
+	line-height: 1.2em;
+}
+.texte-alerte {
+	margin:0;
+	padding:0;
+}
+/*.bloc-creation-alerte #bouton2, .bloc-creation-alerte2 #bouton2 { 
+	padding:0;
+} */   
+.btn-alerte-etude {
+	width:110px;
+}
+.message-alerte-etude {
+	width:300px;
+	margin-top:3px;
+}
+.lien-alerte-etude {
+	margin-top:3px;
+}
+.partenaires h2, .partenaires p {
+	width:auto;
+}
+.image-partenaire {
+	display:block;
+	float:right;
+	margin:0 0 0 10px;
+	width:200px;
+	text-align:right;
+}
+table.invisible td.alerte-td-simple {
+	width:23%;
+}
+p.txt-validation-veille {
+	background:url(/commun/images/validation-veille-2.png) no-repeat top left; 
+	padding:6px 0 0 0;
+	text-indent:18px;
+}
+* html p.txt-validation-veille {
+	background:none; 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/commun/images/validation-veille-2.png', sizingMethod='crop'); 
+	zoom:1;
+}
+
+
+
+
+
+
+
+/*--- correxion D2 --*/
+.haut-encart-d2 {
+	display: none;	
+}
+.bas-encart-d2 {
+	display: none;
+}
+/*---- Nouveau découpage Atlas ---*/
+#encart-theme-atlas {
+	margin-top: 15px;
+	border: #e0e0e0 1px solid;
+	position: relative;
+	padding: 0 8px;
+}
+#choix_theme-atlas {
+	height: 23px;
+	position: absolute;
+	z-index: 20;
+	top: -23px;
+	left: -1px;	
+}
+*html #choix_theme-atlas {
+	top: -23px;
+}
+a.onglet-theme-1, a.onglet-theme-1:hover,
+a.onglet-theme-1-actif, a.onglet-theme-1-actif:hover {
+	position:relative;
+	z-index:1;
+	display:inline-block;
+	text-align:center;
+	font-size: 12px;
+	padding: 5px 10px 0 14px;
+	margin-right:4px;
+	height: 18px;	
+	text-decoration: none;
+}
+a.onglet-theme-1:focus {
+	outline:none;
+}
+a.onglet-theme-1 {
+	background: #fff url(/commun/images/atlas-new/onglet-1-off.gif) no-repeat; 	
+}
+*+html a.onglet-theme-1, *+html a.onglet-theme-1:hover,
+*+html a.onglet-theme-1-actif, *+html a.onglet-theme-1-actif:hover {
+	margin-right:4px;
+}
+*html a.onglet-theme-1, *html a.onglet-theme-1:hover,
+*html a.onglet-theme-1-actif, *html a.onglet-theme-1-actif:hover  {
+	margin-right:2px;
+}
+a.onglet-theme-1:hover, a.onglet-theme-1-actif, a.onglet-theme-1-actif:hover {
+	color: #000;
+	background: #fff url(/commun/images/atlas-new/onglet-1-on.gif) no-repeat; 
+}
+a.onglet-theme-1 img, a.onglet-theme-1:hover img,
+a.onglet-theme-1-actif img, a.onglet-theme-1-actif:hover img {
+	position:absolute;
+	top:0;
+	right:-7px;
+	z-index:3;
+	width:7px;
+	height:23px;
+}
+/*------------ Liens vers les services depuis l'atlas ------------*/
+.lien-service_atlas {
+	border:1px dotted #bbbbbb;
+	padding:11px 5px 12px 49px;
+	font-size:1.1em;
+	background:url(/commun/images/pictos/lien-service.gif) #f1f1f1 no-repeat left center;
+	margin-top:3px;
+	margin-bottom:3px;
+	clear:both;
+}
+.lien-service_atlas a, .lien-service_atlas a:hover {
+}
+p.gt {
+	display:block;
+	padding:10px 0 5px 0;
+	clear:both;
+	float:left;
+	width:99%;
+}
+.page_atlas_1_2_presentation p.gt {
+	padding:25px 0 15px 0;
+}
+/*------------ Liens vers mises à jour ------------*/
+.mise-a-jour {
+	border:1px dotted #bbbbbb;
+	padding:11px 5px 12px 49px;
+	font-size:1.1em;
+	background:url(/commun/images/pictos/lien-mise-a-jour.gif) #f1f1f1 no-repeat left center;
+	margin-top:3px;
+	margin-bottom:15px;
+	clear:both;
+}
+.maj-lightbox {
+	padding:10px;
+	background-image:none;
+	background-color:#FFF;
+}
+.maj-lightbox h1 {
+	margin-top:0;
+	margin-bottom:20px;
+	background-image:none;
+	padding-left:0;
+	text-indent:0;
+}
+.maj-lightbox .chemin {
+	display:none;
+}
+.maj-date {
+}
+.maj-titre {
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+}
+/*--- design service Appels d'offre ---*/
+.page_service_appels_d_offres_v2 #encart-produit {
+	z-index:1;
+}
+/*--- style AO v2 ---*/
+.input-secteurs-ao {
+	position: relative;
+	margin-top: 15px;
+	z-index:2;
+}
+.ordre-select-ao .input-secteurs-ao {
+	clear:both;
+	padding-top:15px;
+}
+.select-pays-ao {
+	position: relative;
+	margin-bottom: 10px;
+	z-index: 1;
+}
+.input-secteurs-ao input, .select-pays-ao input {
+	padding: 1px;
+	padding-left: 2px;
+	height: 14px;
+	width: 216px;
+}
+.open-secteurs-ao, .open-pays-ao {
+	position:absolute;
+	top:2px;
+	left:202px;
+	z-index:1;
+	width:17px;
+	height:14px;
+	background: url(/ressources/images/select-fx.gif) no-repeat; 	
+	text-decoration: none;
+}
+.ordre-select-ao .open-secteurs-ao {
+	top:16px
+}
+.cache-input-ao {
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 219px;
+	height: 1px;
+	background-color: #fff;
+	z-index: 4;	
+}
+.bloc-secteur-ao, .bloc-pays-ao {
+	position:absolute;
+	top:17px;
+	left:0px;
+	z-index:200;	
+	background-color: #FFF;
+	width: auto;
+	padding:10px 2px;
+	border: #000 solid 1px;
+}
+.bloc-secteur-ao {
+  width: 100%;
+} 
+.ordre-select-ao .bloc-secteur-ao {
+	top:32px;
+}
+.bloc-pays-ao {
+	width: 215px;	
+}
+.bloc-secteur-ao a {
+	padding: 0 0 0 12px;
+	display: inline-block;
+}
+.secteur-ao-select {
+	padding: 0 0 0 12px;
+	background: url(/ressources/images/picto-coche.gif) no-repeat;
+}
+.bloc-decoupe-secteur-ao {
+	float:left; 
+	width: 20%;
+}
+.bloc-decoupe-continents-ao {
+	float:left;
+	width:71px;
+}
+.bloc-decoupe-top20-ao {
+	float:left; 
+	width:130px;
+}
+.bloc-decoupe-1-continent-ao {
+	float:left; 
+	width:132px;
+}
+.bouton-off-inactif	{
+	width:auto;
+	background-color: #ccc;
+	color:#FFFFFF;
+	text-align:center;
+	margin:0px;
+	padding:2px 5px;
+	border: #ccc 1px solid;
+}
+.page_service_appels_d_offres_v2 .contenu input.bouton-off,
+.page_service_appels_d_offres_v2 .contenu input.bouton-on,
+.page_service_appels_d_offres_v2 .contenu .bouton-off-inactif {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+.page_service_appels_d_offres_v2 .checkbox_pays,
+.page_service_appels_d_offres_v2_onglet .checkbox_pays {
+	vertical-align:middle;
+	margin-bottom: 3px;
+}
+#encart-reponse-ao {
+	margin-top: 22px;
+	border: #e0e0e0 1px dotted;
+	padding: 8px 8px 25px 8px;	
+}
+.page_service_appels_d_offres_v2 #encart-produit,
+.page_service_appels_d_offres_v2_onglet #encart-produit {
+	/*border: #e0e0e0 1px dotted;*/
+	padding-bottom: 25px;	
+}
+.no-result-ao {
+	background: url(/ressources/images/picto-ampoule.jpg) no-repeat;
+	background-position: center left;
+	padding-left: 35px;
+	min-height: 60px;
+}
+.date-resultat {
+	font-weight:normal;
+	font-size: 0.9em;
+}
+.resume-ao {
+	margin-bottom: 25px;
+	width: 70%;
+	float: left;
+}
+.resume2-ao {
+	margin-bottom: 25px;
+	font-weight:bold;
+	font-size:1.3em;
+	clear:both;
+}
+#page_actu__1, #page_actu2__1, .page-result-tender {
+	clear: both;	
+}
+.box-appel-offre {
+	overflow: auto;
+	height: 132px;
+	width: 226px;
+	border: #000 1px solid;
+	padding: 1px;
+	margin: 0;
+	background-color: #ffffff;
+}
+/*-- ao v3 --*/
+.page_service_appels_d_offres_v3 .resume2-ao {
+	margin-bottom: 15px;
+}
+.page_service_appels_d_offres_v3 .filtres-pointilles {
+	border-bottom: 1px solid #666666;
+	margin-bottom: 15px;
+}
+.page_service_appels_d_offres_v3 .resume3-ao {
+	clear: both;
+	margin-bottom: 4em;
+	margin-top: 2em;
+}
+.page_service_appels_d_offres_v3 .lien-ouvre strong {
+	font-size: 1em;
+}
+.page_service_appels_d_offres_v3 .contenu form#mon_form2 {
+	margin-bottom: 1.5em;
+}
+/*------------ lien suivant atlas découpé 
+.onglet-suivant {
+	width:100%;
+	height:25px;
+	float:left;
+	margin:35px 0 30px 0;
+	text-align:center;
+}
+a.lien-suivant-atlas {
+	color:#505050;
+	font-weight:bold;
+	padding:2px 5px 3px 0;
+	text-decoration:underline;
+	outline:dotted thin #ccc;
+}
+a.lien-suivant-atlas:hover {
+	color:#fff;
+	background-color:#ff6600;
+	text-decoration:none;
+	outline:none;
+}
+a.lien-suivant-atlas .fleche-suivant {
+	color:#ff6600;
+	text-decoration:none;
+	font-weight:normal;
+	background:url(/commun/images/pictos/suivant.gif) #fff no-repeat right;
+	vertical-align:middle;
+	padding:0 15px 2px 5px;
+}
+a.lien-suivant-atlas:hover .fleche-suivant {
+	color:#fff;
+	background:url(/commun/images/pictos/suivant-on.gif) #ff6600 no-repeat right;
+	text-decoration:none;
+}
+------------*/
+/*-- réglage prob btn si mauvais HS */
+.nomenclature-droite-div-upload_popup {
+	width: 7%;
+}
+/*--- Piers ---*/
+.relevance-peirs1 {
+	background-color:#ddd;
+}
+.relevance-peirs2 {
+	background-color:#eee;
+}
+/*---- champs locaux --*/
+.champs_locaux_canada {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_canada.gif) no-repeat 0 3px;	
+}
+.champs_locaux_denmark {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_danemark.gif) no-repeat 0 3px;	
+}
+.champs_locaux_finland {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_finlande.gif) no-repeat 0 3px;	
+}
+.champs_locaux_norway {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_norvege.gif) no-repeat 0 3px;	
+}
+.champs_locaux_sweden{
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_suede.gif) no-repeat 0 3px;
+}
+.champs_locaux_belgium {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_belgique.gif) no-repeat 0 3px;	
+}
+.champs_locaux_netherlands {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_pays-bas.gif) no-repeat 0 3px;	
+}
+.champs_locaux_morocco {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_maroc.gif) no-repeat 0 3px;	
+}
+.champs_locaux_italy {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_italie.gif) no-repeat 0 3px;	
+}
+.champs_locaux_germany {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_allemagne.gif) no-repeat 0 3px;	
+}
+.champs_locaux_egypt {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_egypte.gif) no-repeat 0 3px;	
+}
+.champs_locaux_france {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_france.gif) no-repeat 0 3px;	
+}
+.champs_locaux_spain {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_espagne.gif) no-repeat 0 3px;	
+}
+.champs_locaux_lebanon {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_liban.gif) no-repeat 0 3px;	
+}
+.champs_locaux_mauritius {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_ile-maurice.gif) no-repeat 0 3px;	
+}
+.champs_locaux_brazil {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_bresil.gif) no-repeat 0 3px;	
+}
+.champs_locaux_argentina {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_argentine.gif) no-repeat 0 3px;	
+}
+.champs_locaux_peru {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_perou.gif) no-repeat 0 3px;	
+}
+.champs_locaux_puerto-rico {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_porto-rico.gif) no-repeat 0 3px;	
+}
+.champs_locaux_portugal {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_portugal.gif) no-repeat 0 3px;	
+}
+.champs_locaux_mexico {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_mexique.gif) no-repeat 0 3px;	
+}
+.champs_locaux_chile {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_chili.gif) no-repeat 0 3px;	
+}
+.champs_locaux_uruguay {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_uruguay.gif) no-repeat 0 3px;	
+}
+.champs_locaux_united-states {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_etats-unis.gif) no-repeat 0 3px;	
+}
+.champs_locaux_united-kingdom {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_royaume-uni.gif) no-repeat 0 3px;	
+}
+.champs_locaux_poland {
+	padding-left: 18px;
+	background: url(/commun/images/drapeaux/petit/drapeau_pologne.gif) no-repeat 0 3px;	
+}
+.afficher_voir .fermer, .afficher_fermer .voir {
+	display: none;
+}
+/*--- lightbox --*/
+body.page_gtm_sans_menu_Y, .body-lightbox {
+	background-color:#FFF;
+	background-image:none;
+	padding: 10px 10px 0 10px;
+}
+/*--- lightbox etudes memos et actus --*/
+.description-etude-lightbox, .actus-lightbox {
+	padding: 10px 10px 0 10px;
+	background-image:none;
+	background-color:#FFF;
+}
+.description-etude-lightbox table,
+.description-etude-lightbox table td,
+.actus-lightbox table,
+.actus-lightbox table td {
+	border: 0;
+	font-size: 1em;
+	text-align: left;
+}
+.description-etude-lightbox h1,
+.actus-lightbox h1 {
+	margin: 0;
+	margin-bottom: 6px;
+	height: auto;	
+}
+.description-etude-lightbox a.lien-externe-zoombox,
+.actus-lightbox a.lien-externe-zoombox {
+	float:right;
+	margin-right: 5px;
+}
+a.lien-externe-zoombox {
+	font-size: 11px;
+	padding-right: 13px;
+	background: url(/commun/images/pictos/picto-lien-externe.gif) right top no-repeat;
+	text-decoration: underline;	
+	color: #555;
+	display: block;
+	width: auto;
+}
+a.lien-externe-zoombox:hover {
+	text-decoration: none;	
+}
+/* --- etudes memos v2 */
+.page_recherche_etudes_memos_v2 .atlas table, 
+.page_recherche_etudes_memos_v2 .atlas td {
+	border: 0;	
+}
+.nuage-tag {
+	margin: 10px  0 15px 0;
+	border-bottom: #dddddd 1px solid;
+	border-top: #dddddd 1px solid;
+	padding: 8px 0;
+	text-align: center;
+}
+a.tag-poids-1, a.tag-poids-1:hover,
+a.tag-poids-2, a.tag-poids-2:hover,
+a.tag-poids-3, a.tag-poids-3:hover,
+a.tag-poids-4, a.tag-poids-4:hover,
+a.tag-poids-5, a.tag-poids-5:hover {
+	display: inline-block;
+	font-size: 11px;
+	margin: 4px;
+}
+a.tag-poids-2, a.tag-poids-2:hover {
+	font-size: 13px;
+	margin: 3px 4px;
+}
+a.tag-poids-3, a.tag-poids-3:hover {
+	font-size: 15px;
+	margin: 2px 4px;
+}
+a.tag-poids-4, a.tag-poids-4:hover {
+	font-size: 17px;
+	margin: 1px 4px;
+}
+a.tag-poids-5, a.tag-poids-5:hover {
+	font-size: 20px;
+	margin: 0px 4px;
+}
+/*------------ ... ------------*/
+.resultat-cout-rendu {
+	border:1px solid #e5e5e5;
+	background-color:#f4f4f4;
+	padding:10px 0;
+	width:500px;
+}
+.resultat-cout-rendu dd {
+	width:300px;
+}
+.resultat-cout-rendu dt {
+	padding-left:5px;
+	width:129px;
+}
+/*------------ ... ------------*/
+/*------------ lien suivant atlas découpé ------------*/
+.onglet-suivant {
+	width:50%;
+	height:25px;
+	float:right;
+	margin:30px 0 20px 0;
+	text-align:right;
+}
+a.lien-suivant-atlas {
+	color:#999999;
+	font-weight:bold;
+	padding:2px 5px 3px 0;
+	text-decoration:underline;
+	outline:dotted thin #ccc;
+}
+a.lien-suivant-atlas:hover {
+	color:#fff;
+	background-color:#0071cf;
+	text-decoration:none;
+	outline:none;
+}
+a.lien-suivant-atlas .fleche-suivant {
+	color:#0071cf;
+	text-decoration:none;
+	font-weight:normal;
+	background:url(/ressources/images/pictos/suivant.gif) #fff no-repeat right;
+	vertical-align:middle;
+	padding:0 15px 2px 5px;
+}
+a.lien-suivant-atlas:hover .fleche-suivant {
+	color:#fff;
+	background:url(/commun/images/pictos/suivant-on.gif) #0071cf no-repeat right;
+	text-decoration:none;
+}
+/*------------ lien precedent atlas découpé & flux vin ------------*/
+.onglet-precedent {
+	width:50%;
+	height:25px;
+	float:left;
+	margin:30px 0 20px 0;
+}
+a.lien-precedent-atlas {
+	color:#999999;
+	font-weight:bold;
+	padding:2px 0 3px 5px;
+	text-decoration:underline;
+	outline:dotted thin #ccc;
+}
+a.lien-precedent-atlas:hover {
+	color:#fff;
+	background-color:#0071cf;
+	text-decoration:none;
+	outline:none;
+}
+a.lien-precedent-atlas .fleche-precedent {
+	color:#0071cf;
+	text-decoration:none;
+	font-weight:normal;
+	background:url(/ressources/images/pictos/precedent.gif) #fff no-repeat left;
+	vertical-align:middle;
+	padding:0 5px 2px 15px;
+}
+a.lien-precedent-atlas:hover .fleche-precedent {
+	color:#fff;
+	background:url(/commun/images/pictos/precedent-on.gif) #0071cf no-repeat left;
+	text-decoration:none;
+}
+.atlas-horloge {
+	position:absolute;
+	/*color:#666;
+	top:80px;
+	right:10px;*/
+	top:-95px;
+	right:0px;
+	z-index:10;
+	width:180px;
+	height:100px;
+	overflow:hidden;
+	margin:0 0 2px 10px;
+	text-align:center;
+	/*padding-top:64px;
+	background: url(/commun/images/atlas/horloge.gif) no-repeat center top;*/
+}
+#clock_id {
+	margin-bottom: 4px;
+}
+.atlas-horloge .heure {
+	font-weight:bold;
+}
+
+/*------------ Actualités Atlas (Sibos) ------------*/
+.atlas-inclusion-news {
+	display:block;
+	clear:both;
+	background-color:#f4f4f4;
+	padding:10px 5px 10px 10px;
+	border:1px solid #e5e5e5; 
+	-webkit-border-top-right-radius: 30px; 
+	-moz-border-radius-topright: 30px; 
+	border-top-right-radius: 30px;
+}
+.atlas-inclusion-news #pagination {
+	width:192px;
+	float:right;
+}
+.atlas-inclusion-news h2 {
+	background-image:none;
+	border-bottom:0;
+	padding:0;
+	text-indent:0;
+	margin:0 0 10px 0;
+	
+	font-weight:bold;
+	font-size:13px;
+	color:#000;
+}
+.atlas-inclusion-news .sources {
+	padding-top:10px;
+}
+.bloc-news-atlas {
+	/*border:2px solid DodgerBlue; 
+	-webkit-border-top-right-radius: 20px; 
+	-moz-border-radius-topright: 20px; 
+	border-top-right-radius: 20px;*/
+}
+.date-news {
+	display:inline-block;
+	font-size:0.9em;
+	background-color:#eee;
+}
+a.info_bulle_news {
+	position:relative;
+	z-index:24;
+	text-decoration:none;
+}
+	 
+a.info_bulle_news:hover {
+	z-index:25;
+	background-color:#FFF;
+}
+	 
+a.info_bulle_news span {
+	display: none;
+}
+a.info_bulle_news:hover span {
+	border-radius:5px;
+	moz-border-radius:5px;
+	webkit-border-radius:5px;
+	display:block;
+	position:absolute;
+	top:1.8em; left:12em; width:30em;
+	border:3px solid #ccc;
+	background-color:#FFF;
+	color:#000;
+	font-weight:none;
+	padding:5px;
+}
+
+/*------------ Service Annuaires V3, "Directories" ------------*/
+.page_service_annuaires_v3 #recherche-intro select {
+	width:260px;
+}
+.page_service_annuaires_v3 table thead td {
+	font-weight:normal;
+}
+.fond_annuaire_1 {
+	background-color: #fff;
+}
+.fond_annuaire_2 {
+	background-color: #f0f1ed;
+}
+.fond_annuaire_3 {
+	background-color: #ecede9;
+}
+.fond_annuaire_4 {
+	background-color: #e4e6e0;
+}
+.fond_annuaire_5 {
+	background-color: #dfe1db;
+}
+.fond_annuaire_6 {
+	background-color: #dadcd3;
+}
+.page_service_annuaires_v3 table td .bulle_info_v2 span { 
+	left:-186px; 
+	width:150px;
+}
+.page_service_annuaires_v3 table td .bulle_info_v2 span img { 
+	left: 170px;
+}
+
+/*--- Styles pour l'atlas risque pays ---*/
+.code-export-1 {
+	font-size: 1em;
+	background-color:#ecede9;
+}
+.code-export-2 {
+	background-color:#dcded5;
+	font-size: 0.95em;
+}
+.code-export-3 {
+	background-color:#fff;
+	background-color:#cacdc3;
+	font-size: 0.9em;
+}
+.code-export-1 td a, .code-export-2 td a, .code-export-3 td a {
+	margin-left:4px;
+	padding-left:7px;
+	background: url(/commun/images/puce-li.gif) no-repeat;
+}
+.code-export-2 td a {
+	margin-left:16px;
+}
+.code-export-3 td a {
+	margin-left:28px;
+}
+.pas-de-sous-code a.bulle_info, .code-export-1 td a.bulle_info, .code-export-2 td a.bulle_info, .code-export-3 td a.bulle_info {
+	cursor:default;
+	text-decoration:none;
+}
+table tbody.gestion_des_sous_codes_export td, table tbody.gestion_des_sous_codes_import td {
+    border-top: 1px solid #cacdc3;
+	border-bottom: 1px solid #cacdc3;
+}
+/*table.gestion_des_codes td {
+	font-size: 1.05em;
+	font-family:Arial, Helvetica, sans-serif;
+}*/
+table.gestion_des_codes td a, table.gestion_des_codes td a:hover {
+	text-decoration:none;
+}
+table.gestion_des_codes thead td {
+	font-size:1em;
+}
+/*table.gestion_des_codes td.simple {
+	width:5em;
+}*/
+/*-------- Landed cost v2 ----------*/
+#description_nomenclature {
+	margin: 2px 4px;
+	color: #666;
+}
+.page_service_gtm_landed_cost_resultats #etape_2, .page_service_gtm_landed_cost_resultats #etape_3, .separation-service {
+	clear: both;
+	border-top: #ddd dotted 1px;	
+}
+.separation-service {
+	margin:9px 0;
+	padding-top:9px;
+	border-bottom: #ddd dotted 1px;
+	border-top:none;
+}
+#uom dl, #taxes dl {
+	margin-top: 0;	
+}
+body.page_service_gtm_landed_cost_resultats {
+	background: none;
+	background-color:#FFF;
+}
+.page_service_gtm_landed_cost_resultats .retour,
+.page_service_gtm_landed_cost_resultats .bloc_navigation_non_imprimable {
+	display: none;
+}
+.page_service_gtm_landed_cost_resultats #contenu-all,
+.page_service_gtm_landed_cost_resultats #contenu,
+.page_service_gtm_landed_cost_resultats #global,
+.page_service_gtm_landed_cost_resultats #content,
+.page_service_gtm_landed_cost_resultats #COLB {
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: none;
+	background: none;
+	border: none;
+}
+.resultats-lightbox   {
+	padding: 0 15px;
+	position:relative;
+	z-index:1;
+	width:95%;
+}
+.resultats-lightbox h1 {
+	text-align:center;
+	margin-top: 5px;
+	background: none;
+	height: auto;
+	width: 95%;
+	text-indent: 0;
+	clear:both;
+}
+.resultats-lightbox h1 strong {
+	font-size: 1.2em;
+}
+h2 .liens-criteres-lightbox a, h2 .liens-criteres-lightbox a:hover, .liens-criteres-lightbox a, .liens-criteres-lightbox a:hover {
+	margin-left: 30px;
+	font-size: 11px;
+}
+.page_service_gtm_landed_cost_resultats td.adroite {
+    float: none;
+}
+.page_service_gtm_landed_cost_resultats .italique {
+	display:block;
+	margin-bottom: 20px;
+}
+.page_service_gtm_landed_cost_resultats.page_gtm_sans_menu_Y table {
+	margin: 0px 0px 10px;
+	border: 1px solid #808080;
+	width: 100%;	
+}
+.page_service_gtm_landed_cost_resultats.page_gtm_sans_menu_Y table td {
+	padding: 4px;
+	border: 1px solid #ccc;
+}
+/*--- denied party screening ---*/
+body.page_service_gtm_trade_party_screening_details {
+	background: none;
+	background-color:#FFF;
+}
+.page_service_gtm_trade_party_screening_details .chemin {
+	display:none;
+}
+.page_service_gtm_trade_party_screening_details .retour,
+.page_service_gtm_trade_party_screening_details .bloc_navigation_non_imprimable {
+	display: none;
+}
+.page_service_gtm_trade_party_screening_details  #contenu-all,
+.page_service_gtm_trade_party_screening_details #contenu,
+.page_service_gtm_trade_party_screening_details #content,
+.page_service_gtm_trade_party_screening_details  #global {
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: none;
+	background: none;
+	border: none;
+}
+.approved-party {
+	font-size: 12px;
+	color:#81b941;
+	background: url(/commun/images/pictos/picto-approved.png) no-repeat;
+	padding-left: 16px;
+}
+#party-onglet_1 table, #party-onglet_2 table, #party-onglet_3 table {
+	margin-top: 15px;	
+	margin-bottom: 15px;
+}
+.txt-disclaimer-service {
+	font-style: italic;
+	margin: 20px 0;
+	background-color: #eeeeee;
+	padding: 15px;
+}
+/*---- scroll droite table nomenclature dans services -------*/
+.page_service_gtm_quick_quote_v2 .scroll-droite,
+.page_service_gtm_import_controls_v2 .scroll-droite,
+.page_service_gtm_export_controls_v2 .scroll-droite,
+.page_service_gtm_document_determination_v2 .scroll-droite,
+.page_service_nomenclature_gtm_v2 .scroll-droite {
+	margin-top: 15px;
+	height: 280px;
+	max-height: 280px;
+	overflow-x: hidden;
+    overflow: auto;
+}
+*+html .page_service_gtm_quick_quote_v2 .s_nomenclature,
+*+html .page_service_gtm_import_controls_v2 .s_nomenclature,
+*+html .page_service_gtm_export_controls_v2 .s_nomenclature,
+*+html .page_service_gtm_document_determination_v2 .s_nomenclature,
+*+html .page_service_nomenclature_gtm_v2 .s_nomenclature {
+	width: 97%;	
+}
+* html .page_service_gtm_quick_quote_v2 .s_nomenclature,
+* html .page_service_gtm_import_controls_v2 .s_nomenclature,
+* html .page_service_gtm_export_controls_v2 .s_nomenclature,
+* html .page_service_gtm_document_determination_v2 .s_nomenclature,
+* html .page_service_nomenclature_gtm_v2 .s_nomenclature {
+	width: 97%;	
+}
+* html .page_service_gtm_quick_quote_v2 .nomenclature-droite_popup,
+* html .page_service_gtm_import_controls_v2 .nomenclature-droite_popup,
+* html .page_service_gtm_export_controls_v2 .nomenclature-droite_popup,
+* html .page_service_gtm_document_determination_v2 .nomenclature-droite_popup,
+* html .page_service_nomenclature_gtm_v2 .nomenclature-droite_popup {
+	width: 70%;
+}
+* html .page_service_gtm_quick_quote_v2 .nomenclature-droite-div-upload_popup,
+* html .page_service_gtm_import_controls_v2 .nomenclature-droite-div-upload_popup,
+* html .page_service_gtm_export_controls_v2 .nomenclature-droite-div-upload_popup,
+* html .page_service_gtm_document_determination_v2 .nomenclature-droite-div-upload_popup,
+* html .page_service_nomenclature_gtm_v2 .nomenclature-droite-div-upload_popup {
+	width: 9%;
+}
+/*---- bulle demo ---*/
+.avis-demo, .messages-criteres {	
+	font-size: 1em;
+	padding: 6px 10px 6px 65px;
+	margin-bottom: 10px;
+	width: auto;
+	position: relative;
+	border: 1px solid #d9d490;
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+	
+	background: #f7ed7c url(/commun/images/pictos/user-demo.gif) no-repeat 15px 15px;	
+	z-index: 1;
+	clear:both;
+}
+.messages-criteres {	
+	background: #f7ed7c url(/commun/images/pictos/message-critere.gif) no-repeat 8px 5px;	
+	padding: 6px 10px 6px 60px;
+}
+.avis-demo a {
+	text-decoration: underline;
+}
+.avis-demo a:hover {
+	text-decoration: none;
+}
+.fleche-avis-demo {
+	background: url(/commun/images/fleche-bas-demo.gif) no-repeat;
+	width: 15px;
+	height: 9px;
+	position: absolute;
+	left: 50px;
+	bottom: -8px;	
+	z-index:2;
+}
+* html .fleche-avis-demo {
+	bottom: -4px;	
+}
+.titre-demo {
+	background-color: #f6b43a;
+	color:#FFF;
+	padding: 1px 2px;
+}
+.avis-demo .input_identifiant {
+	width:160px;
+	background-color:#fff;
+	color: #000;
+	border:1px solid #d9d490;
+}
+.avis-demo .input_mdp {
+	width:45px;
+	background-color:#fff;
+	color: #000;
+	border:1px solid #d9d490;
+}
+select.select-demo, table.invisible select.select-demo {
+	/*width:260px;*/
+	background-color:#ddd;
+	color: #666;
+	border-color: #ddd;
+}
+.input-demo, table.invisible input.input-demo {
+	background-color:#ddd;
+	color: #666;
+	border-color: #ddd;
+}
+input.bouton-demo, table.invisible input.bouton-demo {
+	color: #666;
+	background-color:#ddd;	
+	border: none;
+}
+a#plus_information {
+	margin-left:10px;
+}
+#decription_du_service {
+	padding:5px;
+	background-color:#f9f298;
+
+	-webkit-border-radius: 8px; 
+	-moz-border-radius: 8px; 
+	border-radius: 8px;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.avis-demo .bouton-off, .avis-demo .bouton-off:hover {
+    font-size: 0.9em;
+}
+.bulle_info-demo {	
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+.bulle_info-demo:hover span { 
+	position: absolute;
+    border: 1px solid #d9d490;
+    background: #f7ed7c url(/commun/images/pictos/user-demo-bulle.gif) no-repeat 5px 8px;	
+	color:#000;	
+	width: 140px;
+	bottom:28px; 
+    left: -1px; 
+	padding:8px 5px 8px 30px;
+	font-style: normal;
+	font-size: 1em;
+	
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+* html .bulle_info-demo .fleche-avis-demo { 
+	bottom: -8px;	
+}
+* html a.bulle_info-demo, * html a.bulle_info-demo:hover,
+*+html a.bulle_info-demo, *+html a.bulle_info-demo:hover {
+	text-decoration: none;	
+}
+.connecte .bulle_info-demo:hover span {
+	display:none;
+}
+.demo-avis-btn input {
+	float: left;
+	width: auto;
+}
+.demo-avis-btn span {
+	display: inline-block;
+	font-size: 0.9em;
+	float: left;
+	width: 60%;
+	margin-left: 15px;
+	padding: 4px;
+	border: 1px solid #d9d490;
+	position: relative;
+	background-color: #F7ED7C;
+}
+.demo-avis-btn span img {
+	background: url(/commun/images/fleche-gauche-demo.gif) no-repeat;
+    left: -8px;
+	top: 6px;
+    position: absolute;
+	height: 15px;
+    width: 9px;
+    z-index: 2;	
+}
+/*------- fin demo --------*/
+/*---- bulle demo 2 ------*/
+.avis-demo2 {	
+	font-size: 1em;
+	padding: 10px;
+	margin: 20px 0 15px 0;
+	width: auto;
+	position: relative;
+	border: 1px solid #cccccc;
+	
+	background: #eeeeee;	
+	z-index: 1;
+	clear:both;
+}
+.avis-demo2 a {
+	text-decoration: underline;
+}
+.avis-demo2 a:hover {
+	text-decoration: none;
+}
+.avis-demo2 form {
+	padding-bottom: 15px;
+}
+.avis-demo2 .input_identifiant {
+	width:180px;
+	background-color:#fff;
+	margin: 0;
+}
+.avis-demo2 .input_mdp {
+	width: 180px;
+	background-color:#fff;
+	margin: 10px 0;
+}
+.gauche-demo2 {
+	float: left;
+	width: 47%;
+	padding-right: 3%;
+	border-right: 1px dotted #ccc;	
+}
+.droite-demo2 {
+	float: right;
+	width: 47%;
+}
+.titre-demo2 {
+	margin: 1em 0 1.5em 0;
+	color: #000;
+}
+.avis-demo2 #decription_du_service {
+	padding:5px;
+	background-color:#f1f1f1;
+	
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	border-radius: 0px;
+	behavior: none;
+}
+.demo-h1 {
+	border: 1px solid #CF0808;
+    background-color: #fff;
+	color: #CF0808;
+	padding: 2px 6px;
+	font-style: normal;
+	font-size: 14px;
+	text-transform:uppercase;
+	margin-left: 10px;
+	
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	border-radius: 6px;
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+/*------- fin demo 2 --------*/
+
+.page_recherche_afficher_etude h1, .page_recherche_afficher_etude p {
+	padding-left:0;
+	background-image:none;
+}
+a.lien-pdf-impression {
+	position:absolute;
+	top:30px;
+	right:25px;
+	display:block;
+	height:29px;
+	width:29px;
+	background:url(/commun/images/pictogrammes/picto-pdf-off.gif) no-repeat left;
+	z-index:2;
+}
+a.lien-pdf-impression:hover {
+	background:url(/commun/images/pictogrammes/picto-pdf-on.gif) no-repeat left;
+}
+.page_gtm_sans_menu_Y a.lien-pdf-impression {
+	display:none;
+}
+.page_service_gtm_landed_cost_resultats #contenu-all, .page_service_gtm_landed_cost_resultats #global {
+	padding:0;
+}
+.page_service_gtm_landed_cost_resultats #contenu-all a.lien-pdf-impression, 
+.page_service_gtm_landed_cost_resultats #global a.lien-pdf-impression, 
+.page_service_gtm_landed_cost_resultats #menu-contenu a.lien-pdf-impression, 
+.page_service_gtm_landed_cost_resultats #contener a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #MCOLB a.lien-pdf-impression {
+	display:none;
+}
+.page_service_gtm_landed_cost_resultats a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #contenu-all .resultats-lightbox a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #global .resultats-lightbox a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #menu-contenu .resultats-lightbox a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #contener .resultats-lightbox a.lien-pdf-impression,
+.page_service_gtm_landed_cost_resultats #MCOLB .resultats-lightbox a.lien-pdf-impression {
+	display:block;
+	top:15px;
+	right:25px;
+	z-index:100;
+}
+.page_service_gtm_landed_cost_resultats h2 span.lien-page, .page_service_gtm_landed_cost_resultats h2 span.lien_page {
+	font-size:11px;
+}
+.page_service_gtm_landed_cost_resultats.convertir_en_pdf_ok #contenu-all,
+.page_service_gtm_landed_cost_resultats.convertir_en_pdf_ok #contenu,
+.page_service_gtm_landed_cost_resultats.convertir_en_pdf_ok #global,
+.page_service_gtm_landed_cost_resultats.convertir_en_pdf_ok #menu-contenu,
+.page_service_gtm_landed_cost_resultats.convertir_en_pdf_ok #contener {/*marche pas*/
+	background-image:none; 
+}
+.convertir_en_pdf_ok .resultats-lightbox   {/*marche*/
+	background-color:#FFF;
+}
+
+.page_spe_recherche_etudes_memos table.invisible, .page__spe_recherche_etudes_memos table.invisible  {
+	background-color:#fff;
+}
+.page_spe_recherche_etudes_memos table.invisible td, .page__spe_recherche_etudes_memos table.invisible td,
+.page_spe_recherche_etudes_memos_v2 table.invisible td, .page__spe_recherche_etudes_memos_v2 table.invisible td, .page_spe_recherche_etudes_memos_v5 table.invisible td {
+	padding:5px;
+}
+.page_service_gtm_landed_cost_v2 dl dd a.lien-page {
+	display:block;
+	margin-top:5px;
+}
+/*------------ ... ------------*/
+* html .page_service_gtm_document_determination_v2 #encart-produit table.invisible {
+	position:relative;
+	z-index:1;
+}
+/*------------ service federations modifs ------------*/
+.page_service_federations_v2 #choix_industry dl, 
+.page_service_federations_v2 #choix_country dl {
+	margin-bottom: 15px;
+}
+.page_service_federations_v2 #choix_industry select,
+.page_service_federations_v2 #choix_country select {
+	width: 270px;
+}
+/*.choix-federations {
+	overflow:hidden;
+	float:left;
+	width:177px;
+	margin:0 1px 1px 0;
+}
+.bloc-lien-federations {
+	display:block;
+	padding:4px 1px 3px 5px;
+	width:171px;
+}
+a.lien-pays-federations, a.lien-pays-federations:hover {		
+	margin-left: 2px;
+}*/
+
+/*-------- Page 404 ---------*/
+.contenu-404 {
+	position: relative;
+}
+.img-404 {
+	background:url(/commun/images/img-404.png) no-repeat left;
+	position: absolute;
+	right: 0;
+	top: -100px;
+	width: 640px;
+	height: 102px;
+}
+* html .img-404 {
+	/*display:inline;*/
+	background:none; 
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/commun/images/img-404.png', sizingMethod='crop'); 
+	zoom:1;
+}
+.contenu-404 h2 {
+	margin-top: 35px;
+}
+.contenu-404 form {
+	margin: 20px 0 30px 0;	
+}
+* html .contenu-404 ul li {
+	position: relative;	
+}
+.bloc-1-404 {
+	position: relative; /* ie6 */
+	float: left;
+	width: 48%;
+	margin-right: 3%;
+}
+.bloc-2-404 {
+	position: relative; /* ie6 */
+	float: left;
+	width: 48%;
+}
+.bloc-services-404 {
+	position: relative;
+	background-color: #eee;
+	border: #CCC dotted 1px;
+	padding: 7px 10px;
+	margin-top: 15px;
+}
+/*-------- veille forcee ----------*/
+.bloc-form-veille-g, .bloc-form-veille-g2 {
+	float: left;
+	width: 70%;
+	margin-bottom: 20px;
+}
+.bloc-form-veille-g2 {
+	width: 100%;
+}
+.bloc-form-veille-g h1, .bloc-form-veille-g2 h1 {
+	height: auto;
+}
+.bloc-exemple-veille {
+	float: right;
+	width: 27%;
+}
+.bloc-form-veille, .bloc-form-veille-v4 {
+	background-color: #F1F1F1;
+    border: 1px dotted #E5E5E5;
+    padding: 2%;
+	position:relative;
+}
+*html .bloc-form-veille, .bloc-form-veille-v4 {
+    padding: 1%;
+}
+.form-veille-1 {
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+}
+.bloc-form-veille .form-veille-1 input {
+	width: 95%;
+	background-color: #FFF;
+}
+.form-veille-2 {
+	float: left;
+	width: 48%;
+}
+.form-veille-2 select#pays_veille {
+	width: 95%;
+	background-color: #FFF;
+}
+.form-veille-a {
+	float: left;
+	width: 20%;
+	margin-right: 5%;
+}
+.form-veille-b {
+	float: left;
+	width: 31%;
+	margin-right: 5%;
+}
+*html .form-veille-a, *html .form-veille-b {
+	margin-right: 3%;
+}
+.form-veille-c {
+	float: left;
+	width: 39%;
+	margin-right:0;
+}
+.titre-veille-forcee {
+	font-weight:bold;
+	font-size:1em;
+}
+*html .page_spe_vos_abonnements .titre-veille-forcee,
+*+html .page_spe_vos_abonnements .titre-veille-forcee {
+	font-size:1em;
+}
+.bouton-veille-v4 {
+	text-align:center;
+	padding-top:15px;
+}
+.veille-numero {
+	color: #666;
+	border: 1px solid #999;
+	background-color: #f1f1f1;
+    padding: 0px 4px;
+	margin: 0;
+	margin-right: 5px;
+	font-weight:normal;
+}
+.page_veille_forcee table.invisible {
+	width: 100%;
+}
+.page_veille_forcee .invisible tr td {
+	padding-bottom: 7px;
+}
+.page_veille_forcee .invisible tr.modif-veille td {
+	padding: 20px 0 25px 0;
+}
+.page_veille_forcee .invisible td.aucentre {
+	text-align:center;
+}
+/*.page_veille_forcee .invisible td.simple { (problème sur LCL BMCE)
+	width: 47%;
+}*/
+.page_veille_forcee .invisible td.double {
+	width: 25%;
+}
+.page_veille_forcee .invisible td.triple {
+	width: 14%;
+}
+.page_veille_forcee .invisible select {
+	width: 48%;
+}
+.page_veille_forcee .invisible input.input-veille {
+	width: 48%;
+}
+.texte-conseil {
+	font-size:0.9em;
+	/*color:#666;*/
+	margin-top:3px;
+	clear:both;
+	display:block;
+	padding:3px 4px;
+	border: 1px dotted #E5E5E5;
+	background-color:#f9f9f9;
+}
+/*.champ-alerte {
+	padding: 5px;
+	background-color:#FFF;
+}*/
+table.sepa-veille, .sepa-veille {
+	margin-bottom: 10px;
+	border-bottom: #b6b6b6 1px dotted;
+	width:100%;
+}
+div.sepa-veille {
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+.picto-veille {
+	float:left;
+	margin:0 9px 2px 0;
+}
+.veille-forcee-resultats table.invisible td  {
+	padding: 5px;
+}
+.veille-forcee-resultats .colonne-1-veille,
+.veille-forcee-resultats .colonne-2-veille {
+	width: auto;
+	margin-right: 5%;
+	float: left;
+}
+.veille-forcee-resultats .colonne-2-veille {
+	margin-top: 10px;	
+}
+.validation-veille img {
+	width:40px;
+	height:40px;
+	display:block;
+	float:left;
+	margin:0 7px 0 0;
+}
+/*------------ BO ------------*/
+.widgetIframe, .widgetIframe2 {
+	width:49%;
+	float:left;
+}
+.widgetIframe2 {
+	float:right;
+}
+#widgetIframe {
+	margin-bottom:20px;
+	height:auto;
+}
+.page__back_office_back_office_tracking_piwik iframe {
+	background:none;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe1 {
+	height:239px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe2 {
+	height:317px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe3 {
+	height:448px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe4 {
+	height:317px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe5 {
+	height:239px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe6 {
+	height:317px;
+}
+.page__back_office_back_office_tracking_piwik iframe.iframe7 {
+	height:448px;
+}
+.page__back_office_back_office_tracking_piwik iframe html, .page__back_office_back_office_tracking_piwik iframe body {
+	background:none;
+}
+.page__back_office_back_office_tracking_piwik iframe .widget {
+	background-color:#fff;
+	overflow:auto;
+}
+.page__back_office_back_office_tracking_piwik iframe .widget .sparkline, .page__back_office_back_office_tracking_piwik iframe .widget #leftcolumn .sparkline, .page__back_office_back_office_tracking_piwik iframe .widget #rightcolumn .sparkline {
+	display:block;
+	clear:both;
+	width:100%;
+}
+.page__back_office_back_office_tracking_piwik iframe .widget #leftcolumn, .page__back_office_back_office_tracking_piwik iframe .widget #rightcolumn {
+	width:100%;
+	display:block;
+	clear:both;
+	float:left;
+	margin:0;
+	border:0;
+	padding:0;
+}
+
+/*------------ quick quote ------------*/
+.message-resultat-incomplet {
+	background:#fff url(/commun/images/pictos/message-alerte.gif) no-repeat 10px 8px;
+	border:1px dotted #ccc;
+	padding:10px 10px 12px 60px;
+}
+.tarif-preferentiel-1, .tarif-preferentiel-2, .tarif-non-preferentiel {
+	background:#fff url(/commun/images/pictos/picto-douane-tarif-1.gif) no-repeat center left;
+	padding:0 0 0 40px;
+	margin:5px 0;
+	font-style:italic;
+	min-height:26px;
+}
+.tarif-preferentiel-2 {
+	background:#fff url(/commun/images/pictos/picto-douane-tarif-2.gif) no-repeat center left;
+	padding:0 0 0 45px;
+	min-height:21px;
+}
+.tarif-non-preferentiel {
+	background:#fff url(/commun/images/pictos/picto-douane-tarif-3.gif) no-repeat center left;
+	min-height:30px;
+}
+
+/*------------ Importateurs Chine & Inde + latinos ------------*/
+.page_service_importateurs_chine #produit dt, .page_service_importateurs_inde #produit dt  {
+	width:12%;
+	margin:0;
+}
+.page_service_importateurs_chine #produit dd, .page_service_importateurs_inde #produit dd {
+	width:85%;
+	padding-left:0;
+	margin:0;
+}
+.page_service_importateurs_chine #encart-produit select, .page_service_importateurs_inde #encart-produit select,
+.page_service_importateurs_chine_entreprise #encart-produit select, .page_service_importateurs_inde_entreprise #encart-produit select {
+	width:350px;
+}
+.page_service_importateurs_chine #bouton5, .page_service_importateurs_inde #bouton5,
+.page_service_importateurs_chine_entreprise #bouton5, .page_service_importateurs_inde_entreprise #bouton5 {
+	margin-top:10px;
+}
+.page_service_importateurs_chine .bulle_info:hover span, .page_service_importateurs_inde .bulle_info:hover span {    
+    top:-18px; 
+    left:25px; 
+    width:70px;
+	z-index:20px;
+	font-size:0.9em;
+}
+.page_service_importateurs_chine h2 .bulle_info,
+.page_service_importateurs_inde h2 .bulle_info{
+	font-size: 0.8em;
+	font-weight: normal;
+}
+.page_service_importateurs_chine_entreprise h3 .bulle_info,
+.page_service_importateurs_inde_entreprise h3 .bulle_info{
+	font-size: 0.9em;
+	font-weight: normal;
+}
+.page_service_importateurs_chine_entreprise .fiche-salon_v2-gauche, 
+.page_service_importateurs_chine_entreprise .fiche-salon_v2-droite,
+.page_service_importateurs_inde_entreprise .fiche-salon_v2-gauche, 
+.page_service_importateurs_inde_entreprise .fiche-salon_v2-droite {
+	margin-top: 25px;
+}
+/*------------ auto completion --------------------------*/
+.auto-completion {
+	background-color: #fff;	
+	border: 1px solid #ccc;
+	z-index: 20; 
+}
+.auto-completion ul {
+    height: 100px;
+    overflow: auto;
+    padding: 0 5px;
+    position: relative;
+}
+.auto-completion li,
+.auto-completion li:hover {
+	cursor: pointer;
+}
+.auto-completion li:hover {
+	background-color: #f1f1f1;
+}
+
+.top-10-selection {
+	text-align:right;
+	margin:15px 10px 10px 0;
+}
+.top-10-selection input.bouton-off, .top-10-selection input.bouton-on {
+	margin-top:10px;
+}
+.info_bulle_pays {
+}
+.page_service_flux_tous_pays_top_10_v4 dl dt .bulle_info-on, 
+.page_service_flux_tous_pays_top_10_v3 dl dt .bulle_info-on {
+	top:-18px;
+	font-size:1em;
+	left:28px;
+}
+#encart-produit-bo {
+	height:auto !important;
+	height:200px;
+	min-height:200px;
+}
+
+/*------------------ service_flux_tous_pays_top_10_v4 infobulle ---------------------*/
+
+.page_service_flux_tous_pays_top_10_v4 .bulle_info{
+    position: relative;
+}
+.page_service_flux_tous_pays_top_10_v4 .bulle_info:hover {
+	/*height: 100px;*/
+	display: inline-block;
+	overflow: visible;
+}
+.page_service_flux_tous_pays_top_10_v4 .bloc-affiner-recherche-product #div_affiner_recherche .choix-affiner-recherche{
+    overflow: visible;
+    position: relative;
+}
+.page_service_flux_tous_pays_top_10_v4 #encart-produit #choix_produit .bulle_info-on {
+      position: absolute;
+      font-size: .8em;
+      top: -70px;
+      left: 130px;
+      width: 320px;
+      height: auto;
+      padding: .9em;
+      text-align: left;
+     /* color: #FFF;
+      background: #333;
+      border: 1px dotted #DDD;
+      text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;*/
+}
+.page_service_flux_tous_pays_top_10_v4 #encart-produit #choix_produit span.bulle_info-on #bulle_fleche {
+	top: 76px;	
+}
+
+/*------------------ service_flux_tous_pays_top_10_v4 ---------------------*/
+
+.page_service_flux_tous_pays_top_10_v4 #choix_keyword input,
+.page_service_flux_tous_pays_top_10_v4 #choix_hs input {
+    margin-bottom: 8px;
+}
+#choix_preferences ul.bulle_gtm {
+	z-index: 1;
+}
+/*#choix_preferences ul.bulle_gtm li {
+	background: url(/ressources/images/picto-rond-noir.gif) no-repeat center left;
+}*/
+.pays-pref {
+	width:24%;
+	float:left;
+	margin-right:15px;
+}
+.choix-pref {
+	margin-top:10px;
+	float: left;
+    margin: 9px 1px 1px 0;
+    overflow: hidden;
+	width:24%;
+}
+.txt-industry-droite {
+	width: 55%;
+	float: right;
+	margin: 0 0 5px 0;
+}
+.page_service_flux_tous_pays_top_10_v4  #choix_industry select {
+	max-width: 42%;	
+}
+.page_service_flux_tous_pays_top_10_v4 #div_code_hs_secteur {
+	margin-top: 10px;	
+}
+.titre-trading-countries {
+	width: 72%;
+	float: left;
+	margin: 20px 0 15px 0;
+	position:relative;
+	z-index:1;
+}
+.titre-trading-countries h2 {
+	margin-top: 0;
+}
+.lien-dr-select, .lien-dr-select:hover {
+	text-decoration: underline;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: -3px;
+}
+.lien-dr-select:hover {
+	text-decoration: none;
+}
+.bloc-affiner-recherche-product {
+	position: relative;
+	margin: 14px 0 0 0;
+	padding: 0;
+	z-index:2;
+}
+.lien-affiner-recherche, .lien-affiner-recherche:hover,
+.lien-affiner-recherche-actif, .lien-affiner-recherche-actif:hover {
+	display: block;
+	position: absolute;
+	border: 1px solid #fff;
+	right: 0px;
+	top: 17px;
+	padding: 10px 20px 10px 10px;
+	background: #fff url(/ressources/images/fleche-pointe-bas.gif) no-repeat center right;	
+	height: 12px;
+	z-index: 3;
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+* html .lien-affiner-recherche, * html .lien-affiner-recherche:hover,
+* html .lien-affiner-recherche-actif, * html .lien-affiner-recherche-actif:hover {
+	right: 388px;
+}
+.lien-affiner-recherche-actif, .lien-affiner-recherche-actif:hover {
+	border: 1px solid #dbdbdb;
+	border-bottom: 1px solid #fff;
+	color: #000;
+	text-decoration: none;
+}
+.bulle-affiner-recherche {
+	position: absolute;
+	background-color:#FFF;
+	border: 1px solid #dbdbdb;	
+	z-index: 2;
+	top: 50px;
+	right: 0;
+	padding: 8px 10px 10px 10px;
+}
+* html .bulle-affiner-recherche {
+	top: 50px;
+	right: 388px;
+	width: 97%;
+}
+.choix-affiner-recherche {
+    float: left;
+    margin: 0 2% 1% 0;
+    overflow: hidden;
+    width: 48%;
+}
+.bloc-trading-gauche {
+	width: 46%;
+	padding:15px 10px 10px 10px;
+	float: left;
+	margin-top: 20px;
+	background-color:#FFF;
+	-moz-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	-ms-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.bloc-trading-droite {
+	width: 46%;
+	padding:15px 10px 10px 10px;
+	float: right;
+	margin-top: 20px;
+	background-color:#FFF;
+	-moz-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	-ms-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	box-shadow:0 0 4px 0px rgba(0,0,0,0.3);
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+.bloc-trading-gauche, .bloc-trading-droite {
+	min-height:240px;
+}
+.bloc-trading-droite h3 a,
+.bloc-trading-droite h3 a:hover {
+	text-decoration: underline;
+	font-size: 0.8em;
+	/*float: right;*/
+	margin-left: 8px;
+	margin-top: 0.15em;
+}
+.bloc-trading-droite h3 a:hover {
+	text-decoration: none;
+}
+.bloc-trading-gauche select,
+.bloc-trading-droite select {
+	margin-bottom: 10px;	
+}
+.page_service_flux_tous_pays_top_10_v4 .sources {
+	margin-top: 6px;
+}
+.page_service_flux_tous_pays_top_10_v4 .resultats {
+	margin-top: 15px;
+}
+.picto-bloc-trading {
+	width: 16%;
+	float: left;
+	margin-top: 0;
+}
+.picto-bloc-trading-drapeau {
+	width: 14%;
+	float: left;
+	margin-top: 8px;
+}
+.picto-bloc-trading-drapeau-relatif {
+	position:relative;
+	z-index:1;
+}
+.picto-croissance-trading {
+	position:absolute;
+	/*top:-2px;
+	left:-2px;
+	width:30px;
+	height:15px;*/
+	top:-6px;
+	left:-3px;
+	width:28px;
+	height:19px;
+	z-index:2;
+}
+.bloc-trading-gauche h3,
+.bloc-trading-droite h3 {
+	padding-top: 0;
+	padding-left: 0;
+	margin-top: 0;
+	background-image: none;
+	text-indent: 0px;
+	height:40px;
+}
+.bloc-trading-gauche a,
+.bloc-trading-droite a {
+	text-decoration: underline;
+}
+.bloc-trading-gauche a:hover,
+.bloc-trading-droite a:hover {
+	text-decoration: none;
+}
+.liste-espace {
+	margin-top: 5px; 	
+}
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-gauche table.invisible,
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-droite table.invisible,
+.page_veille_accueil_v4 #zone_des_resultats table.invisible {
+    width:100%;
+}
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-gauche table.invisible td,
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-droite table.invisible td {
+    padding-top: 5px;
+}
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-gauche table.invisible td.table-donnees,
+.page_service_flux_tous_pays_top_10_v4 .bloc-trading-droite table.invisible td.table-donnees {
+	text-align:right;
+	padding-right:2px;
+}
+.total-surligne {
+	padding: 5px;
+	background-color: #eee;
+	border: 1px solid #e7e7e7;
+}
+/*----------*/
+h2.bloc-h2-1, h2.bloc-h2-1-actif,
+h2.bloc-h2-2, h2.bloc-h2-2-actif {
+	cursor:pointer;
+}
+h2.bloc-h2-1 span,
+h2.bloc-h2-2 span,
+h2.bloc-h2-1-actif span,
+h2.bloc-h2-2-actif span {
+	font-weight: normal;
+}
+.bloc_bulle_info {
+ 	position:absolute;
+	z-index:2;
+    top:35px; 
+    left:0; 
+    width:379px;
+	padding:8px 5px 12px 12px;
+	border:1px dotted #ccc;
+    background-color:#fff; 
+	color:#000;
+	font-size:0.85em;
+	font-weight:normal;
+	line-height:1.2em;
+}
+/*--- notes affiche - cache -atlas ---*/
+.atlas .item_affiche {
+	font-style:italic;
+}
+.item_cache .note-cache,
+.item_affiche .note-affiche {
+	display: none;
+}
+a.lien-note-affiche, a.lien-note-affiche:hover,
+a.lien-note-affiche-actif, a.lien-note-affiche-actif:hover {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: normal;
+	font-style:italic;
+	clear: both;
+	padding:0 0 0 10px;
+	margin: 10px 0 4px 0;
+	background-image:url(/commun/images/atlas/pictogrammes/picto-note-affiche.gif);
+	background-repeat:no-repeat;
+	background-position: left center;
+	text-decoration:underline;
+	color: #333;
+}
+a.lien-note-affiche:hover {
+	background-image:url(/commun/images/atlas/pictogrammes/picto-note-affiche-on.gif);
+	background-repeat:no-repeat;
+	text-decoration: none;
+}
+a.lien-note-affiche-actif {
+	background-image:url(/commun/images/atlas/pictogrammes/picto-note-cache.gif);
+	background-repeat:no-repeat;
+	text-decoration:underline;
+}
+a.lien-note-affiche-actif:hover {
+	background-image:url(/commun/images/atlas/pictogrammes/picto-note-cache-on.gif);
+	background-repeat:no-repeat;
+	text-decoration:none;
+}
+/*----- numero nomenclature locale -----*/
+.select-code_hs_secteur {
+	margin-top: 6px;
+}
+.page_service_nomenclature_gtm_v2 .bulle_info_v2 span {  
+	top:-10px; 
+	left:-230px; 
+	width:200px;
+	font-weight: normal;
+	font-size:80%;
+}
+.page_service_nomenclature_gtm_v2 .nomenclature_type_2 .picto-information {
+	margin-left:2px;
+}
+.page__service_flux_vin_v2 p.adroite {
+	margin-top:0;
+	float:right;
+	width:20%;
+}
+
+/*----- Service__flux-tous-pays-v3.html -----*/
+.informations_grisee {
+	color:#666;
+}
+.page_service_flux_tous_pays_v3 .informations, .page_service_flux_tous_pays_v3 .informations_grisee {
+	padding: 6px 0;
+}
+/*.page_service_flux_tous_pays_v3 #titre_1 {
+	padding-left:6px;
+}
+.page_service_flux_tous_pays_v3 #etape_2, .page_service_flux_tous_pays_v3 #etape_3 {
+	border-top:0;	
+}*/
+.etape-active {
+	background-color:#FFF;
+	padding:5px;
+	border:1px solid #ddd;
+}
+#votre_selection_pays div {
+	display:inline-block;
+	clear:none;
+	width:auto;
+}
+.titre-secondaire {
+	padding-right:25px;
+}
+ul.sous-titre-secondaire {
+	margin: 15px 0 0 0;
+}
+.contient-choix {
+	width:100%;
+	/*height: 228px;*/
+	overflow:auto;
+}
+.choix-monde {
+    float: left;
+    overflow: hidden;
+	margin: 0 0 1px 0;
+    width:96%;
+	clear:both;
+}
+.page_service_flux_tous_pays_v3 .choix {
+    width:24%;
+}
+.page_service_flux_tous_pays_v3 .choix {
+    width:24%;
+}
+.liste_des_produits_importateurs .choix,
+.page__service_piers_fournisseurs_v3 #choix_secteur .choix,
+.page__service_piers_fournisseurs_entreprise_v3 #choix_secteur .choix,
+#choix_secteur #code_hs_section .choix {
+    width:49%;
+}
+.liste_des_produits_importateurs .choix {
+	overflow:visible;
+}
+.industrie-selectionne, .secteur-selectionne {
+	margin-top:0; 
+	border-bottom:1px dotted #b6b6b6;
+	padding-bottom:12px;
+	width:99%;
+}
+.produit-selectionne {
+	width:99%;
+}
+.produit-selectionne ul {
+	padding-bottom:0;
+	margin-bottom:0;
+	width:99%;
+}
+.secteur-selectionne {
+	/*border-bottom:0;
+	padding-bottom:0;*/
+}
+.industrie-selectionne a.lien-page, .industrie-selectionne a.lien-page:hover, .secteur-selectionne a.lien-page, .secteur-selectionne a.lien-page:hover, .produit-selectionne a.lien-page, .produit-selectionne a.lien-page:hover {
+	display:inline-block;
+	float:right;
+}
+table.titre-liste-importateurs {
+	clear:both;
+	margin-top:35px;
+	margin-bottom:15px;
+	width:100%;
+}
+table.titre-liste-importateurs h2 {
+	margin:0;
+}
+table.titre-liste-importateurs td.simple {
+	width:15%;
+}
+table.titre-liste-importateurs td a.lien-page {
+	float:right;
+	margin-top:7px;
+}
+.industrie-selectionne a.lien-page, .industrie-selectionne a.lien-page:hover,
+.secteur-selectionne a.lien-page, .secteur-selectionne a.lien-page:hover {
+	margin-left:20px;
+}
+.liste-importateurs a.lien-page, .liste-importateurs a.lien-page:hover {
+	margin-left:20px;
+	cursor:pointer;
+}
+
+.page_service_flux_tous_pays_v3 #encart-contenu {
+    padding: 10px 8px;
+}
+.page_service_flux_tous_pays_v3 .bloc-decoupe-pays {
+    float: left;
+    width: 20%;
+}
+.page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu, 
+.page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu:hover, 
+.page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu-actif, 
+.page_service_flux_tous_pays_v3 .contient-choix .onglet-contenu-actif:hover {
+    width: auto;
+	padding-left:  25px;
+	padding-right: 25px;
+}
+.page_service_flux_tous_pays_v3 #contenu .lien-all-world,
+.page_service_flux_tous_pays_v3 #contenu .lien-all-world:hover {
+	width: auto;
+	padding-right: 0;
+	padding-left: 0;
+	background: none;
+	margin-right: 25px;
+	margin-left: 15px;
+	text-decoration: none;
+	border: none;
+}
+.page_service_flux_tous_pays_v3 #contenu .lien-all-world .picto-monde-flux,
+.page_service_flux_tous_pays_v3 #contenu .lien-all-world:hover .picto-monde-flux {
+	display: inline;
+	height: 10px;
+	width: 15px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.page_service_flux_tous_pays_v3 #contenu .lien-all-world:hover {
+	text-decoration: underline;
+}
+.centre-btn-flux {
+	width: 100%;
+	margin-top: 15px;	
+}
+.page_service_flux_tous_pays_v3 .centre-btn-flux  #bouton5,
+.page_service_flux_tous_pays_v3 .centre-btn-flux  #bouton6 {
+	margin: 0 auto;
+	display: block;
+}
+.page_service_flux_tous_pays_v3 .resultats h2 {
+	width: 77%;
+	float: left;	
+}
+.page_service_flux_tous_pays_v3 .resultats .lien-page {
+	max-width: 18%;
+	float: right;
+	margin-top: 2em;
+}
+
+.page_service_flux_tous_pays_v3 .contient-choix a.lien-pays, .page_service_flux_tous_pays_v3 .contient-choix a.lien-pays:hover {
+    background-color: #FFFFFF;
+    color: #666666;
+    display: block;
+    font-size: 0.9em;
+    padding: 3px 1px 3px 4px;
+    text-decoration: none;
+	width: 97%;
+}
+.page_service_flux_tous_pays_v3 .contient-choix a.lien-pays:hover {
+    background-color: #f1f1f1;
+}
+
+/* .page_service_flux_tous_pays_v3 .resultats h2.titre-dt { enlever quand mise en ligne nouveau modèle
+	clear: both;
+	float: none;
+	width: 99%;
+}*/
+
+
+/*-------- Importateurs US --------*/
+li.contient-onglet-liste {
+	padding-left:6px;
+	margin-bottom: 5px;
+}
+a.onglet-liste, a.onglet-liste:hover, a.onglet-liste-actif, a.onglet-liste-actif:hover {
+	padding:5px;
+	text-decoration:none;
+}
+a.onglet-liste-actif, a.onglet-liste-actif:hover {
+	/*border-left:1px solid #e5e5e5;
+	border-right:1px solid #e5e5e5;
+	border-top:1px solid #e5e5e5;
+	padding:2px 2px 3px 2px;*/
+	background-color:#eee;
+	-moz-box-shadow:inset 0 2px 2px 0 rgba(0,0,0,0.1);
+	-ms-box-shadow:inset 0 2px 2px 0 rgba(0,0,0,0.1);
+	-webkit-box-shadow:inset 0 2px 2px 0 rgba(0,0,0,0.1);
+	box-shadow:inset 0 2px 2px 0 rgba(0,0,0,0.1);
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+a.onglet-liste:hover, a.onglet-liste-actif:hover {
+	text-decoration:underline;
+}
+ul.container-liste, ul.container-liste-actif {
+	padding:5px;
+	margin:0;
+}
+ul.container-liste-actif {
+	/*border:1px solid #e5e5e5;
+	border-top:0;
+	padding:3px 2px 2px 2px;*/
+	background-color:#eee;
+	margin:0;
+	-moz-box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.2);
+	-ms-box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.2);
+	-webkit-box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.2);
+	box-shadow:inset 0 0 2px 0 rgba(0,0,0,0.2);
+	
+	behavior: url( /commun/css/css3/PIE.htc ); /* ie 6, 7 et 8 */
+}
+ul.container-liste li, ul.container-liste-actif li {
+	margin-left:3px;
+}
+
+
+.contient-liste-importateurs {
+	margin: 0;
+	padding: 0;
+	clear:both;
+}
+.liste-importateurs {
+	text-align: left;
+	margin: 0 0 2px 0;
+	padding:4px 0 3px 0;
+}
+.span_lien-liste-importateurs {
+	position: relative;
+}
+a.lien-liste-importateurs, a.lien-liste-importateurs-actif {
+width: 85px;
+position: absolute;
+top: -14px;
+left: 0px;
+z-index: 3;
+}
+a.lien-liste-importateurs, a.lien-liste-importateurs:hover,
+a.lien-liste-importateurs-actif, a.lien-liste-importateurs-actif:hover {
+	display: block;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 4px;
+	padding-left: 5px;
+	height: 24px;
+	text-indent: 0;
+	margin: 1px 0 0 5px;
+	cursor:pointer;
+	text-decoration:underline;
+}
+a.lien-liste-importateurs:hover {
+	border:0;
+	padding-right: 4px;
+	padding-left: 5px;
+	text-decoration:none;
+}
+a.lien-liste-importateurs-actif,
+a.lien-liste-importateurs-actif:hover {
+	margin-top: 0;
+	padding-left: 4px;
+	padding-right: 3px;
+	border-top: #ccc solid 1px;
+	border-right: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	background-color: #FFF;
+	text-decoration: none;
+	outline: none;
+}
+a.lien-liste-importateurs-actif:hover {
+	text-decoration:underline;
+}
+* html a.lien-liste-importateurs-actif, * html a.lien-liste-importateurs-actif:hover {
+	border:0;
+	padding-left: 5px;
+	margin: 1px 0 0 2px;
+	text-decoration:underline;
+}
+/*---*/
+.contient-choix-liste-prod {
+	width: 49%;
+	float: left;
+	clear: none;
+	margin-bottom: 10px;
+}
+.contient-choix-liste-prod .choix-liste {
+	display: block;	
+}
+/*---*/
+.ss-liste-importateurs {
+	position: relative;
+	width:98%;
+	margin: 0 0 8px 0;
+	padding: 0;
+	float: left;
+	background-color: #FFF;
+	border: #ccc solid 1px;
+	padding: 1px 0 0 10px;
+}
+.page__service_piers_importateurs_am_latine_liste_entreprise .bulle_info:hover span,
+.page__service_piers_fournisseurs_v3 .bulle_info:hover span,
+.page__service_piers_fournisseurs_entreprise_v3 .bulle_info:hover span,
+.page__service_piers_fournisseurs_liste_entreprise_v3 .bulle_info:hover span,
+.page__service_piers_importateurs .bulle_info:hover span {
+	left:24px;
+	width:125px;
+	top:-16px;
+}
+.page__service_piers_fournisseurs_v3 #encart-produit {
+	margin-top: 50px;
+}
+.page__service_piers_fournisseurs_v3 #encart-produit #choix_produit .bulle_info:hover span {
+	left:150px;
+}
+.commentaire-0-resultat {
+	color:#999;
+	padding-left:16px;
+}
+
+/*-------- Flux tous pays v3 --------*/
+/*.page_service_flux_tous_pays_v3 #choix_preferences .bulle_info {
+	width:480px;
+	display:inline-block;
+}*/
+.page_service_flux_tous_pays_v3 .resultats .resultats_flux_annee {
+	text-align:right;
+}
+#encart-produit p.notes {
+	font-size:1em;
+}
+#encart-resultat-produit {
+	margin-top:50px;
+}
+.page_service_flux_tous_pays_v3 #bas-page, .page_service_flux_tous_pays_v3 .taille-txt {
+	clear:both;
+	display:block;
+}
+
+/*-------- Etude memos v2 --------*/
+.page_spe_recherche_etudes_memos_v2 #filtres_secteurs,
+.page_spe_recherche_etudes_memos_v2 #filtres_langues,
+.page_spe_recherche_etudes_memos_v5 #filtres_secteurs,
+.page_spe_recherche_etudes_memos_v5 #filtres_langues {
+	margin-bottom:25px;
+	width:100%;
+}
+.page_spe_recherche_etudes_memos_v2 #filtre-replier,
+.page_spe_recherche_etudes_memos_v2 #filtre-deplier,
+.page_spe_recherche_etudes_memos_v5 #filtre-replier,
+.page_spe_recherche_etudes_memos_v5 #filtre-deplier {
+	float:right;
+}
+.page_spe_recherche_etudes_memos_v2 .lien-ouvre,
+.page_spe_recherche_etudes_memos_v5 .lien-ouvre {
+	margin-bottom:15px;
+	display:inline-block;
+	background:none;
+}
+.page_spe_recherche_etudes_memos_v2 #filtres {
+	margin-bottom: 25px;
+	background-color:none;
+	padding:10px;
+}
+.page_spe_recherche_etudes_memos_v5 #filtres {
+	margin: 1.5em 0;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	padding: 15px;
+}
+.page_spe_recherche_etudes_memos_v2 #submit_inactif,
+.page_spe_recherche_etudes_memos_v5 #submit_inactif {
+	margin-bottom: 10px;
+	cursor:pointer;
+}
+.page_spe_recherche_etudes_memos_v2 .choix-filtre,
+.page_spe_recherche_etudes_memos_v2 .choix-filtre-2,
+.page_spe_recherche_etudes_memos_v5 .choix-filtre,
+.page_spe_recherche_etudes_memos_v5 .choix-filtre-2 {
+	width:50%;
+	float:left;
+	padding-right: 5px;
+}
+.page_spe_recherche_etudes_memos_v2 .choix-filtre-2,
+.page_spe_recherche_etudes_memos_v5 .choix-filtre-2 {
+	width:145px;
+}
+.filtres-pointilles {
+	height: 0px;
+	width: 100%;
+	border-bottom: 1px dotted #cccccc;
+	margin-bottom: 15px;
+}
+fieldset[disabled] input[type="checkbox"], fieldset[disabled] input[type="radio"], input[type="checkbox"].disabled, input[type="checkbox"][disabled], input[type="radio"].disabled, input[type="radio"][disabled] {
+    cursor: default;
+}
+
+/*-------- Accueil veille v4 --------*/
+.bloc-form-veille {
+	position:relative;
+}
+.form-veille-b {
+	position: relative;
+}
+#info_aide_mots_cles {
+	position:absolute;
+	top: -150px;
+	left: 0;
+	width:250px;
+	border:1px solid #959595;
+	padding:10px;
+	background:#FFF;
+}
+#info_aide_mots_cles .fleche-info-bulle {
+	bottom:-8px;
+	left:80px;
+	position:absolute;
+}
+#info_aide_mots_cles em {
+	font-weight:bold;
+	font-style:normal;
+	font-size:1em;
+	display:block;
+	margin-bottom:10px;
+}
+
+/*-------- GTM --------*/
+.lien-preference, .lien-preference:hover {
+	/*color: #999;*/
+}
+/*#code_produit {
+	float: left;
+}*/
+.liens_code_produit {
+	/*float: left;
+	padding-left: 10px;*/
+	padding:3px 0 8px 0;
+}
+.liens_code_produit a.lien-page, .liens_code_produit a.lien-page:hover {
+	display:inline-block;
+}
+#div_preferences_hs .bulle_info:hover, .service__gtm-v2 #resultat .bulle_info:hover {
+	text-decoration: none;
+}
+#selectionner_preference, #recherche_nomenclature {
+	display: block;
+	float: left;
+}
+#selectionner_preference{
+	margin-right: 10px;
+}
+#div_preferences_hs .message-resultat-incomplet,
+.service__gtm-v2 #resultat .message-resultat-incomplet {
+	background:#fff url(/commun/images/pictos/picto-ampoule.gif) no-repeat 10px 8px;
+}
+.img-ds-texte-dte {
+	float:right;
+	margin:3px 0 3px 10px;
+	background-color:#eee;
+}
+.img-ds-texte-gche {
+	float:left;
+	margin:3px 15px 3px 0;
+	background-color:#eee;
+}
+/*---- importateurs Chine et Inde v2, latinos, US v3 ---*/
+.page_service_importateurs_chine_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_v2 #code_hs_pere_2.choix,  .page_service_importateurs_inde_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_v2 #code_hs_pere_2.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_2.choix, .page_service_importateurs_latinos #code_hs_pere_1.choix, .page_service_importateurs_latinos #code_hs_pere_2.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_1.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_2.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_2.choix, .page_service_importateurs_europeens #code_hs_pere_1.choix, .page_service_importateurs_europeens #code_hs_pere_2.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_1.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_2.choix, .page_service_importateurs_kompass #code_hs_pere_1.choix, .page_service_importateurs_kompass #code_hs_pere_2.choix, .page_service_importateurs_canada #code_hs_pere_1.choix, .page_service_importateurs_canada #code_hs_pere_2.choix {
+    padding: 5px 0 20px 0;
+    width: 46%;
+}
+.page_service_importateurs_kompass #code_hs_section #code_hs_pere_1 .choix, .page_service_importateurs_kompass_entreprise #code_hs_section #code_hs_pere_1 .choix {
+	width: 45%;
+	margin-right: 4%;
+}
+.page_service_importateurs_kompass #code_hs_section #code_hs_pere_1 .choix .lettre, .page_service_importateurs_kompass_entreprise #code_hs_section #code_hs_pere_1 .choix .lettre {
+	display: block;
+	font-weight: bold;
+	margin: 0.85em 0 0.4em;
+}
+.page_service_importateurs_chine_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_v2 #code_hs_pere_1.choix,  .page_service_importateurs_chine_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_inde_entreprise_v2 #code_hs_pere_1.choix, .page_service_importateurs_latinos #code_hs_pere_1.choix, .page_service_importateurs_latinos_entreprise #code_hs_pere_1.choix, .page_service_piers_importateurs_v3 #choix_secteur #code_hs_section #code_hs_pere_1.choix, .page_service_piers_importateurs_entreprise_v3 #choix_secteur #code_hs_section #code_hs_pere_1.choix, .page_service_piers_fournisseurs_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur #code_hs_pere_1.choix, .page_service_importateurs_europeens #code_hs_pere_1.choix, .page_service_importateurs_europeens_entreprise #code_hs_pere_1.choix, .page_service_importateurs_canada #code_hs_pere_1.choix{
+	margin-right: 4%;
+}
+.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs, .page_service_importateurs_latinos #produit.liste_des_produits_importateurs, .page_service_importateurs_latinos_entreprise #produit.liste_des_produits_importateurs, .page_service_importateurs_kompass #produit.liste_des_produits_importateurs, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs, .page_service_importateurs_europeens #produit.liste_des_produits_importateurs, .page_service_importateurs_europeens_entreprise #produit.liste_des_produits_importateurs, .page_service_importateurs_canada #produit.liste_des_produits_importateurs, .page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs {
+	background:none;
+	border-top: 1px dotted #E5E5E5;
+	border-left:none;
+	border-right:none;
+	border-bottom:none;
+	margin-top:15px;
+	padding: 10px 0;
+}
+.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs dl, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs dl, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs dl, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs dl, .page_service_importateurs_canada .liste_des_produits_importateurs dl, .page_service_importateurs_canada_entreprise .liste_des_produits_importateurs dl {
+	margin: .5em 0;
+}
+.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs dt, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs dt, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs dt, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs dt, .page_service_importateurs_canada .liste_des_produits_importateurs dt {
+	width: 12%;
+}
+.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs dd, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs dd, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs dd, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs dd, .page_service_importateurs_canada .liste_des_produits_importateurs dd {
+	width: 86%;
+	padding-top: 2px;
+	padding-left: 0;
+	margin-left: 0.1em;
+}
+.page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_chine_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_inde_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_chine_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_inde_entreprise_v2 #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_kompass #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_canada #produit.liste_des_produits_importateurs .bouton-off-inactif, .page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-on, .page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-off, .page_service_importateurs_canada_entreprise #produit.liste_des_produits_importateurs .bouton-off-inactif,
+.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-off-inactif,
+.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-off,
+.page_service_importateurs_latinos #produit.liste_des_produits_importateurs .bouton-on,
+.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-off-inactif,
+.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-off,
+.page_service_importateurs_europeens #produit.liste_des_produits_importateurs .bouton-on {
+	margin:20px auto 0;
+}
+.page_service_importateurs_chine_v2 #choix_hs #titre_industrie, .page_service_importateurs_chine_v2 #choix_hs #titre_produit,
+.page_service_importateurs_inde_v2 #choix_hs #titre_industrie, .page_service_importateurs_inde_v2 #choix_hs #titre_produit, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_industrie, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_industrie, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit, .page_service_importateurs_canada #choix_hs #titre_industrie, .page_service_importateurs_canada #choix_hs #titre_produit {
+	padding: 5px;
+	margin-right:7px;
+}
+.page_service_importateurs_chine_v2 #choix_hs #titre_produit, .page_service_importateurs_inde_v2 #choix_hs #titre_produit, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit, .page_service_importateurs_latinos #choix_hs #titre_produit, .page_service_importateurs_latinos_entreprise #choix_hs #titre_produit, .page_service_importateurs_kompass #choix_hs #titre_produit, .page_service_importateurs_kompass_entreprise #choix_hs #titre_produit, .page_service_importateurs_europeens #choix_hs #titre_produit, .page_service_importateurs_europeens_entreprise #choix_hs #titre_produit, .page_service_importateurs_canada #choix_hs #titre_produit, .page_service_importateurs_canada_entreprise #choix_hs #titre_produit  {
+	border-top: 1px dotted #E5E5E5;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+.page_service_importateurs_chine_v2 #choix_hs #titre_industrie a, .page_service_importateurs_chine_v2 #choix_hs #titre_produit a, .page_service_importateurs_inde_v2 #choix_hs #titre_industrie a, .page_service_importateurs_inde_v2 #choix_hs #titre_produit a, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_industrie a, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit a, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_industrie a, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit a, .page_service_importateurs_latinos #choix_hs #titre_industrie a, .page_service_importateurs_latinos #choix_hs #titre_produit a,  .page_service_importateurs_latinos_entreprise #choix_hs #titre_industrie a, .page_service_importateurs_latinos_entreprise #choix_hs #titre_produit a,  .page_service_importateurs_kompass #choix_hs #titre_industrie a, .page_service_importateurs_kompass #choix_hs #titre_produit a,  .page_service_importateurs_kompass_entreprise #choix_hs #titre_industrie a, .page_service_importateurs_kompass_entreprise #choix_hs #titre_produit a, .page_service_importateurs_europeens #choix_hs #titre_industrie a, .page_service_importateurs_europeens #choix_hs #titre_produit a,  .page_service_importateurs_europeens_entreprise #choix_hs #titre_industrie a, .page_service_importateurs_europeens_entreprise #choix_hs #titre_produit a, .page_service_importateurs_canada #choix_hs #titre_industrie a, .page_service_importateurs_canada #choix_hs #titre_produit a, .page_service_importateurs_canada_entreprise #choix_hs #titre_industrie a, .page_service_importateurs_canada_entreprise #choix_hs #titre_produit a{
+	float:right;	
+}
+.page_service_importateurs_chine_v2 #choix_hs #titre_industrie a#plus, .page_service_importateurs_chine_v2 #choix_hs #titre_produit a#plus, .page_service_importateurs_inde_v2 #choix_hs #titre_industrie a#plus, .page_service_importateurs_inde_v2 #choix_hs #titre_produit a#plus, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_industrie a#plus, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit a#plus, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_industrie a#plus, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit a#plus, .page_service_importateurs_latinos #choix_hs #titre_industrie a#plus, .page_service_importateurs_latinos #choix_hs #titre_produit a#plus,  .page_service_importateurs_latinos_entreprise #choix_hs #titre_industrie a#plus, .page_service_importateurs_latinos_entreprise #choix_hs #titre_produit a#plus,  .page_service_importateurs_kompass #choix_hs #titre_industrie a#plus, .page_service_importateurs_kompass #choix_hs #titre_produit a#plus,  .page_service_importateurs_kompass_entreprise #choix_hs #titre_industrie a#plus, .page_service_importateurs_kompass_entreprise #choix_hs #titre_produit a#plus, .page_service_importateurs_europeens #choix_hs #titre_industrie a#plus, .page_service_importateurs_europeens #choix_hs #titre_produit a#plus,  .page_service_importateurs_europeens_entreprise #choix_hs #titre_industrie a#plus, .page_service_importateurs_europeens_entreprise #choix_hs #titre_produit a#plus,  .page_service_importateurs_chine_v2 #choix_hs #titre_industrie a#moins, .page_service_importateurs_chine_v2 #choix_hs #titre_produit a#moins, .page_service_importateurs_inde_v2 #choix_hs #titre_industrie a#moins, .page_service_importateurs_inde_v2 #choix_hs #titre_produit a#moins, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_industrie a#moins, .page_service_importateurs_chine_entreprise_v2 #choix_hs #titre_produit a#moins, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_industrie a#moins, .page_service_importateurs_inde_entreprise_v2 #choix_hs #titre_produit a#moins, .page_service_importateurs_latinos #choix_hs #titre_industrie a#moins, .page_service_importateurs_latinos #choix_hs #titre_produit a#moins,  .page_service_importateurs_latinos_entreprise #choix_hs #titre_industrie a#moins, .page_service_importateurs_latinos_entreprise #choix_hs #titre_produit a#moins,  .page_service_importateurs_kompass #choix_hs #titre_industrie a#moins, .page_service_importateurs_kompass #choix_hs #titre_produit a#moins,  .page_service_importateurs_kompass_entreprise #choix_hs #titre_industrie a#moins, .page_service_importateurs_kompass_entreprise #choix_hs #titre_produit a#moins, .page_service_importateurs_europeens #choix_hs #titre_industrie a#moins, .page_service_importateurs_europeens #choix_hs #titre_produit a#moins,  .page_service_importateurs_europeens_entreprise #choix_hs #titre_industrie a#moins, .page_service_importateurs_europeens_entreprise #choix_hs #titre_produit a#moins {
+	
+	float: left;
+}
+.page_service_importateurs_chine_v2 #encart-produit, .page_service_importateurs_inde_v2 #encart-produit, .page_service_importateurs_chine_entreprise_v2 #encart-produit, .page_service_importateurs_inde_entreprise_v2 #encart-produit, .page_service_piers_importateurs_v3 #encart-produit, .page_service_piers_importateurs_entreprise_v3 #encart-produit, .page_service_piers_fournisseurs_v3 #encart-produit, .page_service_piers_fournisseurs_entreprise_v3 #encart-produit, .page_service_piers_fournisseurs_liste_entreprise_v3 #encart-produit, .page_service_importateurs_kompass #encart-produit, .page_service_importateurs_kompass_entreprise #encart-produit {
+	margin-top:55px;
+	margin-bottom:15px;
+}
+.page_service_piers_importateurs_v3 #choix_produit, .page_service_piers_importateurs_entreprise_v3 #choix_produit, .page_service_piers_fournisseurs_v3 #choix_produit, .page_service_piers_importateurs_entreprise_v3 #choix_produit, .page_service_piers_fournisseurs_liste_entreprise_v3 #choix_produit {
+	z-index: 50;
+}
+.page_service_importateurs_chine_v2 td.simple, .page_service_importateurs_inde_v2 td.simple, .page_service_importateurs_chine_entreprise_v2 td.simple, .page_service_importateurs_inde_entreprise_v2 td.simple, .page_service_importateurs_kompass td.simple, .page_service_importateurs_kompass_entreprise td.simple {
+	text-align: right;
+}
+.page_service_importateurs_chine_v2 .bulle_info:hover span, .page_service_importateurs_inde_v2 .bulle_info:hover span, .page_service_importateurs_chine_entreprise_v2 .bulle_info:hover span, .page_service_importateurs_inde_entreprise_v2 .bulle_info:hover span, .page_service_importateurs_kompass .bulle_info:hover span, .page_service_importateurs_kompass_entreprise .bulle_info:hover span {
+	left: 100px;
+}
+.page_service_importateurs_chine_entreprise_v2 h3 .bulle_info:hover span, .page_service_importateurs_inde_entreprise_v2 h3 .bulle_info:hover span, .page_service_importateurs_kompass h3 .bulle_info:hover span, .page_service_importateurs_kompass_entreprise h3 .bulle_info:hover span {
+	left: 25px;
+}
+.page_service_importateurs_chine_entreprise_v2 .fiche-salon_v2-gauche, .page_service_importateurs_inde_entreprise_v2 .fiche-salon_v2-gauche,
+.page_service_importateurs_chine_entreprise_v2 .fiche-salon_v2-droite, .page_service_importateurs_inde_entreprise_v2 .fiche-salon_v2-droite,
+.page_service_importateurs_latinos_entreprise .fiche-salon_v2-gauche, .page_service_importateurs_latinos_entreprise .fiche-salon_v2-droite,
+.page_service_piers_importateurs_entreprise_v3 .fiche-salon_v2-gauche, .page_service_piers_importateurs_entreprise_v3 .fiche-salon_v2-droite,
+.page_service_piers_fournisseurs_entreprise_v3 .fiche-salon_v2-gauche, .page_service_piers_fournisseurs_entreprise_v3 .fiche-salon_v2-droite,
+.page_service_importateurs_kompass .fiche-salon_v2-gauche, .page_service_importateurs_kompass .fiche-salon_v2-droite,
+.page_service_importateurs_kompass_entreprise .fiche-salon_v2-gauche, .page_service_importateurs_kompass_entreprise .fiche-salon_v2-droite,
+.page_service_importateurs_europeens_entreprise .fiche-salon_v2-gauche, .page_service_importateurs_europeens_entreprise .fiche-salon_v2-droite {
+	margin-top: 20px;
+}
+.page_service_importateurs_chine_v2 h2 .bulle_info:hover span, .page_service_importateurs_inde_v2 h2 .bulle_info:hover span, .page_service_importateurs_chine_entreprise_v2 h2 .bulle_info:hover span, .page_service_importateurs_inde_entreprise_v2 h2 .bulle_info:hover span, .page_service_importateurs_kompass h2 .bulle_info:hover span, .page_service_importateurs_kompass_entreprise h2 .bulle_info:hover span  {
+	top:-15px;
+	left:25px;
+}
+.page_service_importateurs_chine_v2 #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_chine_v2 #code_hs_pere_2 .bulle_info:hover span, 
+.page_service_importateurs_inde_v2 #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_inde_v2 #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_latinos #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_latinos #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_latinos_entreprise #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_latinos_entreprise #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_europeens #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_europeens #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_europeens_entreprise #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_europeens_entreprise #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_kompass #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_kompass #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_kompass_entreprise #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_kompass_entreprise #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_canada #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_canada #code_hs_pere_2 .bulle_info:hover span,
+.page_service_importateurs_canada_entreprise #code_hs_pere_1 .bulle_info:hover span, .page_service_importateurs_canada_entreprise #code_hs_pere_2 .bulle_info:hover span{
+	left: 50px;
+	top: 15px;
+	width:auto;
+	min-width:70px;
+	font-size: 0.9em;
+}
+.page_service_piers_importateurs_v3 #choix_secteur .bulle_info:hover span,
+.page_service_piers_importateurs_entreprise_v3 #choix_secteur .bulle_info:hover span,
+.page_service_piers_fournisseurs_v3 #choix_secteur .bulle_info:hover span,
+.page_service_piers_fournisseurs_entreprise_v3 #choix_secteur .bulle_info:hover span,
+.page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur .bulle_info:hover span {
+	left: 70px;
+	top: 6px;
+	width: 200px;
+}
+.page_service_piers_importateurs_v3 #choix_secteur .bulle_info:hover,
+.page_service_piers_importateurs_entreprise_v3 #choix_secteur .bulle_info:hover,
+.page_service_piers_fournisseurs_v3 #choix_secteur .bulle_info:hover,
+.page_service_piers_fournisseurs_liste_entreprise_v3 #choix_secteur .bulle_info:hover,
+.page_service_piers_fournisseurs_entreprise_v3 #choix_secteur .bulle_info:hover {
+	cursor: default;
+	text-decoration: none;
+}
+.page_service_piers_importateurs_v3 #choix_produit .bulle_info:hover span,
+.page_service_piers_importateurs_entreprise_v3 #choix_produit .bulle_info:hover span,
+.page_service_piers_fournisseurs_v3 #choix_produit .bulle_info:hover span,
+.page_service_piers_fournisseurs_entreprise_v3 #choix_produit .bulle_info:hover span,
+.page_service_piers_fournisseurs_liste_entreprise_v3 #choix_produit .bulle_info:hover span {
+	left: 130px;
+	z-index: 60;	
+}
+.page_service_importateurs_latinos #choix_hs #titre_produit, .page_service_importateurs_latinos_entreprise #choix_hs #titre_produit, .page_service_importateurs_europeens #choix_hs #titre_produit, .page_service_importateurs_europeens_entreprise #choix_hs #titre_produit {
+    padding-top: 10px;
+}
+.page_service_importateurs_latinos .liste_des_produits_importateurs dt,
+.page_service_importateurs_europeens .liste_des_produits_importateurs dt, 
+.page_service_importateurs_europeens_entreprise .liste_des_produits_importateurs dt {
+    width: 10%;
+}
+
+.page_service_importateurs_latinos .liste_des_produits_importateurs dd,
+.page_service_importateurs_europeens .liste_des_produits_importateurs dd, 
+.page_service_importateurs_europeens_entreprise .liste_des_produits_importateurs dd {
+	width: 87%;
+}
+.page_service_importateurs_latinos #encart-produit,
+.page_service_importateurs_latinos_entreprise #encart-produit,
+.page_service_importateurs_europeens #encart-produit,
+.page_service_importateurs_europeens_entreprise #encart-produit,
+.page_service_importateurs_canada #encart-produit, 
+.page_service_importateurs_canada_entreprise #encart-produit {
+	margin-bottom: 10px;	
+}
+.page_service_importateurs_latinos .liste_des_produits_importateurs dl {
+    margin: 0.5em 0;
+}
+.page_service_importateurs_latinos .liste_des_produits_importateurs dt {
+	margin-top: 0.1em;
+}
+.page_service_importateurs_latinos .liste_des_produits_importateurs dd {
+	margin-left: 0em;
+	width: 88%;
+}
+/*---- mode demo service modele ---*/
+.page_service_modele .demo {
+    margin-bottom: 30px;
+	background: #eeeeee;
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+}
+.page_service_modele .demo .texte-demo {
+    margin: 0;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    padding: 0;
+    width: 55%;
+}
+.page_service_modele .demo .lien-demo {
+    float: right;
+    width: 40%;
+}
+.page_service_modele .demo .lien-pdf {
+    display: block;
+}
+/*---- page Target Market Scan ---*/
+.page_service_target_market_scan .demo {
+    margin-bottom: 30px;
+}
+.page_service_target_market_scan .demo {
+    background: none repeat scroll 0 0 #eeeeee;
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+}
+.page_service_target_market_scan .demo .texte-demo {
+    margin: 0;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    padding: 0;
+    width: 55%;
+}
+.page_service_target_market_scan .demo .lien-demo {
+    float: right;
+    width: 40%;
+}
+.page_service_target_market_scan .demo .lien-pdf {
+    display: block;
+}
+
+.page_service_importateurs_kompass #produit.liste_des_produits_importateurs dt, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs dt {
+	width: 3%;
+}
+.page_service_importateurs_kompass #produit.liste_des_produits_importateurs dd, .page_service_importateurs_kompass_entreprise #produit.liste_des_produits_importateurs dd {
+	width: 95%;
+	padding-top: 2px;
+	padding-left: 0;
+	margin-left: 0.1em;
+}
+a#retour_arriere, a#retour_arriere_2 {
+	cursor: pointer;
+}
+
+/*---- page find importers -----*/
+.page_service_find_importers .list-country {
+    padding: 15px;
+}
+.page_service_find_importers .list-country a {
+    width: 31%;
+	display: inline-block;
+	margin: 0px 0px 5px;
+}
+.page_service_find_importers #contenu .texte-gras {
+    margin-top: 1.5em;
+}
+.page_service_find_importers .list-country img {
+    padding: 0 10px 0 0;
+}
+
+.page_service_find_importers .list-country-column {
+  background-color: #eeeeee;
+  padding: 15px;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+.page_service_find_importers .list-country-column a {
+  display: block;
+  margin: 0 0 5px;
+}
+.page_service_find_importers .list-country-column a span {
+  vertical-align: bottom;
+}
+
+/*--- lien powered EESA --*/
+.txt-powered {
+	display: inline-block;
+	clear: both;
+	color: #7D7D7D;
+	font-size: 0.95em;
+}
+/*--- email erroné ---*/
+.page_divers_email_erone {
+	margin: 0;
+}
+.page_divers_email_erone .texte-reactivation {
+	margin: 5px 0 0 113px;
+	width: 260px;
+}
+/* Ratings des réponses dossiers personnels */
+.bloc_comment, .bloc_montant {
+	background:#eee;
+	width: 99%;
+}
+.page__dossier_personnel_question p.champ_remarque {
+	clear: both;
+}
+.bloc_montant{
+	padding: 1em;	
+}
+.bloc_comment form#desc_question{
+	float: left;
+	padding-bottom: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.bloc_comment form#desc_question p.title_question{
+	width: 100%;
+}
+.bloc_comment, .bloc_comment .txt_comment {	
+	float: left;
+    padding: 6px;
+}
+.bloc_comment .txt_comment .rank_valid{
+	position: relative;
+}
+.bloc_comment .bloc_reponse{
+	position: relative;
+	float: left;	
+}
+.bloc_comment .avis_valider{
+	float: left;	
+}
+.page_dossier_personnel_question .avis_valider p{
+	font-style: italic;	
+}
+.page_dossier_personnel_question #contenu .message{
+	border-bottom: none !important;	
+}
+.bloc_comment form#desc_question .rank_stars{
+	position: relative;
+    left: 0;
+    min-height: 30px;
+}
+.bloc_comment form#desc_question textarea#commentaire{
+	float: left;
+	width: 400px;
+	height: 50px;
+}
+.bloc_comment form#desc_question input#bouton_submit_note{
+	margin-top: 10px;
+}
+#message_cookie{
+	padding: .7em;
+    text-align: center;
+	background: #eee; 
+}
+/*---- ancre à droite du titre des résultat ----*/
+.titre-resultat-l {
+	width: 80%;
+	box-sizing: border-box;
+	text-align: left;
+	float: left;	
+}
+.ancre-resultat-r, .ancre-resultat-r2 {
+	width: 20%;
+	box-sizing: border-box;	
+	text-align: right;
+	float: left;
+}
+.ancre-resultat-r2 {
+	float: right;
+}
+.ancre-resultat-r a {
+	display:inline-block;
+	margin-top: 1.8em;
+}
+.ancre-resultat-r2 a {
+	display:inline-block;
+	margin-top: 7px;
+}
+.body-lightbox .titre-resultat-l,
+.body-lightbox .ancre-resultat-r,
+.body-lightbox .ancre-resultat-r2 {
+	display: none;	
+}
+/*--- fin ancre à droite du titre résultats ---*/
+#tempo_div_message .champ-message {
+    background: #f4f2e9;
+    border: 1px solid #c1b9b9;
+    display: block;
+    margin: 10px 0 0;
+    min-height: 104px;
+    padding: 10px;
+    width: 583px;
+}
+span.reponse_ok {
+    font-weight: bold;
+}
+
+/** FILTRES SALON : RESPONSIVE **/
+.bloc-filtre dl {
+	border:1px solid black;
+}
+.accordeon-up {
+	height:40px;
+	overflow:hidden;
+}
+.accordeon-down {
+	height:auto;
+}
+.toggle-accordeon {
+	background:red;
+	cursor:pointer;
+	display:block;
+	position:absolute;
+	height:15px;
+	width:15px;
+}
+/*--- veille appels d'offres ---*/
+.page_veille_appels_d_offres #ligne_ajoutee {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.page_veille_appels_d_offres #ligne_ajoutee span {
+    background-color: #eeeeee;
+    padding: 3px 8px;
+}
+.page_veille_appels_d_offres .bloc-form-veille .form-veille-1 select, 
+.page_veille_appels_d_offres .bloc-form-veille .form-veille-2 select {
+    width: 95%;
+}
+.page_veille_appels_d_offres .txt-alert {
+    font-style: italic;
+}
+/*--- service modele contrat --*/
+.page_service_modele_de_contrat .input-radio-contrat {
+	display: inline-block;
+	float: left;
+	width: 55%;
+}
+.page_service_modele_de_contrat .exemple-contrat {
+	display: inline-block;
+	float: right;
+	width: 45%;
+}
+.choix-type-contrat div {
+	padding: 5px 0 25px 0;
+	clear:both;
+}
+.page_service_modele_de_contrat .exemple-contrat .lien-pdf, .page_service_modele_de_contrat .exemple-contrat .lien-pdf:hover {
+	display: inline;
+}
+.methode-encart{
+  background: #eee;
+  padding: 1em;
+  border-radius: 3px;
+}
+/*--- fin service modele contrat --*/
+
+/*--- login-v2 --*/
+.login-general {
+	background-color: #dfdfdf;
+    margin: 150px auto 0 auto;
+    width: 400px;	
+}
+.login-general p.titre-login-general {
+    background-color: #666;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.login-general .form {
+	padding: 10px 20px;
+}
+.login-general label {
+	display: block;
+	text-align: right;
+}
+.login-general input {
+	padding: 0 0 0 5px;
+	max-width: 240px;
+}
+@media \0screen {  /*--- ie8 ---*/
+	.login-general a.bouton-off, .login-general a.bouton-off:hover,
+	.login-general a.bouton-on, .login-general a.bouton-on:hover {
+		behavior: none;
+	}
+}
+.login-general .enter {
+	width: 0;
+	height: 0;
+	border: none;
+}
+/*--- fin login-v2 --*/
+/*--- fiches methodes ---*/
+a.link-utile, a.link-utile:hover {
+	display: inline-block;
+	background: url(/commun/images/pictos/picto-finger.png) no-repeat 0px 1px;
+	padding-left: 30px;
+}
+/*---- Rosace en position fixed pour paiement D&B ---- */
+.page_service_dnb_commande_v2 .message-attente {
+	left: 42%;
+	position: fixed !important;
+}
+.page_service_dnb_commande_v2 select,
+.page_service_dnb_commande_v2 input {
+	min-width: 60px;
+}
+/*---- Atlas Select ----*/
+#encart-theme-atlas{
+	clear:  both;
+}
+
+/*--- BO --*/
+.page__back_office_back_office_tracking_usage_v3 .item_cache, .page__back_office_back_office_tracking_usage_v3 .texte_cache {
+	float: left;
+	margin-bottom: 110px;
+}
+#body-bo .creation-groupe .fermer {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+#body-bo .creation-groupe .bouton-off {
+	height: 24px;
+	line-height: 24px;
+	margin-top: -5px;
+} 
+
+/*--- Liste Importateurs Vin ---*/
+.page_service_importateur_vin .liste-pays-first h2, .page_service_importateur_vin .liste-pays-second h2{
+	padding: 8px;
+	background: #eee;
+	color: #333;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+.page_service_importateur_vin .america, .page_service_importateur_vin .africa, .page_service_importateur_vin .europe, .page_service_importateur_vin .asie, .page_service_importateur_vin .oceanie{
+	border: 1px solid #ccc;
+}
+.page_service_importateur_vin .america{
+	margin-bottom: .9em;
+	min-height: 164px;
+}
+.page_service_importateur_vin .africa{
+	min-height: 93px;
+}
+.page_service_importateur_vin .liste-pays-first .africa a{
+	margin-top: 11px;
+}
+.page_service_importateur_vin .oceanie{
+	min-height: 116px;
+}
+.page_service_importateur_vin .liste-pays-second .oceanie a{
+	display: block;
+}
+.page_service_importateur_vin .bloc-continent-left, .bloc-continent-right{
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+}
+.page_service_importateur_vin .bloc-continent-left{
+	margin-right: 2%;
+}
+.page_service_importateur_vin .liste-pays-first{
+	margin-bottom: 1em;
+}
+.page_service_importateur_vin .liste-pays-first a, .liste-pays-second a{
+	display: inline-block;
+    font-size: 12px;
+    margin-left: 11px;
+    vertical-align: top;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.page_service_importateur_vin a.lien-xls{
+	background-position: left center;
+}
+.page_service_importateur_vin .lien-left, .lien-right{
+	display: inline-block;
+	vertical-align: top;
+	width: 46%;
+}
+/* service DB new */
+.partenariat-dnb-credit {
+	max-width: 170px;
+	float: right;
+	text-align: center;
+	margin: 5px 0 10px 10px;
+}
+.partenariat-dnb-credit img {
+	max-width: 100%;
+}
+.page_service_dnb_accueil_v2 .gtm-recherche form input[type="text"],
+.page_service_dnb_accueil_v2 .gtm-recherche form select {
+	min-width: 290px;
+}
+.page_service_dnb_accueil_v2 .contenu .col-md-3 a.bulle_info-haut,
+.page_service_dnb_accueil_v2 #contenu .col-md-3 a.bulle_info-haut {
+    float: right;
+}
+.page_service_dnb_accueil_v2 .bloc-auto-complete {
+	display: none;
+	position: absolute;
+	border: 1px solid #ccc;
+	padding: 2px 10px;
+	background-color: #ffffff;
+	min-width: 280px;
+	max-width: 380px;
+	max-height: 180px;
+	z-index: 1000;
+	font-size: 0.9em;
+	overflow-y: scroll;
+}
+.page_service_dnb_accueil_v2 .bloc-auto-complete p {
+	margin-top: 0;
+}
+.page_service_dnb_accueil_v2 .bloc-auto-complete .titre-dnb-credit {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-top: 0.75em;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.page_service_dnb_accueil_v2 .bloc-auto-complete .titre-dnb-credit:hover {
+	opacity: 0.75;
+}
+.page_service_dnb_accueil_v2 .bloc-rapport {
+    padding: 20px 15px 15px;
+    background-color: #ffffff;
+	border: 1px solid #b6b6b6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.page_service_dnb_accueil_v2 .bloc-rapport .titre-dnb-credit {
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+.page_service_dnb_accueil_v2 .bloc-rapport .status {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: green;
+	color: #ffffff;
+	border-radius: 5px;
+}
+.page_service_dnb_accueil_v2 .bloc-rapport .status.status-close {
+	background-color: Crimson;
+}
+.infos-company-dnb {
+	margin-top: 1.25em;
+}
+.page_service_dnb_accueil_v2 .bloc-rapport .branch {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: DimGrey;
+	color: #ffffff;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.page_service_dnb_accueil_v2 .resultats #ordre-affichage {
+	margin-bottom: 10px;
+}
+.mt-0 {
+	margin-top: 0;
+}
+a.lien-back-commande {
+	display: block;
+	margin-bottom: 2em;
+}
+
+
+/* page 404 */
+.cont-page-error {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+.cont-page-error h1 {
+	font-size: 80px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.05em;
+}
+.cont-page-error p.message-page-error {
+	font-size: 22px;
+	padding: 0;
+	border-bottom: 1px solid #777777;
+	display: inline-block;
+	padding-bottom: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+.cont-page-error p.txt-page-error {
+    color: #666666;
+    font-size: 1.2em;
+    text-align: center;
+    font-style: normal;
+    line-height: 1.8em;
+}
+
+/* BO */
+.page__back_office_back_office_profil_voir form input[readonly],
+.page__back_office_back_office_profil_voir form select:disabled {
+	border: none;
+	background-image: none;
+	padding-right: 0;
+}

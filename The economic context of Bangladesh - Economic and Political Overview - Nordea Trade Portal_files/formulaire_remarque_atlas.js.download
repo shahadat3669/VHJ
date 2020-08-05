@@ -1,0 +1,73 @@
+var affichage_formulaire = 'oui';
+
+function $RF(el, radioGroup)
+{
+	if($(el).type && $(el).type.toLowerCase() == 'radio')
+	{
+		var radioGroup = $(el).name;
+		var el = $(el).form;
+	}
+	else if ($(el).tagName.toLowerCase() != 'form')
+		return false;
+	
+	var checked = $(el).getInputs('radio', radioGroup).find( function(re) {return re.checked;} );
+	return (checked) ? $F(checked) : null;
+}
+
+function valider_formulaire_remarque( premier_affichage, parametre_1, parametre_0, langue )
+{
+	var url = '/commun/formulaire.php';
+	
+	$('remarque_contact_us').className = 'lien-contact-atlas-actif';
+	
+	affichage_formulaire = premier_affichage;
+	
+	if( premier_affichage == 'non' )
+	{
+		if( $('civilite').nodeName != 'SELECT' )
+			var parametres = 'affichage=ajax&nom_formulaire=remarque_atlas&encodage_des_parametres=utf8&' + Form.serialize('form_remarque') + '&civilite=' + $RF('form_remarque', 'civilite')  + '&langue=' + langue;
+		else
+			var parametres = 'affichage=ajax&nom_formulaire=remarque_atlas&encodage_des_parametres=utf8&' + Form.serialize('form_remarque') + '&langue=' + langue;
+	}
+	else
+		var parametres = 'affichage=ajax&premier_affichage=oui&parametre_1=' + parametre_1 + '&parametre_0=' + parametre_0 + '&langue=' + langue;
+	
+	$('formulaire_remarque').innerHTML = '<div id="form_remarque"><img src="/commun/images/anim_attente.gif"></div>';
+	
+	var myAjax = new Ajax.Request(
+		url,
+		{
+			method: 'get',
+			parameters: parametres,
+			onComplete: afficher_reponse
+		}
+   	);
+}
+
+function afficher_reponse( requete )
+{
+	$('formulaire_remarque').innerHTML = requete.responseText;
+	Element.show('formulaire_remarque');
+
+	if( ( typeof( jQuery ) != 'undefined' )
+		&&( typeof( jQuery.mobile ) ) )
+		{
+		jQuery( '#formulaire_remarque' ).trigger( 'create' );
+		//console.log(jQuery('#formulaire_remarque').find("script").attr('src'));
+        jQuery.getScript(jQuery('#formulaire_remarque').find("script").attr('src'), function(){});
+		}
+	
+	if( $('form_remarque_final') )
+		setTimeout( "masquer_form_remarque()", 10000 );
+}
+
+function masquer_form_remarque()
+{
+	Element.hide('formulaire_remarque');
+	$('remarque_contact_us').className = 'lien-contact-atlas';
+}
+
+function wrapper_agama_recaptcha(response)
+{
+    jQuery("input.wrapper_agama_recaptcha").attr("value", response).trigger("input");
+}

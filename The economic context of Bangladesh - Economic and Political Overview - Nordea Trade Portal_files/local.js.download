@@ -1,0 +1,1157 @@
+// ***********************************************************************************************************
+// Fonctions diverses
+// ***********************************************************************************************************
+function getElementsByClassName( ptr, clsName ) 
+{ 
+	var arr = new Array(); 
+	var elems = ptr.getElementsByTagName("*");
+	for ( i = 0; ( elem = elems[i] ); i++ )
+	{		
+		if ( elem.className == clsName )
+		{
+			if( typeof( elem.innerHTML ) != "undefined" )
+			{
+				var id = elem.getAttribute("id");
+				arr[id] = elem.innerHTML;	
+			}
+		}
+	}
+	return arr;
+}
+
+
+// ***********************************************************************************************************
+// Gestion de la barre de recherche
+// ***********************************************************************************************************
+var recherche_vider_recherche_flag = false;
+function recherche_vider_recherche()
+{
+	if( recherche_vider_recherche_flag == false )
+		{
+		recherche_vider_recherche_flag = true;
+		$( "mot_recherche_sur_le_site" ).value = "";	
+		}
+}
+
+
+// ***********************************************************************************************************
+// Gestion de l'identification
+// ***********************************************************************************************************
+var identification_login_modifie = false;
+function identification_verifier_login()
+{
+	if( identification_login_modifie == false )
+		{
+		identification_login_modifie = true;
+		$( "identification_identifiant" ).value = "";
+		$( "identification_mot_de_passe" ).value = "";
+		}
+}
+function identification_identifier()
+{	
+	if($( 'identification_identifiant' ).value != '')
+		identification_login_modifie=true;
+	if( ( $( 'identification_identifiant' ).value == "" )
+		|| ( $( 'identification_mot_de_passe' ).value == "" )
+		|| ( identification_login_modifie == false )
+		)
+		return;
+	Element.hide( 'identification_message_pb' );
+	Element.show( 'identification_message_en_cours' );
+	$( 'identification_identifiant' ).disabled = true;
+	$( 'identification_mot_de_passe' ).disabled = true;
+	$( 'identification_go' ).disabled = true;
+	var mon_ajax = new Ajax.Request(
+			window.location.protocol + "//" + window.location.host + "/" + langue + "?codage_page=html",
+			{
+			method: 'post',
+			parameters: "identification_identifiant=" + encodeURIComponent($( 'identification_identifiant' ).value) + "&identification_mot_de_passe=" + encodeURIComponent($( 'identification_mot_de_passe' ).value),
+			onComplete: identification_identifier_retour
+			} );
+}
+function identification_identifier_retour( reponse )
+{
+	var tempo = null;
+	
+	if( $( 'tempo_login' ) == null )
+		new Insertion.Bottom( document.getElementsByTagName( "body" )[0], '<div id="tempo_login" old_style="display:none;"></div>' );
+	tempo = $( 'tempo_login' );
+	$( 'tempo_login' ).innerHTML = reponse.responseText;
+	if( $( 'login-on' ) == null )
+		{
+		tempo.innerHTML = "";
+		$( 'identification_identifiant' ).disabled = false;
+		$( 'identification_mot_de_passe' ).disabled = false;
+		$( 'identification_go' ).disabled = false;
+		Element.hide( 'identification_message_en_cours' );
+		Element.show( 'identification_message_pb' );
+		}
+	else
+		document.location.reload();
+	tempo.innerHTML = "";
+}
+function identification_deconnecter()
+{
+	Element.hide( 'lien_deconnexion' );
+	Element.show( 'deconnexion_message_en_cours' );
+	var mon_ajax = new Ajax.Request(
+			window.location.protocol + "//" + window.location.host + "/commun/profil_deconnecter.php?langue=" + langue,
+			{
+			method: 'get',
+			parameters: "redirection=header&codage_page=html",
+			onComplete: identification_deconnecter_retour
+			} );
+}
+function identification_deconnecter_retour( reponse )
+{
+	var tempo = null;
+	
+	if( $( 'tempo_login' ) == null )
+		new Insertion.Bottom( document.getElementsByTagName( "body" )[0], '<div id="tempo_login"></div>' );
+	tempo = $( 'tempo_login' );
+	identification_login_modifie = false;
+	$( 'tempo_login' ).innerHTML = reponse.responseText;
+	//$( 'identification' ).innerHTML = $( 'login-off' ).outerHTML;
+	//recharger_ajax( reponse );
+	$('identification_mot_de_passe').value="xxxx";
+	document.location = '/generique/' + langue + '/spe__accueil';
+}
+function recharger_ajax( reponse )
+{	
+	var ptr = $( 'tempo_login' );
+	ptr.innerHTML = reponse.responseText;
+	var block_ajax = getElementsByClassName(ptr, "reload_ajax");
+	ptr.innerHTML = "";	
+	for (var indice in block_ajax)
+	{  
+		if(typeof(block_ajax[indice])=="string")
+		{
+			$( indice ).innerHTML = block_ajax[indice];
+		}		
+	}	 
+}
+
+// ***********************************************************************************************************
+// Gestion de l'identification Mobile
+// ***********************************************************************************************************
+var identification_login_modifie_responsive = false;
+function identification_verifier_login_responsive()
+{
+	if( identification_login_modifie_responsive == false )
+		{
+		identification_login_modifie_responsive = true;
+		$( "identification_identifiant_responsive" ).value = "";
+		$( "identification_mot_de_passe_responsive" ).value = "";
+		}
+}
+function identification_identifier_responsive()
+{	
+	if($( 'identification_identifiant_responsive' ).value != '')
+		identification_login_modifie_responsive=true;
+	if( ( $( 'identification_identifiant_responsive' ).value == "" )
+		|| ( $( 'identification_mot_de_passe_responsive' ).value == "" )
+		|| ( identification_login_modifie_responsive == false )
+		)
+		return;
+	Element.hide( 'identification_message_pb_responsive' );
+	Element.show( 'identification_message_en_cours_responsive' );
+	$( 'identification_identifiant_responsive' ).disabled = true;
+	$( 'identification_mot_de_passe_responsive' ).disabled = true;
+	$( 'identification_go_responsive' ).disabled = true;
+	var mon_ajax = new Ajax.Request(
+			window.location.protocol + "//" + window.location.host + "/" + langue + "?codage_page=html",
+			{
+			method: 'post',
+			parameters: "identification_identifiant=" + encodeURIComponent($( 'identification_identifiant_responsive' ).value) + "&identification_mot_de_passe=" + encodeURIComponent($( 'identification_mot_de_passe_responsive' ).value),
+			onComplete: identification_identifier_retour_responsive
+			} );
+}
+function identification_identifier_retour_responsive( reponse )
+{
+	var tempo = null;
+	
+	if( $( 'tempo_login' ) == null )
+		new Insertion.Bottom( document.getElementsByTagName( "body" )[0], '<div id="tempo_login" old_style="display:none;"></div>' );
+	tempo = $( 'tempo_login' );
+	$( 'tempo_login' ).innerHTML = reponse.responseText;
+	if( $( 'login-on' ) == null )
+		{
+		tempo.innerHTML = "";
+		$( 'identification_identifiant_responsive' ).disabled = false;
+		$( 'identification_mot_de_passe_responsive' ).disabled = false;
+		$( 'identification_go_responsive' ).disabled = false;
+		Element.hide( 'identification_message_en_cours_responsive' );
+		Element.show( 'identification_message_pb_responsive' );
+		}
+	else
+		document.location.reload();
+	tempo.innerHTML = "";
+}
+function identification_deconnecter_responsive()
+{
+	Element.hide( 'lien_deconnexion_responsive' );
+	Element.show( 'deconnexion_message_en_cours_responsive' );
+	var mon_ajax = new Ajax.Request(
+			window.location.protocol + "//" + window.location.host + "/commun/profil_deconnecter.php?langue=" + langue,
+			{
+			method: 'get',
+			parameters: "redirection=header&codage_page=html",
+			onComplete: identification_deconnecter_retour_responsive
+			} );
+}
+function identification_deconnecter_retour_responsive( reponse )
+{
+	var tempo = null;
+	
+	if( $( 'tempo_login' ) == null )
+		new Insertion.Bottom( document.getElementsByTagName( "body" )[0], '<div id="tempo_login"></div>' );
+	tempo = $( 'tempo_login' );
+	identification_login_modifie_responsive = false;
+	$( 'tempo_login' ).innerHTML = reponse.responseText;
+	//$( 'identification' ).innerHTML = $( 'login-off' ).outerHTML;
+	//recharger_ajax( reponse );
+	$('identification_mot_de_passe_responsive').value="xxxx";
+	document.location = '/generique/' + langue + '/spe__accueil';
+}
+function recharger_ajax( reponse )
+{	
+	var ptr = $( 'tempo_login' );
+	ptr.innerHTML = reponse.responseText;
+	var block_ajax = getElementsByClassName(ptr, "reload_ajax");
+	ptr.innerHTML = "";	
+	for (var indice in block_ajax)
+	{  
+		if(typeof(block_ajax[indice])=="string")
+		{
+			$( indice ).innerHTML = block_ajax[indice];
+		}		
+	}	 
+}
+
+
+// ***********************************************************************************************************
+// Gestion du scrolling
+// ***********************************************************************************************************
+var scroll_position = 0;
+var scroll_taille = 0;
+var scroll_timer = null;
+function scroll_init()
+{
+	if( $( 'mon_scroll' ) == null )
+		return;
+	scroll_taille = $( 'mon_scroll' ).offsetHeight;
+	scroll_position = 0;
+	$( 'mon_scroll' ).innerHTML = $( 'mon_scroll' ).innerHTML + $( 'mon_scroll' ).innerHTML;
+	scroll_timer = null;
+	scroll_start()
+}
+function scroll_start()
+{
+	if( scroll_timer == null )
+		scroll_timer = setInterval( 'scroll_scroll()', 300 );
+}
+function scroll_stop()
+{
+	if( scroll_timer != null )
+		clearInterval( scroll_timer );
+	scroll_timer = null;
+}
+function scroll_scroll()
+{
+	scroll_position = scroll_position-3;
+	if( scroll_position < -scroll_taille )
+		scroll_position += scroll_taille;
+	$( 'mon_scroll' ).style.top = scroll_position + "px";
+}
+//ajouter_evenement( window, 'load', scroll_init );
+
+
+// ***********************************************************************************************************
+// Moteur de recherche Etudes-mémos
+// ***********************************************************************************************************
+var page_courante = 0;
+function montrer_page( nombre )
+{
+	if( $( 'page_de_resultats__' + nombre ) == null )
+		return;
+	if( page_courante > 0 )
+	{
+		Element.hide( 'page_de_resultats__' + page_courante );
+		Element.removeClassName( 'lien_page_haut__' + page_courante, 'pagination-select' );
+		Element.removeClassName( 'lien_page_bas__' + page_courante, 'pagination-select' );
+	}	
+	Element.show( 'page_de_resultats__' + nombre );
+	Element.addClassName( 'lien_page_haut__' + nombre, 'pagination-select' );
+	Element.addClassName( 'lien_page_bas__' + nombre, 'pagination-select' );
+	page_courante = nombre;
+}
+function moteur_de_recherche_lingway__lancer()
+{
+	barre_d_attente_afficher( 'Searching' );
+	Element.show( 'barre_d_attente_layer' );
+	Element.hide( 'resultats' );
+}
+
+
+// ***********************************************************************************************************
+// Veilles
+// ***********************************************************************************************************
+function verifier_criteres_de_veille()
+{
+	for( var num_veille=1 ; num_veille<6 ; num_veille++ )
+		{
+		var produit = $( 'produit_veille_' + num_veille );
+		var pays = $( 'pays_veille_' + num_veille );
+		var valeur_produit = "";
+		var valeur_pays = "";
+		if( ( produit != null ) && ( pays != null ) )
+			{
+			if( produit.tagName == "INPUT" )
+				valeur_produit = produit.value;
+			if( produit.tagName == "SELECT" )
+				valeur_produit = produit.options[produit.selectedIndex].value;
+			if( pays.tagName == "INPUT" )
+				valeur_pays = pays.value;
+			if( pays.tagName == "SELECT" )
+				valeur_pays = pays.options[pays.selectedIndex].value;
+			if( ( ( valeur_produit == "" ) && ( valeur_pays != "" ) )
+				|| ( ( valeur_produit != "" ) && ( valeur_pays == "" ) ) )
+				{
+				alert( veille_message );
+				return false;
+				}
+			}
+		}
+}
+
+
+// ***********************************************************************************************************
+// Flux import-export
+// ***********************************************************************************************************
+var position=-72*3;
+function lancer_animation()
+{
+	if( $( 'zform' ).action == "#resultats" )
+		setInterval( 'moveScroll()', 400 );
+	Element.show( 'toto' );
+}
+function moveScroll()
+{
+	position = position+68;
+	if( position > 544-68-68 )
+		position=-204;
+	$( 'toto' ).style.margin = "0px 0px 0px " + position + "px";
+}
+function popup(url,width,height)
+{
+	window.open( url, "Popup", "width=" + width + ",height=" + height + ", scrollbars=yes, resizable=yes");
+}
+// Transfert d'un select à un autre
+function affecte_select(input,select)
+{
+	pi=document.getElementById(input);
+	ps=document.getElementById(select);
+	if( pi.options.selectedIndex != -1 )
+		{
+		ind=(ps.options.length);
+	
+		ps.options[ind]= new Option(pi.options[pi.options.selectedIndex].text,pi.options[pi.options.selectedIndex].value);
+	
+		pi.options[pi.options.selectedIndex]=null;
+		}
+}
+// Retire du select de destination et remet à l'origine par ordre alphabétique
+function retire_select(input,select)
+{
+	pi=document.getElementById(input);
+	ps=document.getElementById(select);
+	if( ps.options.selectedIndex != -1 )
+		{
+		ind=(pi.options.length);
+		for (var a = 0; a <ind; a ++)
+			{
+			if(ps.options[ps.options.selectedIndex].text<pi.options[a].text)
+				{
+				for (var b = ind; b >a; b-=1 )
+					pi.options[b]= new Option(pi.options[b-1].text,pi.options[b-1].value);
+				pi.options[a]= new Option(ps.options[ps.options.selectedIndex].text,ps.options[ps.options.selectedIndex].value);
+				a=ind;
+				}
+			}
+		ps.options[ps.options.selectedIndex]=null;
+		}
+}
+function clic_select(select)
+{
+	ps=document.getElementById(select);
+	ind=(ps.options.length);
+	for (var a = 0; a <ind; a++)
+		ps.options[a].selected=true;
+}
+function efface_select(input,select)
+{
+	ps=document.getElementById(select);
+	while(ps.options.length>0)
+		{
+		ps.options[0].selected=true;
+		retire_select(input,select);
+		}
+}
+function cherche_nc()
+{
+	document.getElementById('cnp_lib').innerHTML='';
+	frech.location.href='/' + langue + '/secteurs/flux-import-export-nomenclature?nc='+document.getElementById('nc').value
+}
+function fixer_type_de_flux()
+{
+	if( document.getElementById('flux_1').checked )
+		$( "type_de_flux" ).className = "type_de_flux_import";
+	else
+		$( "type_de_flux" ).className = "type_de_flux_export";
+}
+
+
+// ***********************************************************************************************************
+// calcul de prix export
+// ***********************************************************************************************************
+function calcul_feuille_haut() {
+transmettre_log_service_automatise( 'S_auto_7' );
+	document.tableau.fbft.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.mpupa.value )
+					+ parseFloat( document.tableau.mffde.value )
+					+ parseFloat( document.tableau.vm.value )
+					+ parseFloat( document.tableau.cmcabcg.value )
+				)*100 )/100;
+	document.tableau.caf.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.fbft.value )
+					+ parseFloat( document.tableau.cttp.value )
+					+ parseFloat( document.tableau.catp.value )
+				)*100 )/100;
+	document.tableau.ddd.value =
+			Math.round(
+				(
+					( parseFloat( document.tableau.dddp.value ) / 100 ) * parseFloat( document.tableau.caf.value )
+				)*100 )/100;
+	document.tableau.ti.value =
+			Math.round(
+				(
+					( parseFloat( document.tableau.tip.value ) / 100 ) * parseFloat( document.tableau.caf.value )
+				)*100 )/100;
+	document.tableau.rda.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.caf.value )
+					+ parseFloat( document.tableau.ddd.value )
+					+ parseFloat( document.tableau.ti.value )
+					+ parseFloat( document.tableau.cpapadp.value )
+					+ parseFloat( document.tableau.mmapapd.value )
+					+ parseFloat( document.tableau.mfdi.value )
+				)*100 )/100;
+}
+function calcul_feuille_bas() {
+transmettre_log_service_automatise( 'S_auto_7' );
+	document.tableau.mi.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.rdabis.value ) / ( 1 - ( parseFloat( document.tableau.mip.value ) / 100 ) )
+					- parseFloat( document.tableau.rdabis.value )
+				)*100 )/100;
+	document.tableau.pvg.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.rdabis.value )
+					+ parseFloat( document.tableau.mi.value )
+				)*100 )/100;
+	document.tableau.mgca.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.pvg.value ) / ( 1 - ( parseFloat( document.tableau.mgcap.value ) / 100 ) )
+					- parseFloat( document.tableau.pvg.value )
+				)*100 )/100;
+	document.tableau.pvd.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.pvg.value )
+					+ parseFloat( document.tableau.mgca.value )
+				)*100 )/100;
+	document.tableau.md.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.pvd.value ) / ( 1 - ( parseFloat( document.tableau.mdp.value ) / 100 ) )
+					- parseFloat( document.tableau.pvd.value )
+				)*100 )/100;
+	document.tableau.pvcfht.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.md.value )
+					+ parseFloat( document.tableau.pvd.value )
+				)*100 )/100;
+	document.tableau.ttva.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.pvcfht.value ) * ( parseFloat( document.tableau.ttvap.value ) / 100 )
+				)*100 )/100;
+	document.tableau.pvttc.value =
+			Math.round(
+				(
+					parseFloat( document.tableau.pvcfht.value )
+					+ parseFloat( document.tableau.ttva.value )
+				)*100 )/100;
+}
+function calctout(aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar){
+aa=parseFloat(aa);ab=parseFloat(ab);ac=parseFloat(ac);ad=parseFloat(ad);ae=parseFloat(ae); af=parseFloat(af);ag=parseFloat(ag);ah=parseFloat(ah);ai=parseFloat(ai);aj=parseFloat(aj); ak=parseFloat(ak);al=parseFloat(al);am=parseFloat(am);an=parseFloat(an);ao=parseFloat(ao);
+ap=parseFloat(ap);aq=parseFloat(aq);ar=parseFloat(ar);
+ad=aa+ab+ac;         ad= Math.round (ad*100)/100;
+document.tableau.fbft.value=ad;
+ai=ad+ae+ag+ah;        ai= Math.round (ai*100)/100;
+document.tableau.caf.value=ai;
+al=(ad+ae+af)*(ak/100);         al= Math.round (al*100)/100;
+document.tableau.ddd.value=al;
+an=ai*(am/100);         an= Math.round (an*100)/100;
+document.tableau.ti.value=an;
+ap=ai+aj+al+an+ao;         ap= Math.round (ap*100)/100;
+document.tableau.rqpdc.value=ap;
+
+ar=ap+aq;         ar= Math.round (ar*100)/100;
+document.tableau.rda.value=ar;
+document.tableau.rdabis.value=ar;
+return;
+}
+function calcfin(arbis,as,at,au,av,aw,ax,ay,az,ba,bb,bc,bd){
+arbis=parseFloat(arbis);as=parseFloat(as);at=parseFloat(at);au=parseFloat(au);
+av=parseFloat(av);aw=parseFloat(aw);ax=parseFloat(ax);ay=parseFloat(ay);
+az=parseFloat(az);ba=parseFloat(ba);bb=parseFloat(bb);bc=parseFloat(bc);bd=parseFloat(bd);
+
+at=arbis*(as/100);         at= Math.round (at*100)/100;
+document.tableau.mi.value=at;
+au=arbis+at;
+au=arbis+at;               au= Math.round (au*100)/100;
+document.tableau.pvg.value=au;
+aw=au*(av/100);         aw= Math.round (aw*100)/100;
+document.tableau.mgca.value=aw;
+ax=au+aw;         ax= Math.round (ax*100)/100;
+document.tableau.pvd.value=ax;
+az=(ay/100)*ax;         az= Math.round (az*100)/100;
+document.tableau.md.value=az;
+ba=az+ax;        ba= Math.round (ba*100)/100;
+document.tableau.pvcfht.value=ba;
+bc=ba*(1+(bb/100));         bc= Math.round (bc*100)/100;
+document.tableau.pvttc.value=bc;
+bd=ba*(bb/100);                   bd= Math.round (bd*100)/100;
+document.tableau.ttva.value=bd;
+return;
+}
+
+// ***********************************************************************************************************
+// conversion de mesures
+// ***********************************************************************************************************
+function init(name,valeur){
+	this.name=name
+	this.valeur=valeur
+}
+var long = new Array(8)
+var mass = Array(7)
+var volu = Array(6)
+var surf = Array(8)
+if ( langue == 'fr' )
+{
+	long[0]= new init("mètres",1)
+	long[1]= new init("centimètres",0.01)
+	long[2]= new init("millimètres",0.001)
+	long[3]= new init("kilomètres",1000)
+	long[4]= new init("inches",0.0254)
+	long[5]= new init("feet",0.3048)
+	long[6]= new init("yards",0.9144)
+	long[7]= new init("miles",1609.3)
+	
+	mass[0]= new init("kilogrammes",1)
+	mass[1]= new init("milligrammes",0.000001)
+	mass[2]= new init("grammes",0.001)
+	mass[3]= new init("tonnes",1000)
+	mass[4]= new init("pounds",0.4536)
+	mass[5]= new init("onces",0.002835)
+	mass[6]= new init("us tons",1016)
+	
+	volu[0]= new init("mètres cubes",1)
+	volu[1]= new init("centimètres cubes",0.000001)
+	volu[2]= new init("decimètres cubes ou litres",0.001)
+	volu[3]= new init("cubic inches (cu.in)",0.000016387)
+	volu[4]= new init("cubic feet (cu.ft)",0.02832)
+	volu[5]= new init("cubic yards (cu.yd)",0.7646)
+	volu[6]= new init("U.S. gallons (gal)",0.003785)
+	
+	surf[0]= new init("mètres carrés",1)
+	surf[1]= new init("centimètres carrés",0.0001)
+	surf[2]= new init("ares",100)
+	surf[3]= new init("hectares",10000)
+	surf[4]= new init("kilomètres carrés",100000)
+	surf[5]= new init("square inches (sq.in)",0.00064516)
+	surf[6]= new init("square feet (sq.ft)",0.0929)
+	surf[7]= new init("square yards (sq.yd)",0.8361)
+}
+if ( langue == 'es' )
+{
+	long[0]= new init("metros",1)
+	long[1]= new init("centímetros",0.01)
+	long[2]= new init("milímetros",0.001)
+	long[3]= new init("kilómetros",1000)
+	long[4]= new init("pulgadas",0.0254)
+	long[5]= new init("pies",0.3048)
+	long[6]= new init("yardas",0.9144)
+	long[7]= new init("millas",1609.3)
+	
+	mass[0]= new init("kilogramos",1)
+	mass[1]= new init("miligramos",0.000001)
+	mass[2]= new init("gramos",0.001)
+	mass[3]= new init("toneladas",1000)
+	mass[4]= new init("libras",0.4536)
+	mass[5]= new init("onzas",0.002835)
+	mass[6]= new init("toneladas largas",1016)
+	
+	volu[0]= new init("metros cúbicos",1)
+	volu[1]= new init("centímetros cúbicos",0.000001)
+	volu[2]= new init("decímetros cúbicos o litros",0.001)
+	volu[3]= new init("pulgadas cúbicas (cu.in)",0.000016387)
+	volu[4]= new init("pies cúbicos (cu.ft)",0.02832)
+	volu[5]= new init("yardas cúbicas (cu.yd)",0.7646)
+	volu[6]= new init("galones (gal)",0.003785)
+	
+	surf[0]= new init("metros cuadrados",1)
+	surf[1]= new init("centímetros cuadrados",0.0001)
+	surf[2]= new init("áreas",100)
+	surf[3]= new init("hectáreas",10000)
+	surf[4]= new init("kilómetros cuadrados",100000)
+	surf[5]= new init("pulgadas cuadradas (sq.in)",0.00064516)
+	surf[6]= new init("pies cuadrados (sq.ft)",0.0929)
+	surf[7]= new init("yardas cuadradas (sq.yd)",0.8361)
+}
+if ( ( langue == 'en' ) || ( langue == 'uk' ) )
+{
+	long[0]= new init("meters",1)
+	long[1]= new init("centimeters",0.01)
+	long[2]= new init("millimeters",0.001)
+	long[3]= new init("kilometers",1000)
+	long[4]= new init("inches",0.0254)
+	long[5]= new init("feet",0.3048)
+	long[6]= new init("yards",0.9144)
+	long[7]= new init("miles",1609.3)
+	
+	mass[0]= new init("kilograms",1)
+	mass[1]= new init("milligrams",0.000001)
+	mass[2]= new init("grams",0.001)
+	mass[3]= new init("tons",1000)
+	mass[4]= new init("pounds",0.4536)
+	mass[5]= new init("ounces",0.002835)
+	mass[6]= new init("US tons",1016)
+	
+	volu[0]= new init("cubic meters",1)
+	volu[1]= new init("cubic centimeters",0.000001)
+	volu[2]= new init("cubic decimeters or liters",0.001)
+	volu[3]= new init("cubic inches (cu.in)",0.000016387)
+	volu[4]= new init("cubic feet (cu.ft)",0.02832)
+	volu[5]= new init("cubic yards (cu.yd)",0.7646)
+	volu[6]= new init("U.S. gallons (gal)",0.003785)
+	
+	surf[0]= new init("square meters",1)
+	surf[1]= new init("square centimeters",0.0001)
+	surf[2]= new init("are",100)
+	surf[3]= new init("acres",10000)
+	surf[4]= new init("square kilometers",100000)
+	surf[5]= new init("square inches (sq.in)",0.00064516)
+	surf[6]= new init("square feet (sq.ft)",0.0929)
+	surf[7]= new init("square yards (sq.yd)",0.8361)	
+}
+if ( langue == 'it' )
+{
+	long[0]= new init("metri",1)
+	long[1]= new init("centimetri",0.01)
+	long[2]= new init("millimetri",0.001)
+	long[3]= new init("chilometri",1000)
+	long[4]= new init("pollici",0.0254)
+	long[5]= new init("piedi",0.3048)
+	long[6]= new init("iarde",0.9144)
+	long[7]= new init("miglia",1609.3)
+	
+	mass[0]= new init("chilogrammi",1)
+	mass[1]= new init("milligrammi",0.000001)
+	mass[2]= new init("grammi",0.001)
+	mass[3]= new init("tonnellate",1000)
+	mass[4]= new init("libbre",0.4536)
+	mass[5]= new init("once",0.002835)
+	mass[6]= new init("tonnellate USA",1016)
+	
+	volu[0]= new init("metri cubi",1)
+	volu[1]= new init("centimetri cubi",0.000001)
+	volu[2]= new init("decimetri cubi o litri",0.001)
+	volu[3]= new init("pollici cubi (cu.in)",0.000016387)
+	volu[4]= new init("piedi cubi (cu.ft)",0.02832)
+	volu[5]= new init("iarde cubiche (cu.yd)",0.7646)
+	volu[6]= new init("galloni USA (gal)",0.003785)
+	
+	surf[0]= new init("metri quadrati",1)
+	surf[1]= new init("centimetri quadrati",0.0001)
+	surf[2]= new init("ara",100)
+	surf[3]= new init("acri",10000)
+	surf[4]= new init("chilometri quadrati",100000)
+	surf[5]= new init("pollici quadrati (sq.in)",0.00064516)
+	surf[6]= new init("piedi quadrati (sq.ft)",0.0929)
+	surf[7]= new init("iarde quadrate (sq.yd)",0.8361)	
+}
+if( langue == 'de' )
+{
+	long[0]= new init("meter",1)
+	long[1]= new init("zentimeter",0.01)
+	long[2]= new init("millimeter",0.001)
+	long[3]= new init("kilometer",1000)
+	long[4]= new init("zoll",0.0254)
+	long[5]= new init("fuß",0.3048)
+	long[6]= new init("yard",0.9144)
+	long[7]= new init("meilen",1609.3)
+	
+	mass[0]= new init("kilogramme",1)
+	mass[1]= new init("milligramme",0.000001)
+	mass[2]= new init("gramm",0.001)
+	mass[3]= new init("tonnen",1000)
+	mass[4]= new init("pfund",0.4536)
+	mass[5]= new init("unze",0.002835)
+	mass[6]= new init("Amerikanische tonne",1016)
+	volu[0]= new init("kubikmeter",1)
+	volu[1]= new init("kubikzentimeter",0.000001)
+	volu[2]= new init("kubikdezimeter oder Liter",0.001)
+	volu[3]= new init("kubikzoll (cu.in)",0.000016387)
+	volu[4]= new init("kubikfuß (cu.ft)",0.02832)
+	volu[5]= new init("kubikyard (cu.yd)",0.7646)
+	volu[6]= new init("Amerikanische gallonen (gal)",0.003785)
+	surf[0]= new init("guadratmeter",1)
+	surf[1]= new init("quadratzentimeter",0.0001)
+	surf[2]= new init("ar",100)
+	surf[3]= new init("hektar",10000)
+	surf[4]= new init("quadratkilometer",100000)
+	surf[5]= new init("quadratzoll (sq.in)",0.00064516)
+	surf[6]= new init("quadratfuß (sq.ft)",0.0929)
+	surf[7]= new init("quadratyard (sq.yd)",0.8361)
+}
+
+function calcul(type)
+{transmettre_log_service_automatise( 'S_auto_5' );
+	if(type == "tempe"){
+		valeur = document.conversion.val_tempe1.value
+		unite_1 = document.conversion.unit_tempe1[document.conversion.unit_tempe1.selectedIndex].value
+		unite_2 = document.conversion.unit_tempe2[document.conversion.unit_tempe2.selectedIndex].value
+		if((unite_1 == "vide") || (unite_2 == "vide")){
+			return 1;
+		}
+		if(unite_1 == 0){
+			if(unite_2 == 0){
+				x = valeur
+				x = x * 1000
+				x = Math.round(x)
+				x = x / 1000
+				document.conversion.val_tempe2.value = x
+			}
+			else{
+				x = (valeur * 1.8) + 32
+				x = x * 1000
+				x = Math.round(x)
+				x = x / 1000
+				document.conversion.val_tempe2.value = x
+			}
+		}
+		else{
+			if(unite_2 == 0){
+				x = (valeur - 32) / 1.8
+				x = x * 1000
+				x = Math.round(x)
+				x = x / 1000
+				document.conversion.val_tempe2.value = x
+			}
+			else{
+				x = valeur
+				x = x * 1000
+				x = Math.round(x)
+				x = x / 1000
+				document.conversion.val_tempe2.value = x
+			}
+		}
+	}
+	else{
+		valeur = eval("document.conversion.val_"+ type +"1.value")
+		unite_1 = eval("document.conversion.unit_"+ type +"1[document.conversion.unit_"+ type +"1.selectedIndex].value")
+		unite_2 = eval("document.conversion.unit_"+ type +"2[document.conversion.unit_"+ type +"2.selectedIndex].value")
+		if((unite_1 == "vide") || (unite_2 == "vide")){
+			return 1;
+		}
+		x = eval("(valeur * "+ type +"[unite_1].valeur) / "+ type +"[unite_2].valeur")
+		x = x * 1000
+		x = Math.round(x)
+		x = x / 1000
+		eval("document.conversion.val_"+ type +"2.value = x")
+	}
+}
+
+// ***********************************************************************************************************
+// conversion de devises
+// ***********************************************************************************************************
+var monnaie_pivot = 0;
+var ancienne_valeur=0;
+function convertion_des_devises()
+{
+	var signe_de_la_monnaie_pivot = monnaie_pivot;
+	if( monnaie_pivot == "sup1" )
+		signe_de_la_monnaie_pivot = document.devises.supp1.options[document.devises.supp1.selectedIndex].value;
+	if( monnaie_pivot == "sup2" )
+		signe_de_la_monnaie_pivot = document.devises.supp2.options[document.devises.supp2.selectedIndex].value;
+	ref = eval( "monnaie_" + signe_de_la_monnaie_pivot ) * eval( "document.devises." + monnaie_pivot + ".value" );
+if( eval( "document.devises." + monnaie_pivot + ".value" ) != ancienne_valeur ) {
+ancienne_valeur = eval( "document.devises." + monnaie_pivot + ".value" );
+;transmettre_log_service_automatise( 'S_auto_6' );
+}
+
+	document.devises.USD.value = Math.round( ref / monnaie_USD * 10000 ) / 10000;
+	document.devises.AUD.value = Math.round( ref / monnaie_AUD * 10000 ) / 10000;
+	document.devises.BRL.value = Math.round( ref / monnaie_BRL * 10000 ) / 10000;
+	document.devises.CAD.value = Math.round( ref / monnaie_CAD * 10000 ) / 10000;
+	document.devises.CNY.value = Math.round( ref / monnaie_CNY * 10000 ) / 10000;
+	document.devises.EUR.value = Math.round( ref / monnaie_EUR * 10000 ) / 10000;
+	document.devises.FRF.value = Math.round( ref / monnaie_FRF * 10000 ) / 10000;
+	document.devises.HKD.value = Math.round( ref / monnaie_HKD * 10000 ) / 10000;
+	document.devises.HUF.value = Math.round( ref / monnaie_HUF * 10000 ) / 10000;
+	document.devises.INR.value = Math.round( ref / monnaie_INR * 10000 ) / 10000;
+	document.devises.JPY.value = Math.round( ref / monnaie_JPY * 10000 ) / 10000;
+	document.devises.MXP.value = Math.round( ref / monnaie_MXP * 10000 ) / 10000;
+	document.devises.PLZ.value = Math.round( ref / monnaie_PLZ * 10000 ) / 10000;
+	document.devises.GBP.value = Math.round( ref / monnaie_GBP * 10000 ) / 10000;
+	document.devises.SEK.value = Math.round( ref / monnaie_SEK * 10000 ) / 10000;
+	document.devises.CHF.value = Math.round( ref / monnaie_CHF * 10000 ) / 10000;
+	document.devises.CSK.value = Math.round( ref / monnaie_CSK * 10000 ) / 10000;
+	document.devises.MAD.value = Math.round( ref / monnaie_MAD * 10000 ) / 10000;
+	document.devises.sup1.value = Math.round( ref / eval( "monnaie_" + document.devises.supp1.options[document.devises.supp1.selectedIndex].value ) * 10000 ) / 10000;
+	document.devises.sup2.value = Math.round( ref / eval( "monnaie_" + document.devises.supp2.options[document.devises.supp2.selectedIndex].value ) * 10000 ) / 10000;
+}
+function SelDev( monnaie )
+{
+	monnaie_pivot = monnaie;
+ancienne_valeur = eval( "document.devises." + monnaie_pivot + ".value" );
+}
+
+
+// ***********************************************************************************************************
+// nomenclature douaniere
+// ***********************************************************************************************************
+function modifier_numero( texte )
+{
+$('codesel').innerHTML = texte;
+Element.show( 'ma_table' );
+}
+function affdesc(s)
+{
+	$('description2').innerHTML = s;
+}
+function ajax_description( code )
+{
+	var drapeaux = "&nbsp;";
+//alert('/' + langue + '/services/connaitre-votre-numero-de-nomenclature-douaniere-description?langue_nomenclature=' + langue + '&code='+escape(code));
+	result_row = ajax_file('/' + langue + '/services/connaitre-votre-numero-de-nomenclature-douaniere-description?langue_nomenclature=' + langue + '&code='+escape(code));
+	var phrase=result_row.replace(/\r/g,"").split("\n");
+	
+	for( num_trad=0 ; num_trad<phrase.length-1 ; num_trad++ )
+		{
+		var elem=phrase[num_trad].split( "\t" );
+		var langue_tempo = elem[0];
+		var desc = elem[1];
+		if( langue_tempo.toLowerCase() == langue.toLowerCase() )
+			affdesc( desc );
+		if( desc != "" )
+			{
+//			deschtml = desc.replace(/''/g,"'");
+			deschtml = desc.replace(/'/g,"\\'"); //"
+			deschtml = deschtml.replace(/>/g,'&gt;');
+			deschtml = deschtml.replace(/</g,'&lt;');
+			deschtml = deschtml.replace(/""/g,'');
+			drapeaux = drapeaux + '<a href="#" onclick="affdesc(\'' + deschtml + '\')">' + langue_tempo + '</a>&nbsp;';
+			}
+		}
+//	document.getElementById('drapeaux').innerHTML=drapeaux;
+}
+function valide()
+{
+	if( nomenclature__desc != "" )
+		top.opener.document.getElementById(nomenclature__desc).innerHTML=document.getElementById('description').innerHTML
+	if( nomenclature__code != "" )
+		{
+		s=document.getElementById('codesel').innerHTML;
+		s=s.replace(/ /g,'')
+		top.opener.document.getElementById(nomenclature__code).value=s;
+		}
+	top.window.close();
+}
+var img_trdroit = new Image;
+img_trdroit.src = "/commun/images/nomenclature/trdroit.gif"
+var img_trbas = new Image;
+img_trbas.src = "/commun/images/nomenclature/trbas.gif"
+function nbsp(n){
+	var s='',t;
+	if(n>3){
+	for(t=0;t<n;t++){
+		s+='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	}
+	}
+	return s;
+}
+// Mise à jour via AJAX
+function ajax_select(niveau,code){
+	var retour;
+	retour='<table>';
+	if( nomenclature__action == "liste" )
+		result_row = ajax_file('/' + langue + '/services/connaitre-votre-numero-de-nomenclature-douaniere-flux?langue_nomenclature=' + langue + '&code='+escape(code)+'&niveau='+escape(niveau)+'&ms=' + new Date().getTime());
+	else
+		result_row = ajax_file('/' + langue + '/services/connaitre-votre-numero-de-nomenclature-douaniere-flux-rech?langue_nomenclature=' + langue + '&recherche=' + nomenclature__recherche + '&code='+escape(code)+'&niveau='+escape(niveau)+'&ms=' + new Date().getTime());
+	var phrase=result_row.split("\n");
+	for(t=0;t<phrase.length-1;t++){
+		var elem=phrase[t].split("\t");
+		if(elem[2].length<10 || elem[1].substr(10,2)=='10'){
+//		if(elem[0]<4 && (elem[2].length<10 || (elem[1].substr(10,2)=='10'))){
+			image="/commun/images/nomenclature/trdroit.gif";
+			code='id=img'+elem[1];
+			chaine_div='<div id="'+elem[1]+'" style="display:none;width:100%"></div>';
+//			if(elem[1].substr(10,2)=='10'){
+//				elem[2]='---- -- --';
+//			}
+		}else{
+			image="/commun/images/nomenclature/vide.gif";
+			code='';
+			chaine_div='';
+		}
+		
+		if(elem[0]==3 ){ // str(elem[1].substr(10,2)=='80'){
+			if(elem[2].substr(5,2)=='00'){
+				elem[2]=elem[2].substr(0,4);
+			}
+		}
+		if(elem[0]==4 ){ // && elem[1].substr(10,2)=='10'
+			if(elem[2].substr(8,2)=='00'){
+				elem[2]=elem[2].substr(0,7);
+			}
+		}
+		title=elem[4].replace('"','');
+		title=title.replace('"','');
+		title=title.replace('"','');
+		title=title.replace('"','');
+		if(title.length>4){
+			title='title="'+title+'"';
+		}		
+		retour+='<TABLE CELLPADDING="3" CELLSPACING="1" class="code'+elem[0]+'"><TR><TD class=code'+elem[0]+'>&nbsp;&nbsp;<A class=code HREF="javascript:ouvreNiveau(\''+elem[1]+'\',\''+elem[2]+'\',\''+elem[0]+'\');" '+title+'><img src="'+image+'" '+code+' border=0>'+elem[2]+'</A></TD>';
+		retour+='<td class=libelle'+elem[0]+'><table border=0 CELLPADDING="0" CELLSPACING="0"><tr valign="top"><td class=libelle'+elem[0]+'><img src="/commun/images/nomenclature/pixel.gif" height=1 width="'+(elem[0]-3)*50+'"></td><td class=libelle'+elem[0]+' width=100%><A class=code HREF="javascript:ouvreNiveau(\''+elem[1]+'\',\''+elem[2]+'\',\''+elem[0]+'\');" '+title+'>'+elem[3]+'</a></td></tr></table></TD></TR></TABLE>';
+		retour+=chaine_div;		
+	}
+	return retour;
+}
+function afficheCode(code,niveau){
+	var img;
+//	if(niveau<4){
+		el=document.getElementById(code);
+		if(el){
+			img=document.getElementById('img'+code);
+			if(	el.style.display!=''){
+				el.style.display='';
+				niveau++;
+				if(img)	img.src=img_trbas.src;
+				if(el.innerHTML=='' && (img || niveau<4)){
+					el.innerHTML=ajax_select(niveau,code);
+				}
+				for(i = 0; i < document.getElementsByTagName("table").length; i++){
+				  if(document.getElementsByTagName("table")[i].id.substr(2,4)==code.substr(0,4) && document.getElementsByTagName("table")[i].id!="t_"+code){
+					document.getElementsByTagName("table")[i].style.display='none';
+					}
+				}
+
+			}else{
+				for(i = 0; i < document.getElementsByTagName("table").length; i++){
+				  if(document.getElementsByTagName("table")[i].id.substr(2,4)==code.substr(0,4) && document.getElementsByTagName("table")[i].id!="t_"+code){
+					document.getElementsByTagName("table")[i].style.display='';
+					}
+				}
+				el.style.display='none';
+				el.innerHTML='';
+				if(img) img.src=img_trdroit.src;
+			}
+		}
+//	}
+}
+function ouvreNiveau(code,nom,niveau){
+	modifier_numero( ' '+nom );
+	ajax_description(code);
+	afficheCode(code,niveau);
+}
+function ouvreNiveauSup(code,nom,niveau){
+	modifier_numero( ' '+nom );
+	ajax_description(code);
+	afficheCode(code.substr(0,4)+'00000080',3);
+}
+
+
+// ***********************************************************************************************************
+// salons
+// ***********************************************************************************************************
+function mettre_a_jour_code_secteur()
+{
+	// lecture du secteur sélectionné
+//	var id_secteur = "" + $('code_secteur_fiche').options[$('code_secteur_fiche').selectedIndex].value;
+	var id_secteur = "" + $('code_secteur_fiche').value;
+	var nombre_d_items_ajoutes = 0;
+	if( id_secteur != "" )
+		Element.show( "ligne_sous_secteur" );
+	else
+		Element.hide( "ligne_sous_secteur" );
+	// pour chaque item de la liste
+	var nom_liste = "code_sous_secteur_fiche";
+	vider_une_liste( nom_liste );
+	$A(liste_des_sous_secteurs).each( function( valeur, indice )
+		{
+		if( valeur["secteur"] == id_secteur )
+			{
+			ajouter_item( nom_liste, valeur["nom"], valeur["id"] );
+			nombre_d_items_ajoutes++;
+			}
+		} );
+	if( nombre_d_items_ajoutes == 0 )
+		ajouter_item( nom_liste, "                                   ", "" );
+}
+function vider_une_liste( nom_liste )
+{
+	for( i=$(nom_liste).options.length-1 ; i>=0 ; i-- )
+		$(nom_liste).remove( i );
+}
+function ajouter_item( nom_liste, texte, valeur )
+{
+	var mon_option = new Option( texte, valeur ); 
+	try
+		{
+		$( nom_liste ).add( mon_option, null ); // ne fonctionne pas sous IE
+		}
+	catch(ex)
+		{
+		$( nom_liste ).add( mon_option ); // fonctionne sous IE seulement
+		}
+}
+
+// ***********************************************************************************************************
+// Atlas
+// ***********************************************************************************************************
+function lp_toggle( id ) {
+	var tabTmp = new Array();
+	var objet = document.getElementById( id );
+	if( objet.className == "element_visible" ) {
+		objet.className = "element_invisible";
+		document.getElementById( id + "_bloc" ).className = "menu_non_selectionne";
+		return;
+	}
+	tabTmp = document.body.getElementsByTagName( "*" );
+	for (i=0; i<tabTmp.length; i++)
+	if( tabTmp[i].id != id.substr( 0, tabTmp[i].id.length ) )
+	if( tabTmp[i].className == "element_visible" ) {
+		tabTmp[i].className = "element_invisible";
+		document.getElementById( tabTmp[i].id + "_bloc" ).className = "menu_non_selectionne";
+	}
+	objet.className = "element_visible";
+	document.getElementById( id + "_bloc" ).className = "menu_selectionne";
+}
+// ***********************************************************************************************************
+// Menu déroulant
+// ***********************************************************************************************************
+var pointeur = null;
+var menu_ancien = null;
+var menu_ancienne_classe = '';
+function afficher_onglet(num)
+{
+	if( pointeur != null )
+		clearTimeout( pointeur );
+	if( num == menu_ancien )
+		return false;
+	if( menu_ancien != null )
+		cacher_onglet();
+	menu_ancienne_classe = $( 'lien-onglet-'+num ).className;
+	$( 'lien-onglet-' + num ).className = 'lien_menu2_actif';
+	menu_ancien = num;
+//	Element.show( 'sous-menu-' + num );
+	Effect.SlideDown( 'sous-menu-' + num, { duration: 0.2 } );
+}
+function demander_cacher_onglet(num)
+{
+	pointeur = setTimeout( 'cacher_onglet()', 600 );
+}
+function cacher_onglet()
+{
+	pointeur = null;
+	$( 'lien-onglet-' + menu_ancien ).className=menu_ancienne_classe;
+//	Element.hide( 'sous-menu-' + menu_ancien );
+	Effect.SlideUp( 'sous-menu-' + menu_ancien, { duration: 0.2 } );
+	menu_ancien = null;
+}
+// ***********************************************************************************************************
+// Compteur de clics sur la publicité
+// ***********************************************************************************************************
+function stats_publicite( nom_pub )
+{
+	var url = 'stats_publicite.php';
+	var parametres = 'nom_pub='+nom_pub;
+	var myAjax = new Ajax.Request(
+		url,
+		{
+			method: 'get',
+			parameters: parametres
+		}
+	);
+}
+// ***********************************************************************************************************
+// affichage des news rss de Google
+// ***********************************************************************************************************
+function google_news__afficher_description(id_selectionne)
+{
+	if( $('rss_google_'+id_selectionne).style.display == 'none' )
+	{
+		liste_des_elements_a_traiter = $A( document.getElementsByClassName( "rss_google_description", $('affichage_google_description') ) );
+		liste_des_elements_a_traiter.each( function( item, indice )
+			{
+			Element.hide( item, "" + (indice+1) );
+			} );
+		Element.show('rss_google_'+id_selectionne);
+	}
+	else
+		Element.hide('rss_google_'+id_selectionne);
+}
+var google_news__num_page_actuelle = 0;
+function google_news__montrer_page( num_page )
+{
+	if( google_news__num_page_actuelle > 0 )
+	{
+		Element.hide( "actu_google__" + google_news__num_page_actuelle );
+		Element.show( "lien__" + google_news__num_page_actuelle );
+		Element.hide( "texte__" + google_news__num_page_actuelle );
+	}
+	Element.show( "actu_google__" + num_page );
+	Element.show( "texte__" + num_page );
+	Element.hide( "lien__" + num_page );
+	google_news__num_page_actuelle = num_page;
+}
+function google_news__cacher_page()
+{
+	for( var i=10; i>1; i--)
+		if( $("actu_google__" + i) )
+			Element.hide( "actu_google__" + i );
+	num_page = 1;
+	Element.show( "actu_google__" + num_page );
+	Element.show( "texte__" + num_page );
+	Element.hide( "lien__" + num_page );
+	google_news__num_page_actuelle = num_page;
+}
+
+function remplacer_accents_pour_recherche( valeur )
+{
+    return valeur.replace( /^\s+|\s+$/g, '' ).replace( /[èéêë]/g, 'e' ).replace( /[ç]/g, 'c' ).replace( /[àâä]/g, 'a' ).replace( /[ïî]/g, 'i' ).replace( /[ûùü]/g, 'u' ).replace( /[ôöó]/g, 'o' );
+}
+
